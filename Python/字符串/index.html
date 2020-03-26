@@ -1,0 +1,1190 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>字符串 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                字符串
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="字符串" class="md-nav__link md-nav__link--active">
+      字符串
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#_1">字符串</a></li>
+<li><a href="#_2">字符串的方法</a><ul>
+<li><a href="#_3">字符串的分割</a></li>
+<li><a href="#_4">字符串大小写</a></li>
+<li><a href="#_5">字符串的修改</a></li>
+<li><a href="#on">字符串的查找(O(n))</a></li>
+<li><a href="#_6">字符串的判断</a></li>
+<li><a href="#_7">字符串的格式化</a><ul>
+<li><a href="#_8">%</a></li>
+<li><a href="#f-string">f-string</a></li>
+<li><a href="#strformat">str.format</a></li>
+</ul>
+</li>
+<li><a href="#_9">字符串的迭代</a></li>
+</ul>
+</li>
+<li><a href="#_10">面试题</a></li>
+</ul>
+</div>
+<h1 id="_1">字符串<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>字符串是Python基础数据类型之一,索引第一位为0开始</p>
+<ul>
+<li>
+<p><strong>不可变对象</strong></p>
+</li>
+<li>
+<p>Unicode类型</p>
+</li>
+<li>
+<p>a = r'sssssssss\n'</p>
+</li>
+</ul>
+<p>r/R表示其后面引号中所有字符为字符串中字符,不做转义</p>
+<ul>
+<li>
+<p>可迭代</p>
+</li>
+<li>
+<p>str.join方法 ---- 输出结果为新字符串,</p>
+</li>
+</ul>
+<p>str.join() 括号中可迭代对象</p>
+<p><code>python 
+  a = 'abcd'
+  b = ','.join(a)
+  lst = ['1','2','3']
+c = 'a'.join(lst)</code></p>
+<p>b = 'a,b,c,d'</p>
+<p>c = '1a2a3'</p>
+<p><code>python
+print('\n'.join(lst))</code></p>
+<p>1
+  2
+  3</p>
+<ul>
+<li>str.count()  输出结果为整型,子串在原字符串中出现的次数</li>
+</ul>
+<h1 id="_2">字符串的方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h3 id="_3">字符串的分割<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>str.split(seq = None,maxsplit = -1)    ----  将字符串按照分隔符分割成若干字符串,<mark>并返回列表</mark></li>
+<li>
+<p>seq指定分割字符串,缺省情况默认空白字符串作为分隔符(空白字符+,就是包括空格,tab等连在译器都是空白字符),切割后分隔符消失</p>
+</li>
+<li>
+<p>maxsplit 指定分割次数,-1 表示遍历整个字符串,一次切成两段</p>
+</li>
+<li>
+<p>str.rsplit()从右往左切,输出列表顺序为原来顺序,不会反转</p>
+</li>
+<li>
+<p>str.splitlines([keepends]) 按换行符\n\r换行,[True]表示保留换行符</p>
+</li>
+<li>
+<p>rsplit和lsplit同理</p>
+<p><div class="codehilite"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;0a1a2a3a4a5&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">32</span><span class="p">]:</span> <span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">32</span><span class="p">]:</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">]</span>
+</code></pre></div>
+* str.partition(sep)    ---(head,sep,tail) 将字符串按照分隔符分成两段,返回这两段和分隔符的元组.
+  * sep为分隔符,找到第一个分割符后返回头,尾,分隔符三部分;若没找到分隔符,返回,字符串,两个空元素的三元组.</p>
+</li>
+<li>
+<p>不给定分隔(或给一个空值)符报错,</p>
+</li>
+<li>
+<p>str.rpartition(),从右到左切割,若无分隔符,输出两个空值加原字符串组成的三元组</p>
+<div class="codehilite"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;0a1a2a3a4a5&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">33</span><span class="p">]:</span> <span class="n">a</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">33</span><span class="p">]:</span> <span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;1a2a3a4a5&#39;</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="n">a</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">34</span><span class="p">]:</span> <span class="p">(</span><span class="s1">&#39;0a1a2a3a4a5&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</li>
+</ul>
+<h3 id="_4">字符串大小写<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>str.upper() 全大写</li>
+<li>str.lower()  全小写</li>
+<li>str.swapcase()  大小写互换</li>
+<li>str.capitalize() 字符串的首字母大写</li>
+<li>str.title()   字符串的每个单词首字母大写,以空格为分割的识别单词</li>
+</ul>
+<h3 id="_5">字符串的修改<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>str.replace(old,new[,count])    返回新字符串</p>
+</li>
+<li>
+<p>字符串中找到 匹配子串替换为新字符串,返回新字符串</p>
+</li>
+<li>
+<p>count表示 替换 几次,默认全部替换 </p>
+</li>
+<li>
+<p>str.strip([chars])  返回新字符串,</p>
+</li>
+<li>默认除去两侧空格</li>
+<li>括号内字符会依次被从两侧去掉</li>
+<li>str.lstrip()  去左边</li>
+<li>str.lstrip()   去右边</li>
+</ul>
+<h3 id="on">字符串的查找(O(n))<a class="headerlink" href="#on" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>str.find(sub[,start[,end]])   返回整型,在指定区间内[start,end)由==左到右==查找子串sub,找到返回值为字串第一个字符的索引,没找到返回 -1,</p>
+</li>
+<li>
+<p>str.rfind(sub[,start[,end]])   返回整型,在指定区间内[start,end)由==右到左==查找子串sub,返回值为字串第一个字符的索引,没找到返回 -1,</p>
+</li>
+<li>
+<p>str.index(sub[,start[,end]]) 返回整型,在指定区间内[start,end)由==左到右==查找子串sub,返回值为字串第一个字符的索引,没找到报ValueError</p>
+</li>
+<li>
+<p>str.rindex(sub[,start[,end]]) 返回整型,在指定区间内[start,end)由==右到左==查找子串sub,返回值为字串第一个字符的索引,没找到报ValueError</p>
+</li>
+<li>
+<p>str.count(sub[,start[,end]]) 返回整型,在指定区间内[start,end)由==左到右==查找子串出现的次数,返回值次数,没有返回0</p>
+</li>
+</ul>
+<h3 id="_6">字符串的判断<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>str.endswith(suffix[,start[,end]])   判断在指定区间[start,end)内,字符串是否以suffix结尾,返回值为布尔值,前提始末位置要包含子串</li>
+<li>str.startswith(prefix[,start[,end]])   判断在指定区间[start,end)内,字符串是否以prefix开头,返回值为布尔值,前提始末位置要包含子串</li>
+<li>str.isdigit()  判断字符串是不是只有数字   返回bool型</li>
+<li>str.isalpha() 判断字符串是不是只有字母   返回bool型</li>
+<li>str.isupper() 判断字符串是不是全大写   返回bool型</li>
+</ul>
+<h3 id="_7">字符串的格式化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h5 id="_8">%<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>'i like %03d' %(20,)   后面的%后接单值,元组或者字典,0表示不足的用0部位,3表示共三位</p>
+<p>"{}{名称}".format(*args,**kwargs)  --- 输出字符串,</p>
+<p>args是位置参数 ,是一个元组</p>
+<p>kwargs是关键字参数,是一个字典,与{}中关键字匹配</p>
+<p>{{}}表示打印花括号</p>
+<p><img alt="" src="/img/Python/字符串格式化01.jpg" /></p>
+<p>'{0}*{1}={2:&lt; 02}'.format(3,2,2 * 3)       默认右对齐</p>
+<div class="codehilite"><pre><span></span><code>3为0位,2为1位,:&lt;为左对齐,0为0补充占位,^为居中,*为填充
+</code></pre></div>
+
+
+<p>'{:*^30}'.format('centered')   </p>
+<div class="codehilite"><pre><span></span><code>^为居中,*为填充
+</code></pre></div>
+
+
+<p>进制</p>
+<div class="codehilite"><pre><span></span><code><span class="s1">&#39;int:{0:d};hex:{0:#x};oct:{0:#o};bin:{0:#b}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>&#39;int:42;hex:0x2a;oct:0o52;bin:0b101010&#39;
+</code></pre></div>
+
+<h5 id="f-string">f-string<a class="headerlink" href="#f-string" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="/img/Python/格式化字符串 02.jpg" /></p>
+<p>f'{}'f让{}内的字符串变成了变量名</p>
+<p>f'{s:*^10}'   *补位符,^居中,共十位</p>
+<p>f'{x:.5f}'  小数点后5位</p>
+<h5 id="strformat">str.format<a class="headerlink" href="#strformat" title="Permanent link">&para;</a></h5>
+<p>'{0}-{1}'.format("阿","b")</p>
+<h3 id="_9">字符串的迭代<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>字符串是可迭代对象,可使用for循环迭代</p>
+<div class="codehilite"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abcdefg&#39;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">]:</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span> <span class="p">:</span>
+    <span class="o">...</span><span class="p">:</span>     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span>
+</code></pre></div>
+
+<h1 id="_10">面试题<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<p>将a='abcd'反转输出</p>
+<div class="codehilite"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="s1">&#39;abcd&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="n">cba</span>
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                基本运算符
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../%E5%88%97%E8%A1%A8/" title="列表" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                列表
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
