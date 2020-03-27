@@ -745,6 +745,66 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1008,6 +1068,14 @@
 <li><a href="#_18">数据类型和内存管理</a></li>
 <li><a href="#_19">自定义数据类型</a><ul>
 <li><a href="#_20">基本语法</a></li>
+<li><a href="#_21">类型别名</a></li>
+<li><a href="#_22">类型定义和类型别名的区别</a></li>
+</ul>
+</li>
+<li><a href="#newmake">new和make</a><ul>
+<li><a href="#new">new</a></li>
+<li><a href="#make">make</a></li>
+<li><a href="#newmake_1">new与make的区别</a></li>
 </ul>
 </li>
 </ul>
@@ -1201,6 +1269,7 @@
 </code></pre></div>
 
 <p>注意:这时的myint和int在go中还是两个数据类型,</p>
+<p>通过type关键字的定义,MyInt就是一种新的类型,具有int的特性.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">//证明</span>
 <span class="kd">type</span> <span class="nx">myInt</span> <span class="kt">int</span>
 <span class="kd">var</span> <span class="nx">num1</span> <span class="nx">myInt</span>
@@ -1211,6 +1280,69 @@
 <span class="c1">//如何改:强制类型转换</span>
 <span class="nx">num2</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span>
 </code></pre></div>
+
+<h3 id="_21">类型别名<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>Go1.9版本新增的功能.</p>
+<p>类型别名的规定:TypeAlias只是Type的别名,本质上是同一个类型.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">TypeAlias</span> <span class="p">=</span> <span class="nx">Type</span>
+</code></pre></div>
+
+<p>比如之前的rune和byte就是类型别名</p>
+<div class="codehilite"><pre><span></span><code>type byte = uint8
+type rune = int32
+</code></pre></div>
+
+<h3 id="_22">类型定义和类型别名的区别<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>表面上只是差了一个等号<code>=</code></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">NewInt</span> <span class="kt">int</span>
+<span class="kd">type</span> <span class="nx">MyInt</span> <span class="p">=</span> <span class="kt">int</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="nx">NewInt</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="nx">MyInt</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type of a: %T\n&quot;</span><span class="p">,</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type of b: %T\n&quot;</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">type</span> <span class="nx">of</span> <span class="nx">a</span><span class="p">:</span> <span class="nx">main</span><span class="p">.</span><span class="nx">NewInt</span>
+<span class="kd">type</span> <span class="nx">of</span> <span class="nx">b</span><span class="p">:</span> <span class="kt">int</span>
+</code></pre></div>
+
+<p>通过结果可以看到,类型定义是生成了main包下的一个新的类型,而类型别名只是在代码中存在,编译完成时不会存在MyInt类型.</p>
+<h1 id="newmake">new和make<a class="headerlink" href="#newmake" title="Permanent link">&para;</a></h1>
+<p>go中,对于引用类型,在使用的时候不仅要声明,还要为其分配内存空间,否则无法使用.</p>
+<p>而值类型的声明不需要分配内存空间,因为在声明的时候已经默认分配好了内存空间.</p>
+<h3 id="new">new<a class="headerlink" href="#new" title="Permanent link">&para;</a></h3>
+<p>new是一个内置函数.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nb">new</span><span class="p">(</span><span class="nx">Type</span><span class="p">)</span> <span class="o">*</span><span class="nx">Type</span>
+</code></pre></div>
+
+<ul>
+<li>Type表示类型，new函数只接受一个参数，这个参数是一个类型</li>
+<li>*Type表示类型指针，new函数返回一个指向该类型内存地址的指针。</li>
+</ul>
+<p>使用new函数得到的是一个类型的指针，并且该指针对应的值为该类型的零值。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">a</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+    <span class="nx">b</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%T\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span> <span class="c1">// *int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%T\n&quot;</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="c1">// *bool</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">*</span><span class="nx">a</span><span class="p">)</span>       <span class="c1">// 0</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">*</span><span class="nx">b</span><span class="p">)</span>       <span class="c1">// false</span>
+<span class="p">}</span>   
+</code></pre></div>
+
+<h3 id="make">make<a class="headerlink" href="#make" title="Permanent link">&para;</a></h3>
+<p>make也是用于内存分配的，区别于new，它只用于slice、map以及chan的内存创建，而且它返回的类型就是这三个类型本身，而不是他们的指针类型，因为这三种类型就是引用类型，所以就没有必要返回他们的指针了。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nb">make</span><span class="p">(</span><span class="nx">t</span> <span class="nx">Type</span><span class="p">,</span> <span class="nx">size</span> <span class="o">...</span><span class="nx">IntegerType</span><span class="p">)</span> <span class="nx">Type</span>
+</code></pre></div>
+
+<p>在使用slice、map以及channel的时候，都需要使用make进行初始化，然后才可以对它们进行操作。</p>
+<h3 id="newmake_1">new与make的区别<a class="headerlink" href="#newmake_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>二者都是用来做内存分配的。</li>
+<li>make只用于slice、map以及channel的初始化，返回的还是这三个引用类型本身；</li>
+<li>而new用于类型的内存分配，并且内存对应的值为类型零值，返回的是指向类型的指针。</li>
+</ol>
                 
                   
                 

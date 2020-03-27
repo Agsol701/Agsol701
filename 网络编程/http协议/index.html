@@ -691,6 +691,66 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -902,39 +962,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#http_1" class="md-nav__link">
-    HTTP状态码
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#httphttps" class="md-nav__link">
-    http和https
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    区别
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
       
       
       
@@ -992,39 +1019,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#http_1" class="md-nav__link">
-    HTTP状态码
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#httphttps" class="md-nav__link">
-    http和https
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    区别
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
       
       
       
@@ -1048,15 +1042,14 @@
 <li><a href="#_1">简介</a></li>
 <li><a href="#_2">工作原理</a></li>
 <li><a href="#_3">特性</a></li>
-<li><a href="#http_1">HTTP状态码</a><ul>
+</ul>
+</li>
+<li><a href="#http_1">HTTP状态码</a></li>
 <li><a href="#httphttps">http和https</a><ul>
 <li><a href="#_4">区别</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#http2http1">http2与http1的区别</a></li>
 </ul>
 </div>
 <h1 id="http">http<a class="headerlink" href="#http" title="Permanent link">&para;</a></h1>
@@ -1069,7 +1062,7 @@
 <p>基于请求响应</p>
 <p>无状态</p>
 <p>无连接</p>
-<h2 id="http_1">HTTP状态码<a class="headerlink" href="#http_1" title="Permanent link">&para;</a></h2>
+<h1 id="http_1">HTTP状态码<a class="headerlink" href="#http_1" title="Permanent link">&para;</a></h1>
 <p>所有HTTP响应的第一行都是状态行，依次是当前HTTP版本号，3位数字组成的状态代码，以及描述状态的短语，彼此由空格分隔。</p>
 <p>状态代码的第一个数字代表当前响应的类型：</p>
 <ul>
@@ -1079,7 +1072,7 @@
 <li>4xx请求错误——请求含有词法错误或者无法被执行</li>
 <li>5xx服务器错误——服务器在处理某个正确请求时发生错误</li>
 </ul>
-<h3 id="httphttps">http和https<a class="headerlink" href="#httphttps" title="Permanent link">&para;</a></h3>
+<h1 id="httphttps">http和https<a class="headerlink" href="#httphttps" title="Permanent link">&para;</a></h1>
 <p>HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和<a href="https://baike.baidu.com/item/身份认证/5294713">身份认证</a>保证了传输过程的安全性 [1]  。HTTPS 在HTTP 的基础下加入<a href="https://baike.baidu.com/item/SSL/320778">SSL</a> 层，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP与 <a href="https://baike.baidu.com/item/TCP/33012">TCP</a> 之间）。</p>
 <h5 id="_4">区别<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
@@ -1095,6 +1088,14 @@
 <span class="sd">身份认证的网络协议，比http协议安全。</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </code></pre></div>
+
+<h1 id="http2http1">http2与http1的区别<a class="headerlink" href="#http2http1" title="Permanent link">&para;</a></h1>
+<ol>
+<li>HTTP/2采用二进制格式而非文本格式</li>
+<li>HTTP/2是完全多路复用的，而非有序并阻塞的——只需一个连接即可实现并行</li>
+<li>使用报头压缩，HTTP/2降低了开销</li>
+<li>HTTP/2让服务器可以将响应主动“推送”到客户端缓存中</li>
+</ol>
                 
                   
                 

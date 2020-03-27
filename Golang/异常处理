@@ -1,0 +1,151 @@
+# 异常处理
+
+1. 默认情况下,当发生错误后(panic)后,程序就会退出(崩溃).
+2. 但是我们希望:错误发生后,可以捕捉到错误,并进行处理,保证程序可以继续执行,还可以给管理员一个提示信息.
+
+### 基本语法
+
+`defer,panic,recover`
+
+##### defer
+
+在本本函数中,defer在其下方所有可执行代码执行后再执行.
+
+一个方法里若有多个defer语句，则先声明的后被调用，
+
+##### panic
+
+手动抛出异常,其下方代码不执行
+
+##### recover
+
+捕获异常,并使函数继续执行.
+
+常与defer函数联合使用,如果recover不在defer函数中,则不会终止程序崩溃.
+
+在defer函数中调用则会继续将函数执行完毕.
+
+##### 说明:
+
+Go中可以抛出一个panic异常,然后在defer中通过内置函数recover捕获这个异常,然后正常处理.
+
+例:
+
+```Go
+func test()  {
+    defer func(){
+        err := recover()
+        if err != nil {
+            fmt.Println("err:",err)
+            fmt.Println("send message to agsol")
+        }
+    }()
+    //也可以直接将err定义放在if中
+    // defer func(){
+       
+    //     if  err := recover(); err != nil {
+    //         fmt.Println("err:",err)
+    //         fmt.Println("send message to agsol")
+    //     }
+    // }()
+    num1:= 10
+    num2:= 0
+    res := num1/num2
+    fmt.Println(res)
+}
+func main()  {
+    test()
+    fmt.Println("under")
+}
+>>>
+err: runtime error: integer divide by zero
+under
+```
+
+通过压栈defer延迟函数进行异常捕获
+
+### 好处
+
+进行错误处理后,程序不会轻易挂掉,加入预警代码,就可以使程序更加健壮.
+
+```Go
+func test()  {
+    defer func(){
+        err := recover()
+        if err != nil {
+            fmt.Println("err:",err)
+            //模拟向管理员发送信息
+            fmt.Println("send message to agsol")
+        }
+    }()
+    num1:= 10
+    num2:= 0
+    res := num1/num2
+    fmt.Println(res)
+}
+func main()  {
+    test()
+    fmt.Println("under")
+}
+>>>
+err: runtime error: integer divide by zero
+send message to agsol
+under
+```
+
+会提前启动send message动作
+
+# 自定义错误
+
+Go程序中,支持自定义错误,使用errors.New和panic内置函数.
+
+1. error.New("错误说明"),会返回一个error类型的值,表示一个错误
+2. panic内置函数,接受一个空接口类型interface{}类型的值(也就是任何值)作为参数.可以接受error类型的变量,输出错误信息,并退出程序.
+
+```Go
+func readConf(name string) (err error) {
+    if name == "config.ini" {
+        return nil
+    } else {
+        return errors.New("读取数据错误")
+    }
+}
+func test(){
+    err := readConf("config.ini")
+    if err != nil {
+        //发生错误,输出错误并终止程序
+        panic(err)  //panic会打印错误并终止程序
+    }
+    fmt.Println("test继续执行...")
+}
+func main()  {
+    test()
+    fmt.Println("main继续执行...")
+}
+>>>
+test继续执行...
+main继续执行...
+-----------------------------------------------------------------
+func readConf(name string) (err error) {
+    if name == "config.ini" {
+        return nil
+    } else {
+        return errors.New("读取数据错误")
+    }
+}
+func test(){
+    err := readConf("config.")
+    if err != nil {
+        //发生错误,输出错误并终止程序
+        panic(err)  //panic会打印错误并终止程序
+    }
+    fmt.Println("test继续执行...")
+}
+func main()  {
+    test()
+    fmt.Println("main继续执行...")
+}
+>>>
+panic: 读取数据错误
+```
+
