@@ -1,0 +1,1369 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>网络编程 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                网络编程
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        网络编程
+      </label>
+    
+    <a href="./" title="网络编程" class="md-nav__link md-nav__link--active">
+      网络编程
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cs" class="md-nav__link">
+    C/S架构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bs" class="md-nav__link">
+    B/S架构:
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cs" class="md-nav__link">
+    C/S架构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bs" class="md-nav__link">
+    B/S架构:
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#_1">网络编程</a><ul>
+<li><a href="#cs">C/S架构</a></li>
+<li><a href="#bs">B/S架构:</a></li>
+</ul>
+</li>
+<li><a href="#tcp">TCP协议</a><ul>
+<li><a href="#tcp_1">TCP服务端编程</a></li>
+<li><a href="#tcp_2">TCP客户端编程</a></li>
+<li><a href="#_2">三次握手</a><ul>
+<li><a href="#_3">如果第三次握手丢失了，客户端服务端会如何处理？</a></li>
+</ul>
+</li>
+<li><a href="#_4">四次挥手</a></li>
+</ul>
+</li>
+<li><a href="#udp">UDP协议</a><ul>
+<li><a href="#udp_1">UDP服务端编程</a></li>
+<li><a href="#udp_2">UDP客户端编程</a></li>
+<li><a href="#_5">心跳机制</a></li>
+<li><a href="#udp_3">UDP协议的应用</a></li>
+</ul>
+</li>
+<li><a href="#_6">协议族</a><ul>
+<li><a href="#_7">全双工</a></li>
+<li><a href="#_8">半双工</a></li>
+<li><a href="#_9">单工</a></li>
+<li><a href="#_10">轮询</a></li>
+<li><a href="#_11">长轮询</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="_1">网络编程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="cs">C/S架构<a class="headerlink" href="#cs" title="Permanent link">&para;</a></h3>
+<p>Client:客户端</p>
+<p>Server:服务端</p>
+<p>优点:软件使用稳定,并且可以节省网络资源.</p>
+<p>缺点:</p>
+<ol>
+<li>
+<p>若用户想在同一个设备上使用多个软件,必须下载多个客户端</p>
+<ol>
+<li>软件的每一次更新,客户点都必须重新下载更新</li>
+</ol>
+</li>
+</ol>
+<p>C/S架构的软件:</p>
+<p>​   PC:QQ,Pycharm</p>
+<p>​   手机端:微信,吃鸡</p>
+<h3 id="bs">B/S架构:<a class="headerlink" href="#bs" title="Permanent link">&para;</a></h3>
+<p>Browser:浏览器
+Server:服务端</p>
+<p>优点:</p>
+<p>浏览器充当客户端,无需用户下载多个软件,也无需用户下载更新软件版本</p>
+<p>直接在网页上访问需要使用的软件</p>
+<p>缺点:</p>
+<p>消耗网络资源过大,当网路不稳定时,软件的使用也不稳定.</p>
+<h1 id="tcp">TCP协议<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h1>
+<p>TCP是一个流式协议</p>
+<h3 id="tcp_1">TCP服务端编程<a class="headerlink" href="#tcp_1" title="Permanent link">&para;</a></h3>
+<p>步骤:</p>
+<ol>
+<li>
+<p>创建socket对象</p>
+</li>
+<li>
+<p>绑定IP地址address和端口port.bind()方法IPV4地址为一个二元组('IP地址字符串;,port)</p>
+</li>
+<li>
+<p>开始监听,将在指定的IP的端口上监听,listen()方法</p>
+</li>
+<li>
+<p>获取用于传输的socket对象</p>
+</li>
+</ol>
+<p>socket.accept() &rarr; (socket object,address info)</p>
+<p>accept方法默认==阻塞==等待客户端建立连接,返回一个新的socket对象和客户端地址的二元组</p>
+<p>地址是远程客户端的地址,IPv4中他是一个二元组(clientaddr,port)</p>
+<ul>
+<li>接收数据:recv(bufsize[,flags])使用缓冲区接收数据</li>
+<li>发送数据:send(bytes)发送数据</li>
+</ul>
+<h3 id="tcp_2">TCP客户端编程<a class="headerlink" href="#tcp_2" title="Permanent link">&para;</a></h3>
+<p>步骤:</p>
+<ol>
+<li>创建socket对象</li>
+<li>连接到远端服务端的IP和port,connect()方法</li>
+<li>传输数据</li>
+<li>使用send,recv方法发送,接收数据</li>
+<li>关闭连接,释放资源</li>
+</ol>
+<h3 id="_2">三次握手<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/img/Python/TCP三次握手.jpg" /></p>
+<p>seq表示序列号,ack是确认号,SYN为同步位</p>
+<p>三次握手建连接</p>
+<ul>
+<li>第一次握手：客户端主机A发送位码为syn＝1，随机产生seq number=x的数据包到服务器，客户端进入SYN_SEND状态，等待服务器的确认；主机B由SYN=1知道A要求建立连接。</li>
+<li>第二次握手：主机B收到请求后要确认连接信息，向A发送ack number(主机A的seq+1)、syn=1、ack=1，随机产生seq=y的包，此时服务器进入SYN_RECV状态。</li>
+<li>第三次握手：主机A收到后检查ack number是否正确，即第一次发送的seq number+1，以及位码ack是否为1，若正确，主机A会再发送ack number(主机B的seq+1)、ack=1，主机B收到后确认seq值与ack=1则连接建立成功。客户端和服务器端都进入ESTABLISHED状态。</li>
+</ul>
+<h5 id="_3">如果第三次握手丢失了，客户端服务端会如何处理？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>服务端：
+该TCP连接的状态为SYN_RECV,并且会根据TCP的超时重传机制，会等待3秒、6秒、12秒后重新发送SYN+ACK包，以便Client重新发送ACK包。而Server重发SYN+ACK包的次数，可以通过设置/proc/sys/net/ipv4/tcp_synack_retries修改，默认值为5。如果重发指定次数之后，仍然未收到客户端的ACK应答，那么一段时间后，服务端自动关闭这个连接。
+客户端：
+客户端在接收到SYN+ACK包，它的TCP连接状态就为ESTABLISHED（已连接），表示该连接已经建立。那么如果第三次握手中的ACK包丢失的情况下，客户端向服务端发送数据，服务端将以RST包(reset重置)响应，才能感知到服务端的错误。</p>
+<h3 id="_4">四次挥手<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/img/Python/TCP四次挥手.jpg" /></p>
+<ul>
+<li>第一次挥手：主机A（可以是客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机B发送一个FIN报文段；此时，主机A进入FIN_WAIT_1状态；这表示主机A没有数据要发送给主机B了。</li>
+<li>第二次挥手：主机B收到了主机A发送的FIN报文段，向主机A回一个ACK报文段，Acknowledgment Number为Sequence Number加1，主机1进入FIN_WAIT_2状态；主机2告诉主机A，我也没有数据要发送了，可以进行关闭连接了。</li>
+<li>第三次挥手：主机B向主机A发送FIN报文段，请求关闭连接，同时主机B进入CLOSE_WAIT状态。</li>
+<li>第四次挥手：主机A收到主机B发送的FIN报文段，向主机B发送ACK报文段，然后主机A进入TIME_WAIT状态；主机B收到主机A的ACK报文段以后，就关闭连接；此时，主机A等待2MSL后依然没有收到回复，则证明主机B已正常关闭，那好，主机A也可以关闭连接了。</li>
+</ul>
+<h1 id="udp">UDP协议<a class="headerlink" href="#udp" title="Permanent link">&para;</a></h1>
+<p>UDP是一种数据报传输协议.</p>
+<ol>
+<li>不需要建立双向管道.</li>
+<li>不会粘包</li>
+<li>客户端给服务端发送数据,不需要等待服务端返回接收成功.</li>
+<li>数据容易丢失,数据不安全.</li>
+<li>传输速度快</li>
+</ol>
+<p>-TCP:就好比在打电话</p>
+<p>-UDP:就好比在发短信</p>
+<h3 id="udp_1">UDP服务端编程<a class="headerlink" href="#udp_1" title="Permanent link">&para;</a></h3>
+<p>步骤:</p>
+<ol>
+<li>创建socket对象,socket.SOCK_DGRAM</li>
+<li>绑定IP和port,bind()方法</li>
+<li>传输数据</li>
+<li>接收数据,socket.recvfrom(bufsize[,flags]),获得一个二元组(string,address)</li>
+<li>发送数据,socket.sendto(string,address)发给某地址某信息</li>
+<li>释放资源</li>
+</ol>
+<h3 id="udp_2">UDP客户端编程<a class="headerlink" href="#udp_2" title="Permanent link">&para;</a></h3>
+<p>步骤:</p>
+<ol>
+<li>创建socket对象.socket.SOCK_DGRAM</li>
+<li>发送数据,socket.sendto(string,address)发送给某地址某信息</li>
+<li>接收数据,socket.recvfrom(bufsize[,flags]),获得一个二元组(string,address)</li>
+<li>释放资源</li>
+</ol>
+<h3 id="_5">心跳机制<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>加一个ack机制和心跳heartbeat.心跳,就是一端定时发送给另一端 的信息,一般每次数据越少越好,心跳时间间隔自己设定.ack即响应,一端收到另一端的消息后返回的信息.</p>
+<ul>
+<li>一般来说是客户端定时发往服务端的,服务端并不需要ack回复客户端,只要记录该客户端还或者就好</li>
+<li>服务端往客户端发一般用的较少</li>
+<li>也可以双向发送心跳,用的更少.</li>
+</ul>
+<h3 id="udp_3">UDP协议的应用<a class="headerlink" href="#udp_3" title="Permanent link">&para;</a></h3>
+<p>UDP是无连接协议,基于一下假设时使用:网络足够好,消息不会丢包,包不会乱序</p>
+<p>一般应用于 视频,音频传输,,丢点包问题不大,可以通过重新发送来解决</p>
+<p>dns协议,数据内容小,一个包就能完成,不存在乱序,丢包,重新解析</p>
+<p>一般来说,UPD性能优于TCP,但是可靠性要求高的场合要选择使用TCP协议.</p>
+<h1 id="_6">协议族<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>AF表示address family  ,用户socket()第一个参数</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">AF_INET</td>
+<td align="center">IPV4</td>
+</tr>
+<tr>
+<td align="center">AF_INET6</td>
+<td align="center">IPV6</td>
+</tr>
+<tr>
+<td align="center">AF_UNIX</td>
+<td align="center">Unix Domain Socket,windows没有</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">全双工<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>指可以同时进行数据的双向传输,a&rarr;b,b&rarr;a是瞬时同步的.  双道马路</p>
+<h3 id="_8">半双工<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>在一段时间内只有一个动作发生,即ab可以互传数据,但是同时只能有一方发送,  一条双向窄马路</p>
+<h3 id="_9">单工<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>只允许a向b发送数据.而b不能向a发送.  单行道</p>
+<h3 id="_10">轮询<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>定义：其实就是普通的轮询。指在特定的的时间间隔（如每1秒），由浏览器对服务器发出HTTP request，然后由服务器返回最新的数据给客户端的浏览器。</p>
+<p>应用场景：传统的web通信模式。后台处理数据，需要一定时间，前端想要知道后端的处理结果，就要不定时的向后端发出请求以获得最新情况。</p>
+<p>优点：前后端程序编写比较容易。
+缺点：请求中有大半是无用，难于维护，浪费带宽和服务器资源；响应的结果没有顺序（因为是异步请求，当发送的请求没有返回结果的时候，后面的请求又被发送。而此时如果后面的请求比前面的请 求要先返回结果，那么当前面的请求返回结果数据时已经是过时无效的数据了）。
+实例：适于小型应用。</p>
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">让客户端浏览器定时朝服务端发送请求数据的请求(比如每隔5s一次)</span>
+
+<span class="sd">不足之处</span>
+<span class="sd">    消息延迟明显</span>
+<span class="sd">    消耗资源</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+
+<h3 id="_11">长轮询<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>定义：客户端向服务器发送Ajax请求，服务器接到请求后hold住连接，。请求各自队列中的数据，如果没有数据则会阻塞但是不会一直阻塞,利用timeout参数加异常处理的形式最多阻塞30s之后返回，浏览器判断是否有数据，没有则继续发送.直到有新消息才返回响应信息并关闭连接，客户端处理完响应信息后再向服务器发送新的请求</p>
+<p>优点：在无消息的情况下不会频繁的请求，耗费资源小。</p>
+<p>缺点：服务器hold连接会消耗资源，返回数据顺序无保证，难于管理维护。</p>
+<p>实例：WebQQ、Hi网页版、Facebook IM。</p>
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">服务端给每一个第一次来链接的客户端浏览器创建一个队列，之后客户端浏览器通过ajax朝各自的队列索要数据，如果没有数据会阻塞但是不会一直阻塞(pending)，用了timeout加异常处理经过30s自动回去然后再次发请求</span>
+
+<span class="sd">现对于轮询</span>
+<span class="sd">    消息没有延迟</span>
+<span class="sd">    资源损耗较小</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                django之路由层
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                网络模型
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
