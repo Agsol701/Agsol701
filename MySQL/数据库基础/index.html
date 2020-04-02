@@ -1,0 +1,2779 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>数据库基础 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                数据库基础
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%9B%E5%88%B6%E5%8F%8A%E5%8E%9F%E7%A0%81/" title="进制及原码" class="md-nav__link">
+      进制及原码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5/" title="输入语句" class="md-nav__link">
+      输入语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%8D%E5%B0%84/" title="反射" class="md-nav__link">
+      反射
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/json/" title="json" class="md-nav__link">
+      json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="django之视图层" class="md-nav__link">
+      django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="django之模板层" class="md-nav__link">
+      django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM/" title="django之ORM" class="md-nav__link">
+      django之ORM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="django之分组查询" class="md-nav__link">
+      django之分组查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="django之ORM优化查询" class="md-nav__link">
+      django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%92%8Cajax/" title="django和ajax" class="md-nav__link">
+      django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%BA%8F%E5%88%97%E5%8C%96%E6%A8%A1%E5%9D%97/" title="django序列化模块" class="md-nav__link">
+      django序列化模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-nav__link">
+      多对多三种创建方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bforms%E7%BB%84%E4%BB%B6/" title="django之forms组件" class="md-nav__link">
+      django之forms组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-nav__link">
+      django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="django中间件" class="md-nav__link">
+      django中间件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      drf
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        drf
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drf/Restful%E8%A7%84%E8%8C%83/" title="Restful规范" class="md-nav__link">
+      Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf中的APIView请求生命周期.md" title="drf中的APIView请求生命周期" class="md-nav__link">
+      drf中的APIView请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件.md" title="drf序列化组件" class="md-nav__link">
+      drf序列化组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多表操作.md" title="多表操作" class="md-nav__link">
+      多表操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件实现十大接口.md" title="drf序列化组件实现十大接口" class="md-nav__link">
+      drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/视图家族.md" title="视图家族" class="md-nav__link">
+      视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/jwt认证.md" title="jwt认证" class="md-nav__link">
+      jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大认证.md" title="三大认证" class="md-nav__link">
+      三大认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多方式登录.md" title="多方式登录" class="md-nav__link">
+      多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大组件源码分析.md" title="三大组件源码分析" class="md-nav__link">
+      三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/CGI%2CwSGI%2CuWSGI%2Cuwsgi/" title="CGI,wSGI,uWSGI,uwsgi" class="md-nav__link">
+      CGI,wSGI,uWSGI,uwsgi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Redis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Redis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Redis/" title="Redis" class="md-nav__link">
+      Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Golang%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Golang中使用Redis" class="md-nav__link">
+      Golang中使用Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-nav__link">
+      Python中使用Redis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      MySQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        MySQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        数据库基础
+      </label>
+    
+    <a href="./" title="数据库基础" class="md-nav__link md-nav__link--active">
+      数据库基础
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据库启动文件操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    层次数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    网状数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    关系型数据库
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-database" class="md-nav__link">
+    relational database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notonlysqlnosql" class="md-nav__link">
+    非关系型数据库notonlysql=nosql
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-relational-database" class="md-nav__link">
+    non-relational-database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-nav__link">
+      库表值的操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pymysql/" title="pymysql" class="md-nav__link">
+      pymysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MySQL%E4%B8%BB%E4%BB%8E%E6%90%AD%E5%BB%BA/" title="MySQL主从搭建" class="md-nav__link">
+      MySQL主从搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MongoDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MongoDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MongoDB/MongoDB%E5%AE%89%E8%A3%85/" title="MongoDB安装" class="md-nav__link">
+      MongoDB安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%89%E8%A3%85/" title="Docker简介与安装" class="md-nav__link">
+      Docker简介与安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E9%95%9C%E5%83%8F/" title="Docker镜像" class="md-nav__link">
+      Docker镜像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%AE%B9%E5%99%A8/" title="Docker容器" class="md-nav__link">
+      Docker容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%85%B6%E4%BB%96/" title="Docker其他" class="md-nav__link">
+      Docker其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/" title="树" class="md-nav__link">
+      树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" title="稀疏数组" class="md-nav__link">
+      稀疏数组
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据库启动文件操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    层次数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    网状数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    关系型数据库
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-database" class="md-nav__link">
+    relational database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notonlysqlnosql" class="md-nav__link">
+    非关系型数据库notonlysql=nosql
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-relational-database" class="md-nav__link">
+    non-relational-database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#_1">数据库</a><ul>
+<li><a href="#_2">概念</a></li>
+<li><a href="#_3">分类</a></li>
+<li><a href="#_4">数据库启动文件操作</a></li>
+<li><a href="#_5">层次数据库</a></li>
+<li><a href="#_6">网状数据库</a></li>
+<li><a href="#_7">关系型数据库</a><ul>
+<li><a href="#relational-database">relational database</a></li>
+</ul>
+</li>
+<li><a href="#notonlysqlnosql">非关系型数据库notonlysql=nosql</a><ul>
+<li><a href="#non-relational-database">non-relational-database</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sql">SQL</a><ul>
+<li><a href="#dcl">DCL</a><ul>
+<li><a href="#grantrevoke">GRANT授权,REVOKE撤销</a></li>
+</ul>
+</li>
+<li><a href="#ddl">DDL</a><ul>
+<li><a href="#_8">删除用户(慎用)</a></li>
+<li><a href="#_9">创建数据库</a></li>
+<li><a href="#_10">删除数据库</a></li>
+<li><a href="#_11">创建表</a></li>
+<li><a href="#desc">DESC</a></li>
+<li><a href="#primary-key">PRIMARY KEY 主键</a></li>
+<li><a href="#index">索引Index</a></li>
+<li><a href="#constrain">约束constrain</a></li>
+<li><a href="#_12">补充:</a></li>
+<li><a href="#view">视图view</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_13">数据类型</a><ul>
+<li><a href="#_14">数值类型</a></li>
+<li><a href="#_15">日期和时间类型</a></li>
+<li><a href="#_16">字符串类型</a></li>
+<li><a href="#enum">enum枚举类型</a></li>
+</ul>
+</li>
+<li><a href="#_17">关系操作</a></li>
+<li><a href="#dml-crud">DML(数据操作语言)--CRUD增删改查</a><ul>
+<li><a href="#insert">INSERT 语句(可批量操作)</a></li>
+<li><a href="#alter-table">alter table 表名 +方法语句</a></li>
+<li><a href="#update">UPDATE语句</a></li>
+<li><a href="#delete">DELETE语句</a></li>
+<li><a href="#select">SELECT语句</a></li>
+<li><a href="#for-update">FOR UPDATE 会把行进行写锁定,就是排它锁.</a></li>
+<li><a href="#where">WHERE 语句</a></li>
+<li><a href="#order-by">ORDER BY 子句</a></li>
+<li><a href="#distinct">DISTINCT 不返回重复记录(相当于去重)</a></li>
+<li><a href="#_18">聚合函数</a></li>
+<li><a href="#_19">分组查询</a></li>
+<li><a href="#_20">子查询</a></li>
+<li><a href="#join">连接JOIN</a><ul>
+<li><a href="#cross-join">交叉连接cross join</a></li>
+<li><a href="#_21">内连接</a></li>
+<li><a href="#_22">外连接</a></li>
+<li><a href="#_23">自连接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#transaction">事务Transaction</a><ul>
+<li><a href="#_24">存储引擎</a></li>
+<li><a href="#_25">事务</a></li>
+<li><a href="#_26">特性</a></li>
+<li><a href="#mysql">MySQL隔离级别</a></li>
+<li><a href="#_27">事务语法</a><ul>
+<li><a href="#_28">数据库和数据仓库的区别</a></li>
+</ul>
+</li>
+<li><a href="#_29">其他概念</a><ul>
+<li><a href="#_30">视图</a></li>
+<li><a href="#cursor">游标cursor</a></li>
+<li><a href="#_31">存储过程</a></li>
+<li><a href="#_32">触发器</a></li>
+<li><a href="#_33">数据库的备份</a></li>
+</ul>
+</li>
+<li><a href="#_34">数据库的级联操作</a></li>
+</ul>
+</li>
+<li><a href="#_35">数据库三大范式</a></li>
+</ul>
+</div>
+<h1 id="_1">数据库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>按照==数据结构==(逻辑结构,物理结构)来组织,存储,管理数据的仓库</p>
+<p>数据库的数据模型才是其核心和基础</p>
+<h3 id="_3">分类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>按照数据模型分类:网状数据库,层次数据库,<mark>关系型数据库</mark></p>
+<h3 id="_4">数据库启动文件操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>mysqld 相当于mysql客户端</p>
+<p>mysqql 相当于mysql服务端</p>
+<h3 id="_5">层次数据库<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>以树型结构表示实体以及之间的联系,关系支支持一对多.代表数据库IBM IMS</p>
+<h3 id="_6">网状数据库<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>能够直接描述客观世界,可以表示实体间多种复杂关系,而这是层次数据模型无法做到的.一个结点可以有多个父节点,节点之间支持可以多对多关联</p>
+<p>通用电气1964年开发的IDS,只能GE自己用</p>
+<h3 id="_7">关系型数据库<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h5 id="relational-database">relational database<a class="headerlink" href="#relational-database" title="Permanent link">&para;</a></h5>
+<p>对每一列的数据有数据类型的约束</p>
+<p>关系型数据库,把数据存在硬盘中</p>
+<p>非关系型数据库,把数据放在内存中</p>
+<p>使用行列组成的二维表来组织数据和关系.</p>
+<p>基于关系模型构建的数据库系统称为RDBMS(relational database system)</p>
+<p>MySQL</p>
+<p>MariaDB</p>
+<p>cassandra(国内不多)</p>
+<p>elasticsearch</p>
+<p>widecolumn store列存数据库,大数据领域有用</p>
+<p>hbase</p>
+<p>hive</p>
+<p>sqlite</p>
+<p>oracle</p>
+<h3 id="notonlysqlnosql">非关系型数据库notonlysql=nosql<a class="headerlink" href="#notonlysqlnosql" title="Permanent link">&para;</a></h3>
+<h5 id="non-relational-database">non-relational-database<a class="headerlink" href="#non-relational-database" title="Permanent link">&para;</a></h5>
+<p>redis  微博  key-value形式</p>
+<p>mongoDB   文档型数据库</p>
+<h1 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h1>
+<p>SQL是结构化查询语言Structured Query Language.</p>
+<p>SQL语句分类</p>
+<p>DDL数据定义语言,负责数据库定义,数据库对象定义,由CREATE,ALTER和DROP三个语法组成</p>
+<p>DML数据操作语言,负责对数据库对象的操作,CRUD增删改查</p>
+<p>DCL数据控制语言,负责数据库权限访问控制,由GRANT和REVOKE两个指令组成</p>
+<p>TCL事务控制语言,负责处理==ACID==事务,支持commit,rollback指令</p>
+<p>SQL语句大小写不敏感  规范,要么全小写,要么关键字全大写</p>
+<p>SQL语句末尾应该使用分号结束.</p>
+<h3 id="dcl">DCL<a class="headerlink" href="#dcl" title="Permanent link">&para;</a></h3>
+<h5 id="grantrevoke">GRANT授权,REVOKE撤销<a class="headerlink" href="#grantrevoke" title="Permanent link">&para;</a></h5>
+<p>*为通配符,指代任意库或者任意表.<code>*.*</code>表示所有库的所有表;<code>employees.*</code>表示employees库下所有表</p>
+<p>%为通配符,他是SQL语句的通配符,匹配任意长度字符串.</p>
+<h3 id="ddl">DDL<a class="headerlink" href="#ddl" title="Permanent link">&para;</a></h3>
+<h5 id="_8">删除用户(慎用)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>DROP USER agsol;</p>
+<h5 id="_9">创建数据库<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<p>库是数据的集合,所有数据按照数据模型组织在数据库中.</p>
+<p>CHARACTER SET指定字符集,utf8md4是utf8的扩展,支持4字节的utf8mb4.需要MySQL5.5.3+</p>
+<p>COLLATE指定字符集的校对规则,用来做字符串的比较的</p>
+<h5 id="_10">删除数据库<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<p><code>DROP DATABASE IF EXISTS gogs;</code></p>
+<h5 id="_11">创建表<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<p>表分行和列,MySQL是行存数据库,数据是一行行存的,列必须固定有多少列.</p>
+<p>创建表如果不指定字符集,会默认使用数据库当前字符集</p>
+<p>行Row,也称记录Record,元组.</p>
+<p>列Column,也称为字段Field</p>
+<p>反引号标注的名称,被认为是非关键字</p>
+<h5 id="desc">DESC<a class="headerlink" href="#desc" title="Permanent link">&para;</a></h5>
+<p>查看列信息</p>
+<p>`{DESCRIBE|DESC} tbl_name[col_name|wild]</p>
+<h5 id="primary-key">PRIMARY KEY 主键<a class="headerlink" href="#primary-key" title="Permanent link">&para;</a></h5>
+<p>表中一列或者多列组成的唯一的key,也就是通过这一个或者多个列能唯一标识一条记录.</p>
+<p>主键的列不能包含空值null,主键往往设置为整型,长整型,且自增AUTO_INCREAMENT(内容增加而增加,减少而不动)</p>
+<p>表中可以没有主键,但是,一般表设计中,往往会有主键.</p>
+<h5 id="index">索引Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h5>
+<p>是一个类似字典的方式</p>
+<p>用空间换时间,显著提高查询效率.有可能会造成系统卡顿.</p>
+<p>可以对一列或者多列字段设定索引</p>
+<p>主键索引:主键会自动建立主键索引,主键本身就是为了快速定位唯一记录的.</p>
+<p>唯一键索引unique index:表中的索引列组成的索引必须唯一,但可以为空,非空值必须唯一.</p>
+<p>普通索引:没有唯一性要求,就是建了一个字典目录而已.</p>
+<p>普通索引重复不重复无所谓,A在第几行或第几行出现过</p>
+<p>唯一键索引.不能重复,A只在第几行出现过</p>
+<p>主键索引.不能重复,A只在第几行出现过</p>
+<h5 id="constrain">约束constrain<a class="headerlink" href="#constrain" title="Permanent link">&para;</a></h5>
+<ul>
+<li>unique约束 唯一键约束</li>
+</ul>
+<p>定义了唯一键索引,就定义了唯一键约束.</p>
+<ul>
+<li>primary key约束</li>
+</ul>
+<p>定义了主键,就定义了主键约束.</p>
+<ul>
+<li>外键约束 foreign key</li>
+</ul>
+<p>外键,在表B中的列,关联表A中的主键,表B中的列就是外键.</p>
+<p>不易过多使用</p>
+<p>如果B表中某一列关联表A中的主键,那么B键的这一列就是A的外键</p>
+<p>外键可设外键约束</p>
+<p>设置外键约束之后,若想删除表A主键中数据,需先删除表B中的引用,若表A想要更改主键中信息,需要先删除表B的相关记录后,才可以修改表A的主键.</p>
+<p>外键约束,为了保证数据完整性,一致性,杜绝数据冗余,数据讹误.</p>
+<h5 id="_12">补充:<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
+<p>​   1 . cascade方式
+​       在父表上update/delete记录时，同步update/delete掉子表的匹配记录 </p>
+<ol>
+<li>
+<p>set null方式
+   在父表上update/delete记录时，将子表上匹配记录的列设为null
+   要注意子表的外键列不能为not null  </p>
+</li>
+<li>
+<p>No action方式
+   如果子表中有匹配的记录,则不允许对父表对应候选键进行update/delete操作  </p>
+</li>
+<li>
+<p>Restrict方式
+   同no action, 都是立即检查外键约束  </p>
+</li>
+</ol>
+<h5 id="view">视图view<a class="headerlink" href="#view" title="Permanent link">&para;</a></h5>
+<p>视图,也称虚表,看起来像表,实际由查询语句生成的,可以通过视图进行CRUD操作</p>
+<p>作用:</p>
+<p>常用于查询,不要用于增删改</p>
+<p>简化操作,将复杂查询SQL语句定义为视图,可以简化查询.</p>
+<p>数据安全,视图可以只显示真实表的部分列,或计算后的结果,隐藏真是表的数据</p>
+<h1 id="_13">数据类型<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<h5 id="_14">数值类型<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<p>普通数字类型(除了decimal)加()比如int() 括号中数字只表示显示宽度,不表示限制宽度</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th>范围(有符号)</th>
+<th>范围(无符号)</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">TINYINT</td>
+<td align="center">1字节</td>
+<td>(-128，127)</td>
+<td>(0，255)</td>
+<td>小整数值,bool或boolean,就是tinyint,0表示假,非0表示真</td>
+</tr>
+<tr>
+<td align="center">SMALLINT</td>
+<td align="center">2 字节</td>
+<td>(-32 768，32 767)</td>
+<td>(0，65 535)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td align="center">MEDIUMINT</td>
+<td align="center">3 字节</td>
+<td>(-8 388 608，8 388 607)</td>
+<td>(0，16 777 215)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td align="center">INT或INTERGER</td>
+<td align="center">4 字节</td>
+<td>(-2 147 483 648，2 147 483 647)</td>
+<td>(0，4 294 967 295)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td align="center">BIGINT</td>
+<td align="center">8 字节</td>
+<td>(-9,223,372,036,854,775,808，9 223 372 036 854 775 807)</td>
+<td>(0，18 446 744 073 709 551 615)</td>
+<td>极大整数值</td>
+</tr>
+<tr>
+<td align="center">FLOAT</td>
+<td align="center">4 字节</td>
+<td>(-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)</td>
+<td>0，(1.175 494 351 E-38，3.402 823 466 E+38)</td>
+<td>单精度\n浮点数值</td>
+</tr>
+<tr>
+<td align="center">DOUBLE</td>
+<td align="center">8 字节</td>
+<td>(-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td>0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td>双精度\n浮点数值</td>
+</tr>
+<tr>
+<td align="center">DECIMAL</td>
+<td align="center">对DECIMAL(M,D) ，如果M&gt;D，为M+2否则为D+2</td>
+<td>依赖于M和D的值,等同于numeric</td>
+<td>依赖于M和D的值,m为有效数字,d为小数部分数字</td>
+<td>小数值</td>
+</tr>
+</tbody>
+</table>
+<p>定义数据类型时候加unsigned 表示无符号.</p>
+<h5 id="_15">日期和时间类型<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小(字节)</th>
+<th>范围</th>
+<th>格式</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">DATE</td>
+<td align="center">3</td>
+<td>1000-01-01/9999-12-31</td>
+<td>YYYY-MM-DD</td>
+<td>日期值</td>
+</tr>
+<tr>
+<td align="center">TIME</td>
+<td align="center">3</td>
+<td>'-838:59:59'/'838:59:59'</td>
+<td>HH:MM:SS</td>
+<td>时间值或持续时间</td>
+</tr>
+<tr>
+<td align="center">YEAR</td>
+<td align="center">1</td>
+<td>1901/2155</td>
+<td>YYYY</td>
+<td>年份值</td>
+</tr>
+<tr>
+<td align="center"><mark>DATETIME</mark></td>
+<td align="center">8</td>
+<td>1000-01-01 00:00:00/9999-12-31 23:59:59</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>混合日期和时间值,年月日时分秒</td>
+</tr>
+<tr>
+<td align="center">TIMESTAMP</td>
+<td align="center">4</td>
+<td>1970-01-01 00:00:00/2038,结束时间是第 2147483647 秒，北京时间 2038-1-19 11:14:07，格林尼治时间 2038年1月19日 凌晨 03:14:07</td>
+<td>YYYYMMDD HHMMSS</td>
+<td>混合日期和时间值，时间戳</td>
+</tr>
+</tbody>
+</table>
+<p>TIMESTAMP类型有专有的自动更新特性</p>
+<h5 id="_16">字符串类型<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">CHAR(M)</td>
+<td align="center">0-255字节</td>
+<td>定长字符串,右边会填充空格达到长度m.m表示字符长度.</td>
+</tr>
+<tr>
+<td align="center">VARCHAR(M)</td>
+<td align="center">0-65535 字节</td>
+<td>变长字符串,m表示最大列字符长度.但是不能突破行最大字节数65535,内存中会加1位存储.多一个字节表示用来表示变长.</td>
+</tr>
+<tr>
+<td align="center">TINYBLOB</td>
+<td align="center">0-255字节</td>
+<td>不超过 255 个字符的二进制字符串</td>
+</tr>
+<tr>
+<td align="center">TINYTEXT</td>
+<td align="center">0-255字节</td>
+<td>短文本字符串</td>
+</tr>
+<tr>
+<td align="center">BLOB</td>
+<td align="center">0-65 535字节</td>
+<td>大字节,二进制形式的长文本数据,最大长度为65535字节的blob列</td>
+</tr>
+<tr>
+<td align="center">TEXT</td>
+<td align="center">0-65 535字符</td>
+<td>大文本,长文本数据,最大长度为65535个字符</td>
+</tr>
+<tr>
+<td align="center">MEDIUMBLOB</td>
+<td align="center">0-16 777 215字节</td>
+<td>二进制形式的中等长度文本数据</td>
+</tr>
+<tr>
+<td align="center">MEDIUMTEXT</td>
+<td align="center">0-16 777 215字节</td>
+<td>中等长度文本数据</td>
+</tr>
+<tr>
+<td align="center">LONGBLOB</td>
+<td align="center">0-4 294 967 295字节</td>
+<td>二进制形式的极大文本数据</td>
+</tr>
+<tr>
+<td align="center">LONGTEXT</td>
+<td align="center">0-4 294 967 295字节</td>
+<td>极大文本数据</td>
+</tr>
+</tbody>
+</table>
+<p>LENGTH函数返回字节数,而char和varchar定义的M是字符数限制</p>
+<p>char可以将字符串变成等长的,空间换时间,效率略高;varchar变长,节省了空间.</p>
+<h5 id="enum">enum枚举类型<a class="headerlink" href="#enum" title="Permanent link">&para;</a></h5>
+<p>列出所有选项,加入内容只能使用枚举括号中的值</p>
+<div class="codehilite"><pre><span></span><code><span class="k">create</span> <span class="k">table</span> <span class="nf">t2</span> <span class="p">(</span>
+<span class="n">id</span> <span class="kt">int</span> <span class="kp">auto_increment</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
+    <span class="n">gender</span> <span class="kt">enum</span><span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">)</span>
+<span class="p">)</span> <span class="kp">charset</span> <span class="n">utf8</span><span class="p">;</span>
+</code></pre></div>
+
+<h1 id="_17">关系操作<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h1>
+<p>关系:在关系数据库中,关系就是二维表</p>
+<p>关系操作就是对表的操作</p>
+<p>选择(selection):又称为限制,是从关系中选择出满足给定条件的元组.</p>
+<p>投影(projection):在关系上投影就是选择出若干属性列组成新的关系.</p>
+<p>连接(join):将不同的两个关系连接成一个关系.</p>
+<h1 id="dml-crud">DML(数据操作语言)--CRUD增删改查<a class="headerlink" href="#dml-crud" title="Permanent link">&para;</a></h1>
+<h3 id="insert">INSERT 语句(可批量操作)<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h3>
+<p>INSERT INTO table_name(表名)(col_name(列名),...) VALUES (value1,,,,):</p>
+<p>向表中插入一行数据,自增字段,缺省值字段,可谓空字段不写</p>
+<p>INSERT INTO table_name SELECT,,,:</p>
+<p>将select查询的结果插入到表中,将select查询到的结果放入表中,要求前后数量一致</p>
+<p>INSERT INTO table_name(col_name1,,,) VALUES (value1,...) ON DUPLICATE KEY UPDATE</p>
+<p>col_name1 = value1,...:</p>
+<p>这条语句的意思,就是主键不在新增记录,主键就在更新部分字段,不存在就更新,存在就更改</p>
+<p>如果主键冲突,唯一键冲突就执行update后的设置.</p>
+<p>INSERT IGNORE INTO table_name(col_name,...) VALUES (value1,...):</p>
+<p>如果主键冲突,唯一键冲突就忽略错误,返回一个警告</p>
+<h3 id="alter-table">alter table 表名 +方法语句<a class="headerlink" href="#alter-table" title="Permanent link">&para;</a></h3>
+<p>可加定义时的所有语句.</p>
+<h3 id="update">UPDATE语句<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
+<p>UPDATE[IGNORE] tbl_name</p>
+<p>​   SET col_name1 = expr1[,col_name2 = expr2...]</p>
+<p>​   [WHERE where_definition]</p>
+<p>IGNORE意义同INSERT语句</p>
+<p>UPDATE reg SET name= 'tom' WHERE id = 5: </p>
+<h3 id="delete">DELETE语句<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
+<p>DELERE [IGNORE] FROM tbl_name</p>
+<p>​   [WHERE where_definition]</p>
+<p>删除符合条件的记录</p>
+<h3 id="select">SELECT语句<a class="headerlink" href="#select" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span>
+    <span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span>
+    <span class="n">select_expr</span><span class="p">,...</span>
+    <span class="p">[</span><span class="k">FROM</span> <span class="n">table_references</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">WHERE</span> <span class="n">where_definition</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">GROUP</span> <span class="k">BY</span> <span class="err">{</span><span class="n">col_name</span><span class="o">|</span><span class="n">expr</span><span class="o">|</span><span class="n">position</span><span class="err">}</span>
+       <span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">],...[</span><span class="k">WITH</span> <span class="n">ROLLUP</span><span class="p">]]</span>
+    <span class="p">[</span><span class="k">HAVING</span> <span class="n">where_definition</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="err">{</span><span class="n">col_name</span><span class="o">|</span><span class="n">expr</span><span class="o">|</span><span class="n">position</span><span class="err">}</span>
+       <span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">],...]</span>
+    <span class="p">[</span><span class="k">LIMIT</span> <span class="err">{</span><span class="p">[</span><span class="n">office</span><span class="p">,]</span><span class="n">row_count</span><span class="o">|</span><span class="n">row_count</span> <span class="n">OFFSET</span> <span class="n">offset</span><span class="err">}</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">FOR</span> <span class="k">UPDATE</span><span class="o">|</span><span class="k">LOCK</span> <span class="k">IN</span> <span class="n">SHARE</span> <span class="n">MODE</span><span class="p">]</span>
+</code></pre></div>
+
+<h3 id="for-update">FOR UPDATE 会把行进行写锁定,就是排它锁.<a class="headerlink" href="#for-update" title="Permanent link">&para;</a></h3>
+<p>查询,查询的结果称为结果集recordset</p>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">查询所有</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+<span class="o">--</span><span class="err">字符串合并加别名</span>
+<span class="k">SELECT</span> <span class="n">emp_no</span> <span class="p">,</span><span class="nf">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">last_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+<span class="o">--</span><span class="err">数字相加</span><span class="p">,</span><span class="err">字符串默认为</span><span class="mi">0</span>
+<span class="k">SELECT</span> <span class="n">emp_no</span> <span class="p">,</span><span class="n">first_no</span> <span class="o">+</span> <span class="n">last_no</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+<span class="o">--</span><span class="k">LIMIT</span> <span class="err">语句</span><span class="p">,</span>
+<span class="o">--</span><span class="k">limit</span> <span class="mi">5</span><span class="err">表示只显示</span><span class="mi">5</span><span class="err">行</span><span class="p">,</span>
+<span class="o">--</span><span class="n">offset表示偏移量</span><span class="p">,</span><span class="err">值向后偏移几位</span>
+<span class="c1">-- LIMIT 5 OFFSET 2;也可以写成LIMIT 2,5</span>
+<span class="k">SELECT</span> <span class="n">emp_no</span> <span class="p">,</span><span class="nf">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">last_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">LIMIT</span> <span class="mi">5</span> <span class="n">OFFSET</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="where">WHERE 语句<a class="headerlink" href="#where" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">=</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">&lt;&gt;,!=</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">&lt;,&gt;,&lt;=,&gt;=</td>
+<td align="center">本意</td>
+</tr>
+<tr>
+<td align="center">BETWEEN</td>
+<td align="center">在某个范围内,between a and b 等价于[a,b] 闭区间</td>
+</tr>
+<tr>
+<td align="center">LIKE</td>
+<td align="center">字符串模式匹配,%表示任意多个字符,_表示一个字符</td>
+</tr>
+<tr>
+<td align="center">IN</td>
+<td align="center">指定针对某个列的多个可能值</td>
+</tr>
+<tr>
+<td align="center">AND</td>
+<td align="center">与</td>
+</tr>
+<tr>
+<td align="center">OR</td>
+<td align="center">或</td>
+</tr>
+</tbody>
+</table>
+<p>注意:如果很多表达式需要使用AND,OR计算逻辑表达式的值的时候,会产生结合律的问题,使用小括号来避免产生错误.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">条件模糊查询</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="n">WHRER</span> <span class="n">emp_no</span> <span class="o">&lt;</span> <span class="mi">10015</span> <span class="k">and</span> <span class="n">last_name</span> <span class="k">LIKE</span> <span class="s1">&#39;P%&#39;</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="n">WHRER</span> <span class="n">emp_no</span> <span class="o">&lt;</span> <span class="mi">10015</span> <span class="k">and</span> <span class="n">last_name</span> <span class="k">LIKE</span> <span class="s1">&#39;%P%&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="order-by">ORDER BY 子句<a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h3>
+<p>对查询结果进行排序,可以升序ASC(默认升序),降序DESC.</p>
+<p>BY后可写多个函数要求,从前到后依次满足执行</p>
+<p>5.7之后要与聚合函数连用</p>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">降序</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span> <span class="k">WHERE</span> <span class="n">emp_no</span> <span class="k">in</span> <span class="p">(</span><span class="mi">10001</span><span class="p">,</span><span class="mi">10002</span><span class="p">,</span><span class="mi">10010</span><span class="p">)</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">emp_no</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="distinct">DISTINCT 不返回重复记录(相当于去重)<a class="headerlink" href="#distinct" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="k">DISTINCT</span> <span class="err">使用</span>
+<span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">dept_no</span> <span class="n">form</span> <span class="n">dept_emp</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="_18">聚合函数<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">COUNT(expr)</td>
+<td align="center">返回记录中记录的数据,如果指定列,则返回非NULL值的行数.()中可加*表示所有</td>
+</tr>
+<tr>
+<td align="center">COUNT(DISTINCT expr[,expr])</td>
+<td align="center">返回不重复非NULL值的行数</td>
+</tr>
+<tr>
+<td align="center">AVG([DISTINCT]expr)</td>
+<td align="center">返回平均值,[返回不重复值的平均值]</td>
+</tr>
+<tr>
+<td align="center">MIN(expr),MAX(expr)</td>
+<td align="center">最小值,最大值</td>
+</tr>
+<tr>
+<td align="center">SUM([DISTINCT]expr)</td>
+<td align="center">求和,[返回不重复值的和]</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="n">f1相当于创建了别名</span>
+<span class="k">SELECT</span> <span class="nf">sum</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="n">f1</span> <span class="k">FROM</span> <span class="n">salaries</span><span class="p">;</span>
+</code></pre></div>
+
+<p>因为主键中不可以出现NULL,所以使用count函数建议使用主键</p>
+<h3 id="_19">分组查询<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>使用GROUP BY 子句,如果有条件,使用HAVING 子句过滤分组,聚合过的结果(类似where).where先执行,group by如果与where同时出现,放在where后面</p>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">聚合</span>
+<span class="k">SELECT</span> <span class="n">emp_no</span> <span class="p">,</span><span class="nf">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span><span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="n">sal_avg</span> <span class="k">from</span> <span class="n">salaries</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span> <span class="k">HAVING</span> <span class="n">sal_avg</span> <span class="o">&gt;</span> <span class="mi">60000</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="_20">子查询<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>查询语句可以嵌套,内部查询就是子查询.</p>
+<p>子查询必须在一个小括号中.</p>
+<p>子查询中不能使用ORDER BY </p>
+<p>两种常用场景</p>
+<ol>
+<li>在in语句中</li>
+<li>作为一张临时表给其他人用</li>
+</ol>
+<h3 id="join">连接JOIN<a class="headerlink" href="#join" title="Permanent link">&para;</a></h3>
+<h5 id="cross-join">交叉连接cross join<a class="headerlink" href="#cross-join" title="Permanent link">&para;</a></h5>
+<p>笛卡尔乘积,全部交叉,在MySQL中,cross join从语法上说于inner join等同,数据量大,慎用</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">CROSS</span> <span class="k">JOIN</span> <span class="n">salaries</span>
+</code></pre></div>
+
+<h5 id="_21">内连接<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h5>
+<p>inner join,省略为join</p>
+<ul>
+<li>等值连接,只选默写field相等的元组(行),使用ON限定关联的结果.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="k">INNER</span> <span class="k">JOIN</span> <span class="k">ON</span> <span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="o">=</span> <span class="n">salaries</span><span class="p">.</span><span class="n">emp_no</span><span class="p">;</span>
+</code></pre></div>
+
+<ul>
+<li>自然连接,是一种特殊的等值连接,会自动去掉重复的列.用的少</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">自然连接</span><span class="p">,</span><span class="err">去掉了重复列</span><span class="p">,</span><span class="err">且自行使用</span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="o">=</span> <span class="n">salaries</span><span class="p">.</span><span class="n">emp_no的条件</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">from</span> <span class="n">employees</span> <span class="n">NATRUAL</span> <span class="k">JOIN</span> <span class="n">salaries</span><span class="p">;</span>
+</code></pre></div>
+
+<h5 id="_22">外连接<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+<p>outer join,可以省略为join</p>
+<p>分为左外连接,即左连接;右外连接,即右连接;全外连接</p>
+<div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="err">左连接</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">employees</span> <span class="nn">LEFT</span> <span class="nn">JOIN</span> <span class="nn">salaries</span> <span class="nn">ON</span> <span class="nn">employees.emp_no</span><span class="o">=</span> <span class="n">salaries</span><span class="o">.</span><span class="n">emo_no</span><span class="p">;</span>
+<span class="o">--</span><span class="err">右连接</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">employees</span> <span class="nn">RIGHT</span> <span class="nn">JOIN</span> <span class="nn">salaries</span> <span class="nn">ON</span> <span class="nn">employees.emp_no</span><span class="o">=</span> <span class="n">salaries</span><span class="o">.</span><span class="n">emo_no</span><span class="p">;</span>
+<span class="o">--</span><span class="err">这个右连接等价于上面的左连接</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">salaries</span> <span class="nn">RIGHT</span> <span class="nn">JOIN</span> <span class="nn">employees</span> <span class="nn">ON</span> <span class="nn">employees.emp_no</span><span class="o">=</span> <span class="n">salaries</span><span class="o">.</span><span class="n">emo_no</span><span class="p">;</span>
+</code></pre></div>
+
+<p>左外连接,右外连接</p>
+<p>看表的数据的方向,谁是主表,谁的所有数据都显示,匹配不上的显示null</p>
+<h5 id="_23">自连接<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h5>
+<p>表自己和自己连接</p>
+<p>本质上是把一张表当成两张表来用</p>
+<div class="codehilite"><pre><span></span><code><span class="k">select</span> <span class="n">manager</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> <span class="n">emp</span> <span class="n">manager</span><span class="p">,</span><span class="n">emp</span> <span class="n">worker</span> <span class="k">where</span> <span class="n">manaer</span><span class="p">.</span><span class="n">empno</span><span class="o">=</span><span class="n">worker</span><span class="p">.</span><span class="n">mgr</span> <span class="k">and</span> <span class="n">worker</span><span class="p">.</span><span class="n">empno</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">manager</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> <span class="n">emp</span> <span class="n">manager</span> <span class="k">inner</span> <span class="k">join</span> <span class="n">emp</span> <span class="n">worker</span> <span class="k">on</span> <span class="n">manaer</span><span class="p">.</span><span class="n">empno</span><span class="o">=</span><span class="n">worker</span><span class="p">.</span><span class="n">mgr</span> <span class="k">where</span>
+<span class="n">worker</span><span class="p">.</span><span class="n">empno</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+
+<h1 id="transaction">事务Transaction<a class="headerlink" href="#transaction" title="Permanent link">&para;</a></h1>
+<h5 id="_24">存储引擎<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h5>
+<p>InnoDB引擎,支持事务,支持外键 ,支持行锁(5.5之后默认),在存在修改操作的时候使用</p>
+<p>MyIsam不支持事务 ,不支持外键,支持表锁(5.5之前默认),在查询,插入操作多的时候使用</p>
+<h5 id="_25">事务<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h5>
+<p>由若干条语句组成,指的是要做的一系列操作.</p>
+<h5 id="_26">特性<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h5>
+<p>关系型数据库中支持事务,必须支持其四个属性(ACID);</p>
+<table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">原子性(atomicity)</td>
+<td align="center">一个事务是一个不可分割的工作单位,事务中包括的所有操作要么全部做完,要么什么都不做</td>
+</tr>
+<tr>
+<td align="center">一致性(consistency)</td>
+<td align="center">事务必须是使数据库从一个一致性状态变到另一个一致性状态,一致性与原原子性是密切相关的</td>
+</tr>
+<tr>
+<td align="center">隔离性(isolation)</td>
+<td align="center">一个事务的执行不能被其他事务干扰.即一个事务内部的操作及使用的数据对并发的其他事务是隔离的,并发执行的各个事务之间不能互相干扰</td>
+</tr>
+<tr>
+<td align="center">持久性(durablilty)</td>
+<td align="center">持久性也称永久性(permanence),它对数据库中的数据的改变就是应该是永久性的.接下来的其他操作或故障不应该对其有任何影响.</td>
+</tr>
+</tbody>
+</table>
+<p>原子性:要求事务中的所有操作,不可分割,不能做了一部分操作,还剩一部分操作;</p>
+<p>一致性,多个事务并行执行的结果,应该和事务排队执行的结果一致.如果事务的并行执行和多项程读写共享资源一样不可预期,就不能保证一致性.</p>
+<p>隔离性:就是指多个事务访问共同的数据,应该互不干扰.隔离性,指的是究竟再一个事务处理期间,其他事务能不能访问的问题.</p>
+<p>持久性:就是事务提交后,数据不能丢失.</p>
+<h3 id="mysql">MySQL隔离级别<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+<p>隔离性不好,事务的操作就会相互影响,带来不同严重程度的后果.</p>
+<p>隔离性不好带来的问题:</p>
+<ol>
+<li>更新丢失 lost update</li>
+</ol>
+<p>事务A和B,初始值10,A要加1,B要减1,结果是11,看上去就是A的更新消失了</p>
+<ol>
+<li>脏读</li>
+</ol>
+<p>事务A和B,事务B读到了事务A未提交的数据(一个中间值)</p>
+<ol>
+<li>不可重复读unrepeatable read</li>
+</ol>
+<p>事务A在事务执行中,相同的查信语句得到了不同的结果,不能保证同一条查询语句重复读相同的结果就是不可以重复读.</p>
+<ol>
+<li>幻读phantom read</li>
+</ol>
+<p>事务A中同一个查询要进行多次,事务B插入数据,导致A返回不同的结果集.</p>
+<p>数据集有记录增加了,可以看作是增加了记录的不可重复读.</p>
+<p>从而引出隔离级别:</p>
+<p>隔离级别由低到高,</p>
+<table>
+<thead>
+<tr>
+<th align="center">隔离级别</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">READ UNCOMMINTTED</td>
+<td align="center">读取到未提交的数据</td>
+</tr>
+<tr>
+<td align="center">READ COMMITTED</td>
+<td align="center">读已经提交的数据,ORACLE默认隔离级别.</td>
+</tr>
+<tr>
+<td align="center">REPEATALBE READ</td>
+<td align="center">可以重复读,MySQL的默认隔离级别.</td>
+</tr>
+<tr>
+<td align="center">SERIALIZABLE</td>
+<td align="center">可串行化.事务间完全隔离,事务不能并发,只能串行执行</td>
+</tr>
+</tbody>
+</table>
+<p>隔离级别越高,串行化越高,数据库执行效率低,当前事务处理的中间结果对其它事务不可见程度越高.</p>
+<p>隔离级别越低,并行度越高,性能越高</p>
+<h3 id="_27">事务语法<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>开始,START TRANSACTION或BENGIN开始一个事务,START TRANSACTION是标准的SQL语法.</p>
+<p>使用COMMIT提交事务后,变成称为永久变更.</p>
+<p>回滚,ROLLBACK可以在提交事务前,回滚变更,事务中的操作就如同没有发生过一样(原子性).</p>
+<p>提交,SET AUTOCOMMIT语句可以禁用或启用默认的autocommit模式,用于当前连接.SET AUTOCOMMIT = 0 禁用自动提交事务,如果开启自动提交,每有一个修改表的语句执行后,会立即把更新存储到磁盘.</p>
+<h5 id="_28">数据库和数据仓库的区别<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h5>
+<p>数据仓库数据更海量</p>
+<p>数据库存储在线交易数据OLTP;数据仓库存储历史数据用于分析OLAP</p>
+<p>数据库支持在线业务,需要怕闹翻增删改查;数据仓库一把囤积历史数据支持用于分析的SQL,一般不建议删改.</p>
+<h3 id="_29">其他概念<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p>delimiter //   更换换界符</p>
+<h5 id="_30">视图<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="err">增加视图：</span>
+<span class="k">create</span> <span class="n">view</span> <span class="err">视图名</span> <span class="k">as</span> <span class="n">SQL语句</span><span class="p">;</span>
+<span class="err">删除：</span> 
+<span class="k">drop</span> <span class="n">view</span> <span class="n">v1</span><span class="p">;</span>
+
+<span class="err">例子：</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">user</span> <span class="k">where</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;zekai&#39;</span><span class="p">;</span>
+<span class="o">+----+-------+--------+</span>
+<span class="o">|</span> <span class="n">id</span> <span class="o">|</span> <span class="n">name</span>  <span class="o">|</span> <span class="n">salary</span> <span class="o">|</span>
+<span class="o">+----+-------+--------+</span>
+<span class="o">|</span>  <span class="mi">1</span> <span class="o">|</span> <span class="n">zekai</span> <span class="o">|</span>    <span class="mi">900</span> <span class="o">|</span>
+<span class="o">+----+-------+--------+</span>
+<span class="mi">1</span> <span class="n">row</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="n">view</span> <span class="n">v1</span> <span class="k">as</span> <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">user</span> <span class="k">where</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;zekai&#39;</span><span class="p">;</span>
+<span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">0</span> <span class="n">rows</span> <span class="nf">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">07</span> <span class="n">sec</span><span class="p">)</span>
+
+<span class="n">mysql</span><span class="o">&gt;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="kp">tables</span><span class="p">;</span>
+<span class="o">+-----------------+</span>
+<span class="o">|</span> <span class="n">Tables_in_test3</span> <span class="o">|</span>
+<span class="o">+-----------------+</span>
+<span class="o">|</span> <span class="n">user</span>            <span class="o">|</span>
+<span class="o">|</span> <span class="n">v1</span>              <span class="o">|</span>
+<span class="o">+-----------------+</span>
+<span class="mi">2</span> <span class="n">rows</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">v1</span><span class="p">;</span>
+<span class="o">+----+-------+--------+</span>
+<span class="o">|</span> <span class="n">id</span> <span class="o">|</span> <span class="n">name</span>  <span class="o">|</span> <span class="n">salary</span> <span class="o">|</span>
+<span class="o">+----+-------+--------+</span>
+<span class="o">|</span>  <span class="mi">1</span> <span class="o">|</span> <span class="n">zekai</span> <span class="o">|</span>    <span class="mi">900</span> <span class="o">|</span>
+<span class="o">+----+-------+--------+</span>
+<span class="mi">1</span> <span class="n">row</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+</code></pre></div>
+
+<p>就是将一条sql语句赋值给一个view对象,视图会占数据库资源,慎用</p>
+<h5 id="cursor">游标cursor<a class="headerlink" href="#cursor" title="Permanent link">&para;</a></h5>
+<p>可以将游标当作一个指针,指向结果集中的某一行.</p>
+<h5 id="_31">存储过程<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h5>
+<p>存储过程(stored procedure),数据库系统中,一段完成特定功能的SQL语句.编写程类似函数的方式,可以传参并调用.支持流程控制语句.相当于创建一个函数.</p>
+<h5 id="_32">触发器<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h5>
+<p>触发器(trigger),由事件触发的特殊的存储过程,例如insert数据时触发.触发器功能强大,但是会有性能问题.</p>
+<p>这两种,数据库高级内容,很少用.</p>
+<h5 id="_33">数据库的备份<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h5>
+<p>为了将重要的数据保存下来</p>
+<div class="codehilite"><pre><span></span><code><span class="err">用法：</span>
+<span class="c1">#语法：</span>
+<span class="c1"># mysqldump -h 服务器 -u用户名 -p密码 数据库名 表名,  表名,.... &gt; aaa.sql</span>
+
+<span class="c1">#示例：</span>
+<span class="c1">#单库备份</span>
+<span class="n">mysqldump</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p123</span> <span class="n">db1</span> <span class="o">&gt;</span> <span class="n">db1</span><span class="p">.</span><span class="k">sql</span>
+<span class="n">mysqldump</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p123</span> <span class="n">db1</span> <span class="n">table1</span> <span class="n">table2</span> <span class="o">&gt;</span> <span class="n">db1</span><span class="o">-</span><span class="n">table1</span><span class="o">-</span><span class="n">table2</span><span class="p">.</span><span class="k">sql</span>
+
+<span class="c1">#多库备份</span>
+<span class="n">mysqldump</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p123</span> <span class="o">--</span><span class="k">databases</span> <span class="n">db1</span> <span class="n">db2</span> <span class="n">mysql</span> <span class="n">db3</span> <span class="o">&gt;</span> <span class="n">db1_db2_mysql_db3</span><span class="p">.</span><span class="k">sql</span>
+
+<span class="c1">#备份所有库</span>
+<span class="n">mysqldump</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p123</span> <span class="o">--</span><span class="k">all</span><span class="o">-</span><span class="k">databases</span> <span class="o">&gt;</span> <span class="k">all</span><span class="p">.</span><span class="k">sql</span>
+
+<span class="err">重新导入：</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">source</span> <span class="n">D</span><span class="p">:</span><span class="o">/</span><span class="n">test3</span><span class="p">.</span><span class="k">sql</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="_34">数据库的级联操作<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>当有了**外键约束**的时候，必须先修改或删除副表中的所有关联数据，才能修改或删除主表！但是，我们希望直接修改或删除主表数据，从而影响副表数据。可以使用级联操作实现</p>
+<p>级联修改： on updata cascade</p>
+<p>级联删除： on 　delete cascade</p>
+<div class="codehilite"><pre><span></span><code><span class="k">create</span> <span class="k">table</span> <span class="nf">stu</span><span class="p">(</span>
+<span class="n">sid</span> <span class="kt">int</span> <span class="k">UNSIGNED</span> <span class="k">primary</span> <span class="k">key</span> <span class="kp">auto_increment</span><span class="p">,</span>
+<span class="n">name</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">not</span> <span class="no">null</span><span class="p">)</span>
+<span class="n">TYPE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="kp">charset</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+
+<span class="k">create</span> <span class="k">table</span> <span class="nf">sc</span><span class="p">(</span>
+<span class="n">scid</span> <span class="kt">int</span> <span class="k">UNSIGNED</span> <span class="k">primary</span> <span class="k">key</span> <span class="kp">auto_increment</span><span class="p">,</span>
+<span class="n">sid</span> <span class="kt">int</span> <span class="k">UNSIGNED</span> <span class="k">not</span> <span class="no">null</span><span class="p">,</span>
+<span class="n">score</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+<span class="k">index</span> <span class="p">(</span><span class="n">sid</span><span class="p">),</span>   <span class="o">--</span><span class="err">外键必须加索引</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">sid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nf">stu</span><span class="p">(</span><span class="n">sid</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">)</span>
+<span class="n">TYPE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="kp">charset</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span>
+</code></pre></div>
+
+<h1 id="_35">数据库三大范式<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h1>
+<p>1、第一范式（1NF）</p>
+<p>所谓第一范式（1NF）是指在关系模型中，对于添加的一个规范要求，所有的域都应该是原子性的，即数据库表的每一列都是不可分割的原子数据项，而不能是集合，数组，记录等非原子数据项。</p>
+<p>即实体中的某个属性有多个值时，必须拆分为不同的属性。在符合第一范式（1NF）表中的每个域值只能是实体的一个属性或一个属性的一部分。简而言之，第一范式就是无重复的域。</p>
+<p>说明：在任何一个关系数据库中，第一范式（1NF）是对关系模式的设计基本要求，一般设计中都必须满足第一范式（1NF）。</p>
+<p>不过有些关系模型中突破了1NF的限制，这种称为非1NF的关系模型。换句话说，是否必须满足1NF的最低要求，主要依赖于所使用的关系模型。</p>
+<p>2、第二范式（2NF）</p>
+<p>在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖）</p>
+<p>第二范式（2NF）是在第一范式（1NF）的基础上建立起来的，即满足第二范式（2NF）必须先满足第一范式（1NF）。</p>
+<p>第二范式（2NF）要求数据库表中的每个实例或记录必须可以被唯一地区分。选取一个能区分每个实体的属性或属性组，作为实体的唯一标识。</p>
+<p>例如在员工表中的身份证号码即可实现每个一员工的区分，该身份证号码即为候选键，任何一个候选键都可以被选作主键。</p>
+<p>在找不到候选键时，可额外增加属性以实现区分，如果在员工关系中，没有对其身份证号进行存储，而姓名可能会在数据库运行的某个时间重复。</p>
+<p>无法区分出实体时，设计辟如ID等不重复的编号以实现区分，被添加的编号或ID选作主键。（该主键的添加是在ER设计时添加，不是建库时随意添加）</p>
+<p>第二范式（2NF）要求实体的属性完全依赖于主关键字。</p>
+<p>所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。</p>
+<p>为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。简而言之，第二范式就是在第一范式的基础上属性完全依赖于主键。</p>
+<p>3、第三范式（3NF）</p>
+<p>在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）</p>
+<p>第三范式（3NF）是第二范式（2NF）的一个子集，即满足第三范式（3NF）必须满足第二范式（2NF）。</p>
+<p>简而言之，第三范式（3NF）要求一个关系中不包含已在其它关系已包含的非主关键字信息。例如，存在一个部门信息表，其中每个部门有部门编号（dept_id）、部门名称、部门简介等信息。</p>
+<p>那么在员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息再加入员工信息表中。</p>
+<p>如果不存在部门信息表，则根据第三范式（3NF）也应该构建它，否则就会有大量的数据冗余。</p>
+<p>简而言之，第三范式就是属性不依赖于其它非主属性，也就是在满足2NF的基础上，任何非主属性不得传递依赖于主属性。</p>
+<p><img alt="" src="D:\learning\笔记\图片\Python\三大范式.jpg" /></p>
+<p>目前关系数据库有六种范式：第一范式（1NF）、第二范式（2NF）、第三范式（3NF）、巴斯-科德范式（BCNF）、第四范式(4NF）和第五范式（5NF，又称完美范式）。</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Python中使用Redis
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                库表值的操作
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

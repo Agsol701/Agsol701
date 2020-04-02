@@ -1,0 +1,2657 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>反射 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                反射
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%BF%9B%E5%88%B6%E5%8F%8A%E5%8E%9F%E7%A0%81/" title="进制及原码" class="md-nav__link">
+      进制及原码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5/" title="输入语句" class="md-nav__link">
+      输入语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        反射
+      </label>
+    
+    <a href="./" title="反射" class="md-nav__link md-nav__link--active">
+      反射
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    变量的内在机制
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../json/" title="json" class="md-nav__link">
+      json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="django之视图层" class="md-nav__link">
+      django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="django之模板层" class="md-nav__link">
+      django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM/" title="django之ORM" class="md-nav__link">
+      django之ORM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="django之分组查询" class="md-nav__link">
+      django之分组查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="django之ORM优化查询" class="md-nav__link">
+      django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%92%8Cajax/" title="django和ajax" class="md-nav__link">
+      django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%BA%8F%E5%88%97%E5%8C%96%E6%A8%A1%E5%9D%97/" title="django序列化模块" class="md-nav__link">
+      django序列化模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-nav__link">
+      多对多三种创建方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bforms%E7%BB%84%E4%BB%B6/" title="django之forms组件" class="md-nav__link">
+      django之forms组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-nav__link">
+      django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="django中间件" class="md-nav__link">
+      django中间件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      drf
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        drf
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drf/Restful%E8%A7%84%E8%8C%83/" title="Restful规范" class="md-nav__link">
+      Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf中的APIView请求生命周期.md" title="drf中的APIView请求生命周期" class="md-nav__link">
+      drf中的APIView请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件.md" title="drf序列化组件" class="md-nav__link">
+      drf序列化组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多表操作.md" title="多表操作" class="md-nav__link">
+      多表操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件实现十大接口.md" title="drf序列化组件实现十大接口" class="md-nav__link">
+      drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/视图家族.md" title="视图家族" class="md-nav__link">
+      视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/jwt认证.md" title="jwt认证" class="md-nav__link">
+      jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大认证.md" title="三大认证" class="md-nav__link">
+      三大认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多方式登录.md" title="多方式登录" class="md-nav__link">
+      多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大组件源码分析.md" title="三大组件源码分析" class="md-nav__link">
+      三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/CGI%2CwSGI%2CuWSGI%2Cuwsgi/" title="CGI,wSGI,uWSGI,uwsgi" class="md-nav__link">
+      CGI,wSGI,uWSGI,uwsgi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Redis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Redis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Redis/" title="Redis" class="md-nav__link">
+      Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Golang%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Golang中使用Redis" class="md-nav__link">
+      Golang中使用Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-nav__link">
+      Python中使用Redis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      MySQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        MySQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础" class="md-nav__link">
+      数据库基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-nav__link">
+      库表值的操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/pymysql/" title="pymysql" class="md-nav__link">
+      pymysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/MySQL%E4%B8%BB%E4%BB%8E%E6%90%AD%E5%BB%BA/" title="MySQL主从搭建" class="md-nav__link">
+      MySQL主从搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MongoDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MongoDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MongoDB/MongoDB%E5%AE%89%E8%A3%85/" title="MongoDB安装" class="md-nav__link">
+      MongoDB安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%89%E8%A3%85/" title="Docker简介与安装" class="md-nav__link">
+      Docker简介与安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E9%95%9C%E5%83%8F/" title="Docker镜像" class="md-nav__link">
+      Docker镜像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%AE%B9%E5%99%A8/" title="Docker容器" class="md-nav__link">
+      Docker容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%85%B6%E4%BB%96/" title="Docker其他" class="md-nav__link">
+      Docker其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/" title="树" class="md-nav__link">
+      树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" title="稀疏数组" class="md-nav__link">
+      稀疏数组
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    变量的内在机制
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#_1">反射</a><ul>
+<li><a href="#_2">基本介绍</a></li>
+<li><a href="#_3">变量的内在机制</a></li>
+</ul>
+</li>
+<li><a href="#reflect">reflect包</a><ul>
+<li><a href="#typeof">TypeOf</a></li>
+<li><a href="#type-nametype-kind">type name和type kind</a></li>
+<li><a href="#valueof">ValueOf</a></li>
+<li><a href="#_4">通过反射获取值</a></li>
+<li><a href="#_5">通过反射设置变量的值</a></li>
+</ul>
+</li>
+<li><a href="#isnilisvalid">isNil()和isValid()</a><ul>
+<li><a href="#isnil">isNil()</a></li>
+<li><a href="#isvalid">isValid()</a><ul>
+<li><a href="#_6">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_7">结构体的反射</a><ul>
+<li><a href="#_8">与结构体相关的方法</a></li>
+<li><a href="#structfield">StructField类型</a></li>
+</ul>
+</li>
+<li><a href="#_9">反射的优缺点</a></li>
+<li><a href="#_10">注意</a></li>
+<li><a href="#_11">应用</a></li>
+</ul>
+</div>
+<h1 id="_1">反射<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">基本介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>反射是指在==程序运行期==本身进行访问和修改的能力.程序在编译时,变量被转换为内存地址,变量名不会被编译器写到可执行部分,所以,在程序运行时,程序无法获取自身的信息.</p>
+</li>
+<li>
+<p>支持反射的语言可以在程序编译期将变量的反射信息,包括字段名称,类型信息,结构体信息等整合到可执行文件中.并给程序提供接口访问反射信息,这样就可以在程序运行期间获取类型的反射信息,且有能力修改.</p>
+</li>
+<li>
+<p>反射可以在运行时动态的获取变量的各种信息(变量的类型type,类别kind)</p>
+</li>
+<li>
+<p>如果是结构体变量,还可以获取到结构体本身的信息,(包括字段,方法)</p>
+</li>
+<li>
+<p>通过反射,还可以修改变量的值,可以调用关联的方法</p>
+</li>
+<li>
+<p>Go程序在运行期使用reflect包访问程序的反射信息。</p>
+</li>
+<li>
+<p>变量,interface{}和reflect.Value是可以相互转换的,这在实际开发中,经常用到.</p>
+</li>
+</ol>
+<p><img alt="" src="/img/Go/反射转换图.jpg" /></p>
+<ol>
+<li>
+<p>interface转reflect.Value</p>
+<p>rVal := reflect.valueOf(x)</p>
+</li>
+<li>
+<p>reflect.Value转interface{}</p>
+<p>iVal := rVal.Interface()</p>
+</li>
+<li>
+<p>interface{}转原来的变量类型</p>
+<p>类型断言,强制转换</p>
+<p>v := iVal.(Stu)</p>
+</li>
+</ol>
+<h3 id="_3">变量的内在机制<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Go中的变量分为两部分</p>
+<ul>
+<li>类型信息:预先定义好的元信息.</li>
+<li>值信息:程序运行过程中可以动态变化.</li>
+</ul>
+<h1 id="reflect">reflect包<a class="headerlink" href="#reflect" title="Permanent link">&para;</a></h1>
+<p>reflect包实现了运行时的反射.</p>
+<p>在Go语言的反射机制中，任何接口值都由是<code>一个具体类型</code>和<code>具体类型的值</code>两部分组成的.在Go语言中反射的相关功能由内置的reflect包提供，任意接口值在反射中都可以理解为由<code>reflect.Type</code>和<code>reflect.Value</code>两部分组成，并且reflect包提供了<code>reflect.TypeOf</code>和<code>reflect.ValueOf</code>两个函数来获取任意对象的Value和Type。</p>
+<h3 id="typeof">TypeOf<a class="headerlink" href="#typeof" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">Type</span> <span class="kd">interface</span> <span class="p">{</span>
+
+    <span class="c1">// Align returns the alignment in bytes of a value of</span>
+    <span class="c1">// this type when allocated in memory.</span>
+    <span class="nx">Align</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// FieldAlign returns the alignment in bytes of a value of</span>
+    <span class="c1">// this type when used as a field in a struct.</span>
+    <span class="nx">FieldAlign</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// Method returns the i&#39;th method in the type&#39;s method set.</span>
+    <span class="c1">// It panics if i is not in the range [0, NumMethod()).</span>
+    <span class="c1">//</span>
+    <span class="c1">// For a non-interface type T or *T, the returned Method&#39;s Type and Func</span>
+    <span class="c1">// fields describe a function whose first argument is the receiver.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For an interface type, the returned Method&#39;s Type field gives the</span>
+    <span class="c1">// method signature, without a receiver, and the Func field is nil.</span>
+    <span class="nx">Method</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="nx">Method</span>
+
+    <span class="c1">// MethodByName returns the method with that name in the type&#39;s</span>
+    <span class="c1">// method set and a boolean indicating if the method was found.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For a non-interface type T or *T, the returned Method&#39;s Type and Func</span>
+    <span class="c1">// fields describe a function whose first argument is the receiver.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For an interface type, the returned Method&#39;s Type field gives the</span>
+    <span class="c1">// method signature, without a receiver, and the Func field is nil.</span>
+    <span class="nx">MethodByName</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">Method</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
+
+    <span class="c1">// NumMethod returns the number of methods in the type&#39;s method set.</span>
+    <span class="nx">NumMethod</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// Name returns the type&#39;s name within its package.</span>
+    <span class="c1">// It returns an empty string for unnamed types.</span>
+    <span class="nx">Name</span><span class="p">()</span> <span class="kt">string</span>
+
+    <span class="c1">// PkgPath returns a named type&#39;s package path, that is, the import path</span>
+    <span class="c1">// that uniquely identifies the package, such as &quot;encoding/base64&quot;.</span>
+    <span class="c1">// If the type was predeclared (string, error) or unnamed (*T, struct{}, []int),</span>
+    <span class="c1">// the package path will be the empty string.</span>
+    <span class="nx">PkgPath</span><span class="p">()</span> <span class="kt">string</span>
+
+    <span class="c1">// Size returns the number of bytes needed to store</span>
+    <span class="c1">// a value of the given type; it is analogous to unsafe.Sizeof.</span>
+    <span class="nx">Size</span><span class="p">()</span> <span class="kt">uintptr</span>
+
+    <span class="c1">// String returns a string representation of the type.</span>
+    <span class="c1">// The string representation may use shortened package names</span>
+    <span class="c1">// (e.g., base64 instead of &quot;encoding/base64&quot;) and is not</span>
+    <span class="c1">// guaranteed to be unique among types.  To test for equality,</span>
+    <span class="c1">// compare the Types directly.</span>
+    <span class="nx">String</span><span class="p">()</span> <span class="kt">string</span>
+
+    <span class="c1">// Kind returns the specific kind of this type.</span>
+    <span class="nx">Kind</span><span class="p">()</span> <span class="nx">Kind</span>
+
+    <span class="c1">// Implements reports whether the type implements the interface type u.</span>
+    <span class="nx">Implements</span><span class="p">(</span><span class="nx">u</span> <span class="nx">Type</span><span class="p">)</span> <span class="kt">bool</span>
+
+    <span class="c1">// AssignableTo reports whether a value of the type is assignable to type u.</span>
+    <span class="nx">AssignableTo</span><span class="p">(</span><span class="nx">u</span> <span class="nx">Type</span><span class="p">)</span> <span class="kt">bool</span>
+
+    <span class="c1">// ConvertibleTo reports whether a value of the type is convertible to type u.</span>
+    <span class="nx">ConvertibleTo</span><span class="p">(</span><span class="nx">u</span> <span class="nx">Type</span><span class="p">)</span> <span class="kt">bool</span>
+
+    <span class="c1">// Comparable reports whether values of this type are comparable.</span>
+    <span class="nx">Comparable</span><span class="p">()</span> <span class="kt">bool</span>
+
+    <span class="c1">// Bits returns the size of the type in bits.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not one of the</span>
+    <span class="c1">// sized or unsized Int, Uint, Float, or Complex kinds.</span>
+    <span class="nx">Bits</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// ChanDir returns a channel type&#39;s direction.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Chan.</span>
+    <span class="nx">ChanDir</span><span class="p">()</span> <span class="nx">ChanDir</span>
+
+    <span class="c1">// IsVariadic reports whether a function type&#39;s final input parameter</span>
+    <span class="c1">// is a &quot;...&quot; parameter.  If so, t.In(t.NumIn() - 1) returns the parameter&#39;s</span>
+    <span class="c1">// implicit actual type []T.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For concreteness, if t represents func(x int, y ... float64), then</span>
+    <span class="c1">//</span>
+    <span class="c1">//  t.NumIn() == 2</span>
+    <span class="c1">//  t.In(0) is the reflect.Type for &quot;int&quot;</span>
+    <span class="c1">//  t.In(1) is the reflect.Type for &quot;[]float64&quot;</span>
+    <span class="c1">//  t.IsVariadic() == true</span>
+    <span class="c1">//</span>
+    <span class="c1">// IsVariadic panics if the type&#39;s Kind is not Func.</span>
+    <span class="nx">IsVariadic</span><span class="p">()</span> <span class="kt">bool</span>
+
+    <span class="c1">// Elem returns a type&#39;s element type.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Array, Chan, Map, Ptr, or Slice.</span>
+    <span class="nx">Elem</span><span class="p">()</span> <span class="nx">Type</span>
+
+    <span class="c1">// Field returns a struct type&#39;s i&#39;th field.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Struct.</span>
+    <span class="c1">// It panics if i is not in the range [0, NumField()).</span>
+    <span class="nx">Field</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">StructField</span>
+
+    <span class="c1">// FieldByIndex returns the nested field corresponding</span>
+    <span class="c1">// to the index sequence.  It is equivalent to calling Field</span>
+    <span class="c1">// successively for each index i.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Struct.</span>
+    <span class="nx">FieldByIndex</span><span class="p">(</span><span class="nx">index</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="nx">StructField</span>
+
+    <span class="c1">// FieldByName returns the struct field with the given name</span>
+    <span class="c1">// and a boolean indicating if the field was found.</span>
+    <span class="nx">FieldByName</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">StructField</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
+
+    <span class="c1">// FieldByNameFunc returns the first struct field with a name</span>
+    <span class="c1">// that satisfies the match function and a boolean indicating if</span>
+    <span class="c1">// the field was found.</span>
+    <span class="nx">FieldByNameFunc</span><span class="p">(</span><span class="nx">match</span> <span class="kd">func</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">(</span><span class="nx">StructField</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span>
+
+    <span class="c1">// In returns the type of a function type&#39;s i&#39;th input parameter.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Func.</span>
+    <span class="c1">// It panics if i is not in the range [0, NumIn()).</span>
+    <span class="nx">In</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">Type</span>
+
+    <span class="c1">// Key returns a map type&#39;s key type.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Map.</span>
+    <span class="nx">Key</span><span class="p">()</span> <span class="nx">Type</span>
+
+    <span class="c1">// Len returns an array type&#39;s length.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Array.</span>
+    <span class="nx">Len</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// NumField returns a struct type&#39;s field count.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Struct.</span>
+    <span class="nx">NumField</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// NumIn returns a function type&#39;s input parameter count.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Func.</span>
+    <span class="nx">NumIn</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// NumOut returns a function type&#39;s output parameter count.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Func.</span>
+    <span class="nx">NumOut</span><span class="p">()</span> <span class="kt">int</span>
+
+    <span class="c1">// Out returns the type of a function type&#39;s i&#39;th output parameter.</span>
+    <span class="c1">// It panics if the type&#39;s Kind is not Func.</span>
+    <span class="c1">// It panics if i is not in the range [0, NumOut()).</span>
+    <span class="nx">Out</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">Type</span>
+    <span class="c1">// contains filtered or unexported methods</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>reflect.TypeOf(变量名),获取变量的类型,返回reflect.Type类型</p>
+<p>在Go语言中，使用<code>reflect.TypeOf()</code>函数可以获得任意值的类型对象（reflect.Type），程序通过类型对象可以访问任意值的类型信息。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">reflectTpye</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type of %v\n&quot;</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%T\n&quot;</span><span class="p">,</span><span class="nx">v</span><span class="p">)</span> <span class="c1">//*reflect.rtype 是一个reflect对象指针</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">3.12</span>
+    <span class="nx">reflectTpye</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// type:float32</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int64</span> <span class="p">=</span> <span class="mi">100</span>
+    <span class="nx">reflectTpye</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="c1">// type:int64</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">type</span> <span class="nx">of</span> <span class="kt">float32</span>
+<span class="o">*</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">rtype</span>
+<span class="kd">type</span> <span class="nx">of</span> <span class="kt">int64</span>
+<span class="o">*</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">rtype</span>
+</code></pre></div>
+
+<h3 id="type-nametype-kind">type name和type kind<a class="headerlink" href="#type-nametype-kind" title="Permanent link">&para;</a></h3>
+<p>反射中类型分为两种:<code>类型(Type)</code>和<code>种类(Kind)</code>.</p>
+<p>type很多是自定义的构造类型.</p>
+<p>kind是底层的类型.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">type</span> <span class="nx">myInt</span> <span class="kt">int64</span>
+
+<span class="kd">func</span> <span class="nx">reflectType</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">t</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type:%v  kind:%v\n&quot;</span><span class="p">,</span><span class="nx">t</span><span class="p">.</span><span class="nx">Name</span><span class="p">(),</span><span class="nx">t</span><span class="p">.</span><span class="nx">Kind</span><span class="p">())</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">*</span><span class="kt">float32</span> <span class="c1">//指针</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="nx">myInt</span> <span class="c1">// 自定义类型</span>
+    <span class="kd">var</span> <span class="nx">c</span> <span class="kt">rune</span>  <span class="c1">// byte类型别名</span>
+
+    <span class="kd">type</span> <span class="nx">person</span> <span class="kd">struct</span> <span class="p">{</span>
+        <span class="nx">name</span> <span class="kt">string</span>
+        <span class="nx">age</span> <span class="kt">int</span>
+    <span class="p">}</span>
+    <span class="kd">type</span> <span class="nx">book</span> <span class="kd">struct</span> <span class="p">{</span>
+        <span class="nx">title</span> <span class="kt">string</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="p">=</span> <span class="nx">person</span><span class="p">{</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="s">&quot;agsol&quot;</span><span class="p">,</span>
+        <span class="nx">age</span><span class="p">:</span>  <span class="mi">18</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">e</span> <span class="p">=</span> <span class="nx">book</span><span class="p">{</span><span class="nx">title</span><span class="p">:</span><span class="s">&quot;golearning&quot;</span><span class="p">}</span>
+    <span class="nx">reflectType</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">reflectType</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="nx">reflectType</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+    <span class="nx">reflectType</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>
+    <span class="nx">reflectType</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">type</span><span class="p">:</span>  <span class="nx">kind</span><span class="p">:</span><span class="nx">ptr</span>
+<span class="kd">type</span><span class="p">:</span><span class="nx">myInt</span>  <span class="nx">kind</span><span class="p">:</span><span class="kt">int64</span>
+<span class="kd">type</span><span class="p">:</span><span class="kt">int32</span>  <span class="nx">kind</span><span class="p">:</span><span class="kt">int32</span>
+<span class="kd">type</span><span class="p">:</span><span class="nx">person</span>  <span class="nx">kind</span><span class="p">:</span><span class="kd">struct</span>
+<span class="kd">type</span><span class="p">:</span><span class="nx">book</span>  <span class="nx">kind</span><span class="p">:</span><span class="kd">struct</span>
+</code></pre></div>
+
+<p>Go中的数组,切片,Map,指针等指针类型变量,期<code>.Name()</code>返回空.</p>
+<p>在<code>reflect</code>包中定义的Kind类型</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">Kind</span> <span class="kt">uint</span>
+<span class="kd">const</span> <span class="p">(</span>
+    <span class="nx">Invalid</span> <span class="nx">Kind</span> <span class="p">=</span> <span class="kc">iota</span>  <span class="c1">// 非法类型</span>
+    <span class="nx">Bool</span>                 <span class="c1">// 布尔型</span>
+    <span class="nx">Int</span>                  <span class="c1">// 有符号整型</span>
+    <span class="nx">Int8</span>                 <span class="c1">// 有符号8位整型</span>
+    <span class="nx">Int16</span>                <span class="c1">// 有符号16位整型</span>
+    <span class="nx">Int32</span>                <span class="c1">// 有符号32位整型</span>
+    <span class="nx">Int64</span>                <span class="c1">// 有符号64位整型</span>
+    <span class="nx">Uint</span>                 <span class="c1">// 无符号整型</span>
+    <span class="nx">Uint8</span>                <span class="c1">// 无符号8位整型</span>
+    <span class="nx">Uint16</span>               <span class="c1">// 无符号16位整型</span>
+    <span class="nx">Uint32</span>               <span class="c1">// 无符号32位整型</span>
+    <span class="nx">Uint64</span>               <span class="c1">// 无符号64位整型</span>
+    <span class="nx">Uintptr</span>              <span class="c1">// 指针</span>
+    <span class="nx">Float32</span>              <span class="c1">// 单精度浮点数</span>
+    <span class="nx">Float64</span>              <span class="c1">// 双精度浮点数</span>
+    <span class="nx">Complex64</span>            <span class="c1">// 64位复数类型</span>
+    <span class="nx">Complex128</span>           <span class="c1">// 128位复数类型</span>
+    <span class="nx">Array</span>                <span class="c1">// 数组</span>
+    <span class="nx">Chan</span>                 <span class="c1">// 通道</span>
+    <span class="nx">Func</span>                 <span class="c1">// 函数</span>
+    <span class="nx">Interface</span>            <span class="c1">// 接口</span>
+    <span class="nx">Map</span>                  <span class="c1">// 映射</span>
+    <span class="nx">Ptr</span>                  <span class="c1">// 指针</span>
+    <span class="nx">Slice</span>                <span class="c1">// 切片</span>
+    <span class="nx">String</span>               <span class="c1">// 字符串</span>
+    <span class="nx">Struct</span>               <span class="c1">// 结构体</span>
+    <span class="nx">UnsafePointer</span>        <span class="c1">// 底层指针</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h3 id="valueof">ValueOf<a class="headerlink" href="#valueof" title="Permanent link">&para;</a></h3>
+<p>reflect.ValueOf(变量名),获取变量的值,返回reflect.Value类型.</p>
+<p><code>reflect.ValueOf()</code>返回的是<code>reflect.Value</code>类型，其中包含了原始值的值信息。<code>reflect.Value</code>与原始值之间可以互相转换。</p>
+<p><code>reflect.Value</code>类型提供的获取原始值的方法如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Interface() interface </td>
+<td align="center">将值以 interface</td>
+</tr>
+<tr>
+<td align="center">Int() int64</td>
+<td align="center">将值以 int 类型返回，所有有符号整型均可以此方式返回</td>
+</tr>
+<tr>
+<td align="center">Uint() uint64</td>
+<td align="center">将值以 uint 类型返回，所有无符号整型均可以此方式返回</td>
+</tr>
+<tr>
+<td align="center">Float() float64</td>
+<td align="center">将值以双精度（float64）类型返回，所有浮点数（float32、float64）均可以此方式返回</td>
+</tr>
+<tr>
+<td align="center">Bool() bool</td>
+<td align="center">将值以 bool 类型返回</td>
+</tr>
+<tr>
+<td align="center">Bytes() []bytes</td>
+<td align="center">将值以字节数组 []bytes 类型返回</td>
+</tr>
+<tr>
+<td align="center">String() string</td>
+<td align="center">将值以字符串类型返回</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">通过反射获取值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">reflectValue</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="nx">k</span> <span class="o">:=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">Kind</span><span class="p">()</span>  <span class="c1">//拿到对应值的类型种类</span>
+    <span class="k">switch</span> <span class="nx">k</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Int64</span><span class="p">:</span>
+        <span class="c1">// v.Int()从反射中获取整型的原始值，然后通过int64()强制类型转换</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type is int64,value is %v\n&quot;</span><span class="p">,</span><span class="nb">int64</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">Int</span><span class="p">()))</span>
+    <span class="k">case</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Float32</span><span class="p">:</span>
+        <span class="c1">// v.Float()从反射中获取浮点型的原始值，然后通过float32()强制类型转换</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type is float32, value is %f\n&quot;</span><span class="p">,</span> <span class="nb">float32</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">Float</span><span class="p">()))</span>
+    <span class="k">case</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Float64</span><span class="p">:</span>
+        <span class="c1">// v.Float()从反射中获取浮点型的原始值，然后通过float64()强制类型转换</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type is float64, value is %f\n&quot;</span><span class="p">,</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">Float</span><span class="p">()))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">3.14</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int64</span> <span class="p">=</span> <span class="mi">618</span>
+    <span class="nx">reflectValue</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">reflectValue</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="nx">c</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;type c :%T\n&quot;</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;val c :%v\n&quot;</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">type</span> <span class="nx">is</span> <span class="kt">float32</span><span class="p">,</span> <span class="nx">value</span> <span class="nx">is</span> <span class="mf">3.140000</span>
+<span class="kd">type</span> <span class="nx">is</span> <span class="kt">int64</span><span class="p">,</span><span class="nx">value</span> <span class="nx">is</span> <span class="mi">618</span>
+<span class="kd">type</span> <span class="nx">c</span> <span class="p">:</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">Value</span>
+<span class="nx">val</span> <span class="nx">c</span> <span class="p">:</span><span class="mi">10</span>
+</code></pre></div>
+
+<p>也可以通过先讲reflect.Value类型转换为interface{}类型,再进行断言</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nx">reflectTest</span><span class="p">(</span><span class="nx">b</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="c1">//获取到参数的type</span>
+    <span class="nx">rType</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="c1">//获取到参数的value</span>
+    <span class="nx">rVal</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="c1">//将reflect.Value转换为interface{}</span>
+    <span class="nx">iV</span> <span class="o">:=</span> <span class="nx">rVal</span><span class="p">.</span><span class="nx">Interface</span><span class="p">{}</span>
+    <span class="c1">//将interfae{}通过断言转换成需要的类型</span>
+    <span class="nx">num</span> <span class="o">:=</span> <span class="nx">iV</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;num=&quot;</span><span class="p">,</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="_5">通过反射设置变量的值<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>想要在函数中通过反射修改变量的值，需要注意函数参数传递的是值拷贝，必须传递变量地址才能修改变量值。而反射中使用专有的<code>Elem()</code>方法来获取指针对应的值。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">reflectSetValue1</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">v</span><span class="p">.</span><span class="nx">Kind</span><span class="p">()</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Int64</span> <span class="p">{</span>
+        <span class="nx">v</span><span class="p">.</span><span class="nx">SetInt</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="c1">//修改的是副本，reflect包会引发panic</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nx">reflectSetValue2</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="c1">// 反射中使用 Elem()方法获取指针对应的值</span>
+    <span class="c1">//v.Elem()得到指针对应的值,再通过.Kind()判断类型</span>
+    <span class="k">if</span> <span class="nx">v</span><span class="p">.</span><span class="nx">Elem</span><span class="p">().</span><span class="nx">Kind</span><span class="p">()</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Int64</span> <span class="p">{</span>
+        <span class="nx">v</span><span class="p">.</span><span class="nx">Elem</span><span class="p">().</span><span class="nx">SetInt</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int64</span> <span class="p">=</span> <span class="mi">100</span>
+    <span class="c1">// reflectSetValue1(a) //panic: reflect: reflect.Value.SetInt using unaddressable value</span>
+    <span class="nx">reflectSetValue2</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">a</span><span class="p">)</span> <span class="c1">//需要传入指针</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="mi">200</span>
+</code></pre></div>
+
+<h1 id="isnilisvalid">isNil()和isValid()<a class="headerlink" href="#isnilisvalid" title="Permanent link">&para;</a></h1>
+<h4 id="isnil">isNil()<a class="headerlink" href="#isnil" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">v</span> <span class="nx">Value</span><span class="p">)</span> <span class="nx">IsNil</span><span class="p">()</span> <span class="kt">bool</span>
+</code></pre></div>
+
+<p><code>IsNil()</code>报告v持有的值是否为nil。v持有的值的分类必须是通道、函数、接口、映射、指针、切片之一；否则IsNil函数会导致panic。</p>
+<h4 id="isvalid">isValid()<a class="headerlink" href="#isvalid" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">v</span> <span class="nx">Value</span><span class="p">)</span> <span class="nx">IsValid</span><span class="p">()</span> <span class="kt">bool</span>
+</code></pre></div>
+
+<p><code>IsValid()</code>返回v是否持有一个值。如果v是零值时会返回假，此时v使用除了IsValid、String、Kind之外的方法都会导致panic。</p>
+<h5 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p><code>IsNil()</code>常被用于判断指针是否为空；<code>IsValid()</code>常被用于判定返回值是否有效。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// *int类型空指针</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">*</span><span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;var a *int IsNil:&quot;</span><span class="p">,</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">a</span><span class="p">).</span><span class="nx">IsNil</span><span class="p">())</span>
+    <span class="c1">// nil值</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;nil IsValid:&quot;</span><span class="p">,</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="kc">nil</span><span class="p">).</span><span class="nx">IsValid</span><span class="p">())</span>
+    <span class="c1">// 实例化一个匿名结构体</span>
+    <span class="nx">b</span> <span class="o">:=</span> <span class="kd">struct</span><span class="p">{}{}</span>
+    <span class="c1">// 尝试从结构体中查找&quot;abc&quot;字段</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;不存在的结构体成员:&quot;</span><span class="p">,</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">b</span><span class="p">).</span><span class="nx">FieldByName</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">).</span><span class="nx">IsValid</span><span class="p">())</span>
+    <span class="c1">// 尝试从结构体中查找&quot;abc&quot;方法</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;不存在的结构体方法:&quot;</span><span class="p">,</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">b</span><span class="p">).</span><span class="nx">MethodByName</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">).</span><span class="nx">IsValid</span><span class="p">())</span>
+    <span class="c1">// map</span>
+    <span class="nx">c</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span>
+    <span class="c1">// 尝试从map中查找一个不存在的键</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;map中不存在的键：&quot;</span><span class="p">,</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">c</span><span class="p">).</span><span class="nx">MapIndex</span><span class="p">(</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="s">&quot;娜扎&quot;</span><span class="p">)).</span><span class="nx">IsValid</span><span class="p">())</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">*</span><span class="kt">int</span> <span class="nx">IsNil</span><span class="p">:</span> <span class="kc">true</span>
+<span class="kc">nil</span> <span class="nx">IsValid</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nx">不存在的结构体成员</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nx">不存在的结构体方法</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nx">map中不存在的键</span><span class="err">：</span> <span class="kc">false</span>
+</code></pre></div>
+
+<h1 id="_7">结构体的反射<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<h3 id="_8">与结构体相关的方法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>任意值通过<code>reflect.TypeOf()</code>获得反射对象信息后，如果它的类型是结构体，可以通过反射值对象（<code>reflect.Type</code>）的<code>NumField()</code>和<code>Field()</code>方法获得结构体成员的详细信息。</p>
+<p><code>reflect.Type</code>中与获取结构体成员相关的的方法如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Field(i int) StructField</td>
+<td align="center">根据索引，返回索引对应的结构体字段的信息。</td>
+</tr>
+<tr>
+<td align="center">NumField() int</td>
+<td align="center">返回结构体成员字段数量。</td>
+</tr>
+<tr>
+<td align="center">FieldByName(name string) (StructField, bool)</td>
+<td align="center">根据给定字符串返回字符串对应的结构体字段的信息。</td>
+</tr>
+<tr>
+<td align="center">FieldByIndex(index []int) StructField</td>
+<td align="center">多层成员访问时，根据 []int 提供的每个结构体的字段索引，返回字段的信息。</td>
+</tr>
+<tr>
+<td align="center">FieldByNameFunc(match func(string) bool) (StructField,bool)</td>
+<td align="center">根据传入的匹配函数匹配需要的字段。</td>
+</tr>
+<tr>
+<td align="center">NumMethod() int</td>
+<td align="center">返回该类型的方法集中方法的数目</td>
+</tr>
+<tr>
+<td align="center">Method(int) Method</td>
+<td align="center">返回该类型方法集中的第i个方法</td>
+</tr>
+<tr>
+<td align="center">MethodByName(string)(Method, bool)</td>
+<td align="center">根据方法名返回该类型方法集中的方法</td>
+</tr>
+<tr>
+<td align="center">Call(in[]Value) []Value</td>
+<td align="center">调用传入的方法,其中传入的参数需满足是reflect.Value类型的切片</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structfield">StructField类型<a class="headerlink" href="#structfield" title="Permanent link">&para;</a></h3>
+<p><code>StructField</code>类型用来描述结构体中的一个字段的信息。</p>
+<p><code>StructField</code>的定义如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">StructField</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="c1">// Name是字段的名字。PkgPath是非导出字段的包路径，对导出字段该字段为&quot;&quot;。</span>
+    <span class="c1">// 参见http://golang.org/ref/spec#Uniqueness_of_identifiers</span>
+    <span class="nx">Name</span>    <span class="kt">string</span>
+    <span class="nx">PkgPath</span> <span class="kt">string</span>
+    <span class="nx">Type</span>      <span class="nx">Type</span>      <span class="c1">// 字段的类型</span>
+    <span class="nx">Tag</span>       <span class="nx">StructTag</span> <span class="c1">// 字段的标签</span>
+    <span class="nx">Offset</span>    <span class="kt">uintptr</span>   <span class="c1">// 字段在结构体中的字节偏移量</span>
+    <span class="nx">Index</span>     <span class="p">[]</span><span class="kt">int</span>     <span class="c1">// 用于Type.FieldByIndex时的索引切片</span>
+    <span class="nx">Anonymous</span> <span class="kt">bool</span>      <span class="c1">// 是否匿名字段</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>当我们使用反射得到一个结构体数据之后可以通过索引依次获取其字段信息，也可以通过字段名去获取指定的字段信息。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">type</span> <span class="nx">student</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Name</span>  <span class="kt">string</span> <span class="s">`json:&quot;name&quot;`</span>
+    <span class="nx">Score</span> <span class="kt">int</span>    <span class="s">`json:&quot;score&quot;`</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">stu1</span> <span class="o">:=</span> <span class="nx">student</span><span class="p">{</span>
+        <span class="nx">Name</span><span class="p">:</span>  <span class="s">&quot;agsol&quot;</span><span class="p">,</span>
+        <span class="nx">Score</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="nx">t</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">stu1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">Name</span><span class="p">(),</span> <span class="nx">t</span><span class="p">.</span><span class="nx">Kind</span><span class="p">(),</span><span class="nx">t</span><span class="p">.</span><span class="nx">NumField</span><span class="p">())</span> <span class="c1">// student struct</span>
+    <span class="c1">// 通过for循环遍历结构体的所有字段信息</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">NumField</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="c1">//fmt.Println(i) 0 1</span>
+        <span class="nx">field</span> <span class="o">:=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">Field</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;name:%s index:%d type:%v json tag:%v\n&quot;</span><span class="p">,</span> <span class="nx">field</span><span class="p">.</span><span class="nx">Name</span><span class="p">,</span> <span class="nx">field</span><span class="p">.</span><span class="nx">Index</span><span class="p">,</span> <span class="nx">field</span><span class="p">.</span><span class="nx">Type</span><span class="p">,</span> <span class="nx">field</span><span class="p">.</span><span class="nx">Tag</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;json&quot;</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 通过字段名获取指定结构体字段信息</span>
+    <span class="k">if</span> <span class="nx">scoreField</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">FieldByName</span><span class="p">(</span><span class="s">&quot;Score&quot;</span><span class="p">);</span> <span class="nx">ok</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;name:%s index:%d type:%v json tag:%v\n&quot;</span><span class="p">,</span> <span class="nx">scoreField</span><span class="p">.</span><span class="nx">Name</span><span class="p">,</span> <span class="nx">scoreField</span><span class="p">.</span><span class="nx">Index</span><span class="p">,</span> <span class="nx">scoreField</span><span class="p">.</span><span class="nx">Type</span><span class="p">,</span> <span class="nx">scoreField</span><span class="p">.</span><span class="nx">Tag</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;json&quot;</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="nx">student</span> <span class="kd">struct</span> <span class="mi">2</span>
+<span class="nx">name</span><span class="p">:</span><span class="nx">Name</span> <span class="nx">index</span><span class="p">:[</span><span class="mi">0</span><span class="p">]</span> <span class="kd">type</span><span class="p">:</span><span class="kt">string</span> <span class="nx">json</span> <span class="nx">tag</span><span class="p">:</span><span class="nx">name</span>
+<span class="nx">name</span><span class="p">:</span><span class="nx">Score</span> <span class="nx">index</span><span class="p">:[</span><span class="mi">1</span><span class="p">]</span> <span class="kd">type</span><span class="p">:</span><span class="kt">int</span> <span class="nx">json</span> <span class="nx">tag</span><span class="p">:</span><span class="nx">score</span>
+<span class="nx">name</span><span class="p">:</span><span class="nx">Score</span> <span class="nx">index</span><span class="p">:[</span><span class="mi">1</span><span class="p">]</span> <span class="kd">type</span><span class="p">:</span><span class="kt">int</span> <span class="nx">json</span> <span class="nx">tag</span><span class="p">:</span><span class="nx">score</span>
+</code></pre></div>
+
+<p>接下来编写一个函数<code>printMethod(s interface{})</code>来遍历打印s包含的方法。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">type</span> <span class="nx">student</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Name</span>  <span class="kt">string</span> <span class="s">`json:&quot;name&quot;`</span>
+    <span class="nx">Score</span> <span class="kt">int</span>    <span class="s">`json:&quot;score&quot;`</span>
+<span class="p">}</span>
+
+<span class="c1">// 给student添加两个方法 Study和Sleep(注意首字母大写)</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">student</span><span class="p">)</span> <span class="nx">Study</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">msg</span> <span class="o">:=</span> <span class="s">&quot;好好学习，天天向上。&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">msg</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">student</span><span class="p">)</span> <span class="nx">Sleep</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">msg</span> <span class="o">:=</span> <span class="s">&quot;好好睡觉，快快长大。&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">msg</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">printMethod</span><span class="p">(</span><span class="nx">x</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="nx">t</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">NumMethod</span><span class="p">())</span> <span class="c1">// 返回参数变量的方法数量,返回一个int类型</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">v</span><span class="p">.</span><span class="nx">NumMethod</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">methodType</span> <span class="o">:=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">Type</span><span class="p">()</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;method name:%s\n&quot;</span><span class="p">,</span> <span class="nx">t</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">Name</span><span class="p">)</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;method:%s\n&quot;</span><span class="p">,</span> <span class="nx">methodType</span><span class="p">)</span>
+        <span class="c1">// 通过反射调用方法传递的参数必须是 []reflect.Value 类型,才可以调用Call()</span>
+        <span class="kd">var</span> <span class="nx">args</span> <span class="p">=</span> <span class="p">[]</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">Value</span><span class="p">{}</span>
+        <span class="nx">v</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">Call</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">t_MethodObj</span><span class="p">,</span><span class="nx">ok</span> <span class="o">:=</span><span class="nx">t</span><span class="p">.</span><span class="nx">MethodByName</span><span class="p">(</span><span class="s">&quot;Sleep&quot;</span><span class="p">)</span> <span class="c1">//返回method和bool值</span>
+    <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;t_MethodObj&quot;</span><span class="p">,</span><span class="nx">t_MethodObj</span><span class="p">.</span><span class="nx">Type</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">v_MethodObj</span> <span class="o">:=</span> <span class="nx">v</span><span class="p">.</span><span class="nx">MethodByName</span><span class="p">(</span><span class="s">&quot;Sleep&quot;</span><span class="p">)</span> <span class="c1">//返回value</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;v_MethodObj:&quot;</span><span class="p">,</span><span class="nx">v_MethodObj</span><span class="p">.</span><span class="nx">Type</span><span class="p">())</span>
+
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">stu1</span> <span class="o">:=</span> <span class="nx">student</span><span class="p">{</span>
+        <span class="nx">Name</span><span class="p">:</span>  <span class="s">&quot;agsol&quot;</span><span class="p">,</span>
+        <span class="nx">Score</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="nx">printMethod</span><span class="p">(</span><span class="nx">stu1</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="mi">2</span>
+<span class="nx">method</span> <span class="nx">name</span><span class="p">:</span><span class="nx">Sleep</span>
+<span class="nx">method</span><span class="p">:</span><span class="kd">func</span><span class="p">()</span> <span class="kt">string</span>
+<span class="nx">好好睡觉</span><span class="err">，</span><span class="nx">快快长大</span><span class="err">。</span>
+<span class="nx">method</span> <span class="nx">name</span><span class="p">:</span><span class="nx">Study</span>
+<span class="nx">method</span><span class="p">:</span><span class="kd">func</span><span class="p">()</span> <span class="kt">string</span>
+<span class="nx">好好学习</span><span class="err">，</span><span class="nx">天天向上</span><span class="err">。</span>
+<span class="nx">t_MethodObj</span> <span class="kd">func</span><span class="p">(</span><span class="nx">main</span><span class="p">.</span><span class="nx">student</span><span class="p">)</span> <span class="kt">string</span>
+<span class="nx">v_MethodObj</span><span class="p">:</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">string</span>
+</code></pre></div>
+
+<p>当使用reflect.ValueOf返回的结构体</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nx">reflectTest</span><span class="p">=</span><span class="mi">2</span><span class="p">(</span><span class="nx">b</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="c1">//获取到参数的value</span>
+    <span class="nx">rVal</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="c1">//将reflect.Value转换为interface{}</span>
+    <span class="nx">iV</span> <span class="o">:=</span> <span class="nx">rVal</span><span class="p">.</span><span class="nx">Interface</span><span class="p">{}</span>
+    <span class="c1">//将interfae{}通过断言转换成需要的类型</span>
+    <span class="c1">//将 interface{} 通过断言转成需要的类型 </span>
+    <span class="c1">//这里，我们就简单使用了一带检测的类型断言. //同学们可以使用 swtich 的断言形式来做的更加的灵活 </span>
+    <span class="nx">stu</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">iV</span><span class="p">.(</span><span class="nx">Student</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;stu.Name=%v\n&quot;</span><span class="p">,</span> <span class="nx">stu</span><span class="p">.</span><span class="nx">Name</span><span class="p">)</span> <span class="c1">//这是就可以通过stu.Name取值,否则编译不过</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="_9">反射的优缺点<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h1>
+<ol>
+<li>基于反射的代码非常脆弱,反射中的类型错误会在真正运行的时候引发panic,那是在代码完成很长事件之后发生.</li>
+<li>大量使用反射的代码通常不好理解</li>
+<li>反射的性能地下,基于反射实现的代码通常比正常代码运行速度慢一到两个数量级.</li>
+</ol>
+<h1 id="_10">注意<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>reflect.Value.Kind,获取变量的类别,返回一个常量.</p>
+</li>
+<li>
+<p>Type和Kind的区别</p>
+</li>
+</ol>
+<p>Type 是类型, Kind 是类别， Type 和 Kind 可能是相同的，也可能是不同的</p>
+<p>比如: var num int = 10 num 的 Type 是 int , Kind 也是 int </p>
+<p>比如: var stu Student stu 的 Type 是 pkg1.Student , Kind 是 struct</p>
+<ol>
+<li>通过反射来修改变量,使用SetXxx方法来始指需要通过对应的指针类型来完成.同时需要使用reflect.Value.Elem()方法</li>
+</ol>
+<h1 id="_11">应用<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;reflect&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">type</span> <span class="nx">Monster</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Name</span> <span class="kt">string</span> <span class="s">`json :&quot;name&quot;`</span>
+    <span class="nx">Age</span> <span class="kt">int</span> <span class="s">`json:&quot;monster_age&quot;`</span>
+    <span class="nx">Score</span> <span class="kt">float32</span>
+    <span class="nx">Sex</span> <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">Monster</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;----start----&quot;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;----end----&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">Monster</span><span class="p">)</span> <span class="nx">GetSum</span><span class="p">(</span><span class="nx">n1</span><span class="p">,</span><span class="nx">n2</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">n1</span> <span class="o">+</span> <span class="nx">n2</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">Monster</span><span class="p">)</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">,</span><span class="nx">age</span> <span class="kt">int</span><span class="p">,</span><span class="nx">score</span> <span class="kt">float32</span><span class="p">,</span><span class="nx">sex</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">Name</span> <span class="p">=</span> <span class="nx">name</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">Age</span> <span class="p">=</span> <span class="nx">age</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">Score</span> <span class="p">=</span> <span class="nx">score</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">Sex</span> <span class="p">=</span> <span class="nx">sex</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Teststruct</span><span class="p">(</span><span class="nx">a</span> <span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
+    <span class="c1">//获取reflect.Type 类型</span>
+    <span class="nx">typ</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">TypeOf</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="c1">//获取reflectt.Value类型</span>
+    <span class="nx">val</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="c1">//获取a对应的类别</span>
+    <span class="nx">kd</span> <span class="o">:=</span> <span class="nx">val</span><span class="p">.</span><span class="nx">Kind</span><span class="p">()</span>
+    <span class="c1">//判断a是否为结构体</span>
+    <span class="k">if</span> <span class="nx">kd</span> <span class="o">!=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Struct</span><span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;expect struct&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+    <span class="c1">//获取该结构体有几个字段</span>
+    <span class="nx">num</span> <span class="o">:=</span> <span class="nx">val</span><span class="p">.</span><span class="nx">NumField</span><span class="p">()</span>
+    <span class="c1">//num := val.Elem().NumField()</span>
+    <span class="c1">//val.Elem().Field(0).SetString(&quot;蜘蛛精&quot;)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;struct has %d fields\n&quot;</span><span class="p">,</span><span class="nx">num</span><span class="p">)</span>
+    <span class="c1">//遍历结构体的字段</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="p">&lt;</span><span class="nx">num</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Field %d :值为%v\n&quot;</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">val</span><span class="p">.</span><span class="nx">Field</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span>
+        <span class="c1">//获取struct标签,注意使用reflect.Type来获取tag的标签的值</span>
+        <span class="nx">tagVal</span> <span class="o">:=</span> <span class="nx">typ</span><span class="p">.</span><span class="nx">Field</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">Tag</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;json&quot;</span><span class="p">)</span>
+        <span class="c1">//如果该字段有标签,则取,无标签,不动作</span>
+        <span class="k">if</span> <span class="nx">tagVal</span> <span class="o">!=</span> <span class="s">&quot;&quot;</span> <span class="p">{</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Field %d :tag = %v\n&quot;</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">tagVal</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//获取a有几个方法</span>
+    <span class="nx">numOfMethod</span> <span class="o">:=</span> <span class="nx">val</span><span class="p">.</span><span class="nx">NumMethod</span><span class="p">()</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;struct has %d methods\n&quot;</span><span class="p">,</span><span class="nx">numOfMethod</span><span class="p">)</span>
+    <span class="c1">//var params []reflect.Value</span>
+    <span class="c1">//方法的排序默认按照 函数迷宫的顺序(ASCII码)0,1,2分别是G,P,S</span>
+    <span class="nx">val</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">Call</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span> <span class="c1">//获取到第二个方法并调用</span>
+
+    <span class="c1">//调用结构体的第一个方法Method(0)</span>
+    <span class="kd">var</span> <span class="nx">params</span> <span class="p">[]</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">Value</span>
+    <span class="c1">//通过reflect.valueOf的方式给方法传参</span>
+    <span class="nx">params</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="nx">params</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="nx">reflect</span><span class="p">.</span><span class="nx">ValueOf</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+    <span class="nx">res</span> <span class="o">:=</span> <span class="nx">val</span><span class="p">.</span><span class="nx">Method</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">Call</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="c1">// 传入的参数是[]reflect.Value</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;res=&quot;</span><span class="p">,</span><span class="nx">res</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Int</span><span class="p">())</span> <span class="c1">//返回结果,返回的结果是[]reflect.Value</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="nx">Monster</span> <span class="p">=</span> <span class="nx">Monster</span><span class="p">{</span>
+        <span class="nx">Name</span> <span class="p">:</span> <span class="s">&quot;白骨精&quot;</span><span class="p">,</span>
+        <span class="nx">Age</span> <span class="p">:</span><span class="mi">400</span><span class="p">,</span>
+        <span class="nx">Score</span> <span class="p">:</span> <span class="mf">30.0</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="nx">Teststruct</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+    <span class="nx">Teststruct</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">a</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;</span><span class="p">&gt;</span>
+<span class="kd">struct</span> <span class="nx">has</span> <span class="mi">4</span> <span class="nx">fields</span>
+<span class="nx">Field</span> <span class="mi">0</span> <span class="p">:</span><span class="nx">值为白骨精</span>
+<span class="nx">Field</span> <span class="mi">1</span> <span class="p">:</span><span class="nx">值为400</span>
+<span class="nx">Field</span> <span class="mi">1</span> <span class="p">:</span><span class="nx">tag</span> <span class="p">=</span> <span class="nx">monster_age</span>
+<span class="nx">Field</span> <span class="mi">2</span> <span class="p">:</span><span class="nx">值为30</span>
+<span class="nx">Field</span> <span class="mi">3</span> <span class="p">:</span><span class="nx">值为</span>
+<span class="kd">struct</span> <span class="nx">has</span> <span class="mi">3</span> <span class="nx">methods</span>
+<span class="o">----</span><span class="nx">start</span><span class="o">----</span>
+<span class="p">{</span><span class="nx">白骨精</span> <span class="mi">400</span> <span class="mi">30</span> <span class="p">}</span>
+<span class="o">----</span><span class="nx">end</span><span class="o">----</span>
+<span class="nx">res</span><span class="p">=</span> <span class="mi">60</span>
+<span class="nx">expect</span> <span class="kd">struct</span>
+<span class="p">{</span><span class="nx">白骨精</span> <span class="mi">400</span> <span class="mi">30</span> <span class="p">}</span>
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                异常处理
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                单元测试
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
