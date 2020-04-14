@@ -1,0 +1,2081 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Jwt认证 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#jwt" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Jwt认证
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      组成原理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        组成原理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%9B%E5%88%B6%E5%8F%8A%E5%8E%9F%E7%A0%81/" title="进制及原码" class="md-nav__link">
+      进制及原码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5/" title="输入语句" class="md-nav__link">
+      输入语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%8D%E5%B0%84/" title="反射" class="md-nav__link">
+      反射
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/json/" title="json" class="md-nav__link">
+      json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="django之视图层" class="md-nav__link">
+      django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="django之模板层" class="md-nav__link">
+      django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM/" title="django之ORM" class="md-nav__link">
+      django之ORM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="django之分组查询" class="md-nav__link">
+      django之分组查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="django之ORM优化查询" class="md-nav__link">
+      django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%92%8Cajax/" title="django和ajax" class="md-nav__link">
+      django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%BA%8F%E5%88%97%E5%8C%96%E6%A8%A1%E5%9D%97/" title="django序列化模块" class="md-nav__link">
+      django序列化模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-nav__link">
+      多对多三种创建方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bforms%E7%BB%84%E4%BB%B6/" title="django之forms组件" class="md-nav__link">
+      django之forms组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-nav__link">
+      django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="django中间件" class="md-nav__link">
+      django中间件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      drf
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        drf
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Restful%E8%A7%84%E8%8C%83/" title="Restful规范" class="md-nav__link">
+      Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf中的APIView请求生命周期.md" title="drf中的APIView请求生命周期" class="md-nav__link">
+      drf中的APIView请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件.md" title="drf序列化组件" class="md-nav__link">
+      drf序列化组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多表操作.md" title="多表操作" class="md-nav__link">
+      多表操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件实现十大接口.md" title="drf序列化组件实现十大接口" class="md-nav__link">
+      drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/视图家族.md" title="视图家族" class="md-nav__link">
+      视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/jwt认证.md" title="jwt认证" class="md-nav__link">
+      jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大认证.md" title="三大认证" class="md-nav__link">
+      三大认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多方式登录.md" title="多方式登录" class="md-nav__link">
+      多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大组件源码分析.md" title="三大组件源码分析" class="md-nav__link">
+      三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/CGI%2CwSGI%2CuWSGI%2Cuwsgi/" title="CGI,wSGI,uWSGI,uwsgi" class="md-nav__link">
+      CGI,wSGI,uWSGI,uwsgi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Redis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Redis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Redis/" title="Redis" class="md-nav__link">
+      Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Golang%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Golang中使用Redis" class="md-nav__link">
+      Golang中使用Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-nav__link">
+      Python中使用Redis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MySQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MySQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础" class="md-nav__link">
+      数据库基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-nav__link">
+      库表值的操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/pymysql/" title="pymysql" class="md-nav__link">
+      pymysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/MySQL%E4%B8%BB%E4%BB%8E%E6%90%AD%E5%BB%BA/" title="MySQL主从搭建" class="md-nav__link">
+      MySQL主从搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      MongoDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        MongoDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MongoDB/MongoDB%E5%AE%89%E8%A3%85/" title="MongoDB安装" class="md-nav__link">
+      MongoDB安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%89%E8%A3%85/" title="Docker简介与安装" class="md-nav__link">
+      Docker简介与安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E9%95%9C%E5%83%8F/" title="Docker镜像" class="md-nav__link">
+      Docker镜像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%AE%B9%E5%99%A8/" title="Docker容器" class="md-nav__link">
+      Docker容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%85%B6%E4%BB%96/" title="Docker其他" class="md-nav__link">
+      Docker其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/" title="树" class="md-nav__link">
+      树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" title="稀疏数组" class="md-nav__link">
+      稀疏数组
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    admin后台关联自定义用户表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rbacrole-basedaccesscontrol" class="md-nav__link">
+    用户权限关系 RBAC（Role-BasedAccessControl）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    权限三表#
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    权限六表#
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seesiontoken" class="md-nav__link">
+    基于后台seesion的token认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessiontoken" class="md-nav__link">
+    基于session的token认证服务器集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-json-web-token" class="md-nav__link">
+    jwt认证规则 json web token
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    优点：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    突破点：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt_1" class="md-nav__link">
+    jwt原理
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    内容：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwttoken" class="md-nav__link">
+    基于jwt的token认证集群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    签发算法：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    校验算法：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    刷新算法：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drf-jwt" class="md-nav__link">
+    drf-jwt 插件简单使用
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#jwt">jwt认证</a><ul>
+<li><a href="#admin">admin后台关联自定义用户表</a></li>
+<li><a href="#rbacrole-basedaccesscontrol">用户权限关系 RBAC（Role-BasedAccessControl）</a><ul>
+<li><a href="#_1">权限三表#</a></li>
+<li><a href="#_2">权限六表#</a></li>
+</ul>
+</li>
+<li><a href="#seesiontoken">基于后台seesion的token认证</a></li>
+<li><a href="#sessiontoken">基于session的token认证服务器集群</a></li>
+<li><a href="#jwt-json-web-token">jwt认证规则 json web token</a><ul>
+<li><a href="#_3">基本原理</a></li>
+<li><a href="#_4">优点：</a></li>
+<li><a href="#_5">突破点：</a></li>
+<li><a href="#jwt_1">jwt原理</a><ul>
+<li><a href="#_6">内容：</a></li>
+</ul>
+</li>
+<li><a href="#jwttoken">基于jwt的token认证集群</a></li>
+<li><a href="#_7">签发算法：</a></li>
+<li><a href="#_8">校验算法：</a></li>
+<li><a href="#_9">刷新算法：</a></li>
+</ul>
+</li>
+<li><a href="#drf-jwt">drf-jwt 插件简单使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="jwt">jwt认证<a class="headerlink" href="#jwt" title="Permanent link">&para;</a></h1>
+<h2 id="admin">admin后台关联自定义用户表<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as AuthUserAdmin
+from . import models
+
+
+class UserAdmin(AuthUserAdmin):
+    # 添加用户页面可控制字段
+    add_fieldsets = (
+        (None, {
+            &#39;classes&#39;: (&#39;wide&#39;,),
+            &#39;fields&#39;: (&#39;username&#39;, &#39;password1&#39;, &#39;password2&#39;, &#39;phone&#39;, &#39;is_staff&#39;, &#39;is_active&#39;),
+        }),
+    )
+
+    # 用户列表展示页面显示字段
+    list_display = (&#39;username&#39;, &#39;email&#39;, &#39;mobile&#39;, &#39;is_staff&#39;, &#39;is_active&#39;)
+
+# 注册自定义User表，用admin管理，配置UserAdmin，定制化管理页面
+admin.site.register(models.User, AuthUserAdmin)
+</code></pre></div>
+
+<h2 id="rbacrole-basedaccesscontrol">用户权限关系 RBAC（Role-BasedAccessControl）<a class="headerlink" href="#rbacrole-basedaccesscontrol" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>表： User、Group、Permission、UG关系表、UP关系表、GP关系表
+传统的RBAC 有两种：权限三表 =&gt; 权限五表(没有UP关系表)
+Django中Auth组件采用的是  权限六表 （在传统RBAC基础上增加UP关系表）
+</code></pre></div>
+
+<h3 id="_1">权限三表<a href="https://setcreed.github.io/django-dev/django rest framework/07 jwt认证/#_1">#</a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200101155427.png" /></p>
+<h3 id="_2">权限六表<a href="https://setcreed.github.io/django-dev/django rest framework/07 jwt认证/#_2">#</a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20191231105924.png" /></p>
+<h2 id="seesiontoken">基于后台seesion的token认证<a class="headerlink" href="#seesiontoken" title="Permanent link">&para;</a></h2>
+<ul>
+<li>未登录状态发送登录请求，提交账号密码数据，后端 对账号密码进行校验</li>
+<li>后端为当前账号以及当前客户端创建session表，存到session表中</li>
+<li>服务端做出响应，将session中的认证字符串token传给前端，存到cookie中</li>
+<li>浏览器 cookie存储服务端返回的token，下一次请求携带着token。服务端接收前台token，并拿着session与user表进行校验。</li>
+</ul>
+<p>需要优化的地方：</p>
+<ul>
+<li>客户端服务端都会存储session相关的token</li>
+<li>服务端要存token，一定会进行IO操作，存token是IO写操作，服务器并发压力很大</li>
+</ul>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200101163256.png" /></p>
+<h2 id="sessiontoken">基于session的token认证服务器集群<a class="headerlink" href="#sessiontoken" title="Permanent link">&para;</a></h2>
+<ul>
+<li>客户端访问服务端资源，需要通过Nginx进行分发资源的访问，Nginx能做到负载均衡，将多个客户端访问的请求压力让多台服务器承受，并且Nginx存储静态资源，客户端访问的静态资源不需要从服务端拿，直接从Nginx服务器上拿静态资源，大大降低了服务器的压力。</li>
+<li>部署多台服务器，一个用来产生token，一个校验token，它们需要数据同步</li>
+</ul>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200101163419.png" /></p>
+<h2 id="jwt-json-web-token">jwt认证规则 json web token<a class="headerlink" href="#jwt-json-web-token" title="Permanent link">&para;</a></h2>
+<h5 id="_3">基本原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>第一次认证通过用户名和密码,服务端签发一个json的token,后续客户端的请求都带着这个token,服务端解析这个token来判断客户端的身份和合法性.</p>
+<h5 id="_4">优点：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<ul>
+<li>数据库不需要存储token，所有服务器的IO操作会减少（没有IO写操作）</li>
+<li>客户端存token，服务器只存储签发与校验算法，执行效率高</li>
+<li>签发与校验算法在多个服务器可以直接统一，在jwt认证规则下，服务器做集群非常便捷</li>
+</ul>
+<h5 id="_5">突破点：<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<ul>
+<li>token必须要有多个部分组成，有能反解的部分，也有不能反解的部分。jwt一般采用三段式</li>
+<li>token中必须包含过期时间，保证token的安全性与时效性</li>
+</ul>
+<h3 id="jwt_1">jwt原理<a class="headerlink" href="#jwt_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>jwt由 头.载荷.签名 三部分组成</li>
+<li>每一个部分都是一个json字典， 头和载荷采用 base64 可逆加密算法加密，签名采用HS256不可逆加密</li>
+</ul>
+<h5 id="_6">内容：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<ul>
+<li>头header（基本信息）：可逆不可逆采用的加密算法、公司名称、项目组信息、开发者信息……</li>
+<li>载荷payload（核心信息）：用户主键、用户账号、客户端设备信息、过期时间……</li>
+<li>签名signature（安全信息）：头的加密结果、载荷的加密结果、服务器的安全码（盐）……</li>
+</ul>
+<h3 id="jwttoken">基于jwt的token认证集群<a class="headerlink" href="#jwttoken" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200101163559.png" /></p>
+<h3 id="_7">签发算法：<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>头内容:</li>
+</ol>
+<p>写死(可以为空):公司,项目信息,都是固定不变的</p>
+<p>=&gt; 将数据字典转化为json格式字符串,再将json字符串加密为base64字符串</p>
+<ol>
+<li>载荷的内容:</li>
+</ol>
+<p>用户账号,客户端设备信息由客户端提供,用户名,主键等要验证信息,过期时间以及刷新时间</p>
+<p>=&gt; 将数据字典转化为json格式字符串,再将json字符串加密为base64字符串</p>
+<ol>
+<li>签名的内容:</li>
+</ol>
+<p>将头的加密结果,载荷的加密结果,再从服务器上拿到安全码,也可以包含额外的载荷部分(用户信息,设备信息)</p>
+<p>=&gt; 将数据字典转化成json字符串,再将json字符串加密为HS256字符串</p>
+<ol>
+<li>将三个字符串使用<code>.</code>连接称为三段式token</li>
+</ol>
+<h3 id="_8">校验算法：<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ol>
+<li>从客户端提交的请求中获取token,使用<code>.</code>分割成三段</li>
+<li>header头(第一部分)可以不解密</li>
+<li>payload载荷(第二部分)一定要解密,先使用base64解密成json字符串,再转换为字典数据格式</li>
+<li>用户主键与用户账号查询User表确定用户是否存在</li>
+<li>设备信息与本次提交的设备信息比对,确定前后是否为统一设备提交,决定是否对用户做安全提示(异地登录信息)</li>
+<li>过期时间校验,看该token是否在有效时间内</li>
+<li>signature签名(第三段)采用加密碰撞校验</li>
+<li>将头,载荷加密字符串和数据库安全码形成json字典,转成成json字符串.</li>
+<li>采用不可逆HS256加密形成加密字符串</li>
+<li>新的加密字符串与发过来的token中的第三段碰撞对比,一致才能保证token是合法的.</li>
+<li>校验算法通过后,载荷校验得到User对象,就是该token代表的登录用户(Django项目一般会把登录用户存放在request.user中</li>
+</ol>
+<h3 id="_9">刷新算法：<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在签发token的载荷中,添加第一次签发token的时间,和刷新有效时间</li>
+</ol>
+<p>(比如一小时刷新一次token,那么这一小时之内的访问就不需要签发新的token,而token的过期时间为一周,那么一小时之外一周之内的时间段内就需要不断刷新token,一直到过期时间后token失效)</p>
+<ol>
+<li>
+<p>每一次请求携带token,不仅走校验算法验证token是否合法,还要额外请求刷新token接口,如果超过刷新时间,则签发新的token,整体过期时间后移.(没有超过过期时间,产生新的token给客户端,超过了,刷新失败)</p>
+</li>
+<li>
+<p>服务端要同时设置过期时间,还要设置刷新时间.</p>
+</li>
+</ol>
+<h2 id="drf-jwt">drf-jwt 插件简单使用<a class="headerlink" href="#drf-jwt" title="Permanent link">&para;</a></h2>
+<p>安装插件<code>pip3 install djangorestframework-jwt</code></p>
+<p>在settings文件中自定义配置jwt</p>
+<div class="codehilite"><pre><span></span><code># drf-jwt自定义配置
+import datetime
+JWT_AUTH = {
+    # 过期时间
+    &#39;JWT_EXPIRATION_DELTA&#39;: datetime.timedelta(seconds=300),
+
+    # 是否允许刷新
+    &#39;JWT_ALLOW_REFRESH&#39;: False,
+
+    # 最大刷新的过期时间
+    &#39;JWT_REFRESH_EXPIRATION_DELTA&#39;: datetime.timedelta(days=7),
+}
+</code></pre></div>
+
+<p>在路由中设置</p>
+<div class="codehilite"><pre><span></span><code># urls.py
+from django.conf.urls import url, include
+from .router import router
+# router.register(&#39;users&#39;, UserModelViewSet, basename=&#39;user&#39;)
+from rest_framework_jwt.views import ObtainJSONWebToken, RefreshJSONWebToken, VerifyJSONWebToken
+urlpatterns = [
+    # 登录接口，签发token
+    url(r&#39;^login/$&#39;, ObtainJSONWebToken.as_view()),
+    # 刷新token
+    url(r&#39;^refresh/$&#39;, RefreshJSONWebToken.as_view()),
+    # 验证token
+    url(r&#39;^verify/$&#39;, VerifyJSONWebToken.as_view()),
+
+    url(&#39;&#39;, include(router.urls))
+]
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

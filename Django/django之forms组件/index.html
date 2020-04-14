@@ -1,0 +1,2514 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>django之forms组件 - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#djangoforms" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                django之forms组件
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      组成原理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        组成原理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%9B%E5%88%B6%E5%8F%8A%E5%8E%9F%E7%A0%81/" title="进制及原码" class="md-nav__link">
+      进制及原码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5/" title="输入语句" class="md-nav__link">
+      输入语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%8D%E5%B0%84/" title="反射" class="md-nav__link">
+      反射
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/json/" title="json" class="md-nav__link">
+      json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="django之视图层" class="md-nav__link">
+      django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="django之模板层" class="md-nav__link">
+      django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8BORM/" title="django之ORM" class="md-nav__link">
+      django之ORM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8B%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="django之分组查询" class="md-nav__link">
+      django之分组查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="django之ORM优化查询" class="md-nav__link">
+      django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E5%92%8Cajax/" title="django和ajax" class="md-nav__link">
+      django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E5%BA%8F%E5%88%97%E5%8C%96%E6%A8%A1%E5%9D%97/" title="django序列化模块" class="md-nav__link">
+      django序列化模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-nav__link">
+      多对多三种创建方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        django之forms组件
+      </label>
+    
+    <a href="./" title="django之forms组件" class="md-nav__link md-nav__link--active">
+      django之forms组件
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    主要作用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    手动书写需求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" class="md-nav__link">
+    使用forms组件校验数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms_1" class="md-nav__link">
+    forms组件渲染标签
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 方式一
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 方式二
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.方式三
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms_2" class="md-nav__link">
+    forms组件展示信息
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-nav__link">
+      django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../django%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="django中间件" class="md-nav__link">
+      django中间件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      drf
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        drf
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drf/Restful%E8%A7%84%E8%8C%83/" title="Restful规范" class="md-nav__link">
+      Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../drf中的APIView请求生命周期.md" title="drf中的APIView请求生命周期" class="md-nav__link">
+      drf中的APIView请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../drf序列化组件.md" title="drf序列化组件" class="md-nav__link">
+      drf序列化组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../多表操作.md" title="多表操作" class="md-nav__link">
+      多表操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../drf序列化组件实现十大接口.md" title="drf序列化组件实现十大接口" class="md-nav__link">
+      drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../视图家族.md" title="视图家族" class="md-nav__link">
+      视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jwt认证.md" title="jwt认证" class="md-nav__link">
+      jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../三大认证.md" title="三大认证" class="md-nav__link">
+      三大认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../多方式登录.md" title="多方式登录" class="md-nav__link">
+      多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../三大组件源码分析.md" title="三大组件源码分析" class="md-nav__link">
+      三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/CGI%2CwSGI%2CuWSGI%2Cuwsgi/" title="CGI,wSGI,uWSGI,uwsgi" class="md-nav__link">
+      CGI,wSGI,uWSGI,uwsgi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Redis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Redis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Redis/" title="Redis" class="md-nav__link">
+      Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Golang%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Golang中使用Redis" class="md-nav__link">
+      Golang中使用Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-nav__link">
+      Python中使用Redis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MySQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MySQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础" class="md-nav__link">
+      数据库基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-nav__link">
+      库表值的操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/pymysql/" title="pymysql" class="md-nav__link">
+      pymysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/MySQL%E4%B8%BB%E4%BB%8E%E6%90%AD%E5%BB%BA/" title="MySQL主从搭建" class="md-nav__link">
+      MySQL主从搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      MongoDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        MongoDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MongoDB/MongoDB%E5%AE%89%E8%A3%85/" title="MongoDB安装" class="md-nav__link">
+      MongoDB安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%89%E8%A3%85/" title="Docker简介与安装" class="md-nav__link">
+      Docker简介与安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E9%95%9C%E5%83%8F/" title="Docker镜像" class="md-nav__link">
+      Docker镜像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%AE%B9%E5%99%A8/" title="Docker容器" class="md-nav__link">
+      Docker容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%85%B6%E4%BB%96/" title="Docker其他" class="md-nav__link">
+      Docker其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/" title="树" class="md-nav__link">
+      树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" title="稀疏数组" class="md-nav__link">
+      稀疏数组
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    主要作用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    手动书写需求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" class="md-nav__link">
+    使用forms组件校验数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms_1" class="md-nav__link">
+    forms组件渲染标签
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 方式一
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 方式二
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.方式三
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms_2" class="md-nav__link">
+    forms组件展示信息
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#djangoforms">django之forms组件</a><ul>
+<li><a href="#_1">主要作用</a></li>
+<li><a href="#_2">手动书写需求</a></li>
+<li><a href="#forms">使用forms组件校验数据</a></li>
+<li><a href="#forms_1">forms组件渲染标签</a><ul>
+<li><a href="#1">1. 方式一</a></li>
+<li><a href="#2">2. 方式二</a></li>
+<li><a href="#3">3.方式三</a></li>
+</ul>
+</li>
+<li><a href="#forms_2">forms组件展示信息</a></li>
+</ul>
+</li>
+<li><a href="#form">form组件自定义校验</a><ul>
+<li><a href="#regexvalidator">RegexValidator验证器</a></li>
+<li><a href="#_3">自定义校验器</a></li>
+<li><a href="#hook">钩子函数 (HOOK)</a><ul>
+<li><a href="#_4">全局钩子</a></li>
+<li><a href="#_5">局部钩子</a><ul>
+<li><a href="#_6">注意</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#forms_3">forms组件补充知识点</a><ul>
+<li><a href="#_7">其他字段参数</a><ul>
+<li><a href="#error_messages">error_messages</a></li>
+<li><a href="#password">password</a></li>
+<li><a href="#radioselect">radioSelect</a></li>
+<li><a href="#select">单选Select</a></li>
+<li><a href="#select_1">多选Select</a></li>
+<li><a href="#checkbox">单选checkbox</a></li>
+<li><a href="#checkbox_1">多选checkbox</a></li>
+<li><a href="#choice">choice字段注意事项</a></li>
+</ul>
+</li>
+<li><a href="#_8">其他</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="djangoforms">django之forms组件<a class="headerlink" href="#djangoforms" title="Permanent link">&para;</a></h1>
+<p>先抛出一个需求：</p>
+<div class="codehilite"><pre><span></span><code>1.写一个注册功能，获取用户输入的用户名和密码，提交到后端，后端做校验
+2.用户名里面不能含有敏感信息，给出相应的提示
+3.如果密码小于三位，就提示用户
+</code></pre></div>
+
+<h3 id="_1">主要作用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>渲染标签</p>
+<p>校验数据</p>
+<p>展示信息</p>
+<h3 id="_2">手动书写需求<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>views.py</p>
+<div class="codehilite"><pre><span></span><code>def register(request):
+    errors = {&#39;username&#39;:&#39;&#39;, &#39;password&#39;:&#39;&#39;}
+    if request.method == &#39;POST&#39;:
+        username = request.POST.get(&#39;username&#39;)
+        password = request.POST.get(&#39;password&#39;)
+
+        if &#39;zf&#39; in username:
+            errors[&#39;username&#39;] = &#39;不能使用该字符&#39;
+        if len(password) &lt; 4:
+            errors[&#39;password&#39;] = &#39;密码不能小于三位&#39;
+
+    return render(request, &#39;register.html&#39;, locals())
+</code></pre></div>
+
+<p>register.html</p>
+<div class="codehilite"><pre><span></span><code>&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;p&gt;
+        username:&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;
+        &lt;span style=&quot;color: red&quot;&gt;{{ errors.username }}&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        password:&lt;input type=&quot;text&quot; name=&quot;password&quot;&gt;
+        &lt;span style=&quot;color: red&quot;&gt;{{ errors.password }}&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre></div>
+
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305114802.png" /></p>
+<p>这里实现了三个功能：</p>
+<ul>
+<li>手写html页面获取用户输入信息</li>
+<li>将数据传入后端做数据校验</li>
+<li>如果有错误，展示错误信息</li>
+</ul>
+<p>但是这个页面手写麻烦，输入信息写错了，一刷新信息全没了，很不友好！！</p>
+<h2 id="forms">使用forms组件校验数据<a class="headerlink" href="#forms" title="Permanent link">&para;</a></h2>
+<p>使用forms组件首先要导入forms模块， 写这玩意类似于models</p>
+<div class="codehilite"><pre><span></span><code>from django import forms
+
+class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3)
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3)
+    # email字段  必须是邮箱格式
+    email = forms.EmailField()
+</code></pre></div>
+
+<p>然后对数据进行校验， 可以写一个测试脚本，还可以使用pycharm左下角的Python Console功能，会自动搭建测试脚本</p>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305115132.png" /></p>
+<p>使用测试</p>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305115229.png" /></p>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305115319.png" /></p>
+<p>校验数据的方法：</p>
+<ol>
+<li>给写好的类 传字典数据(待校验的数据)</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>form_obj = views.MyForm({&#39;username&#39;:&#39;cwz&#39;,&#39;password&#39;:&#39;12&#39;,&#39;email&#39;:&#39;123&#39;})
+</code></pre></div>
+
+<ol>
+<li>如何查看校验的数据是否合法</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>form_obj.is_valid()    # 只有全部数据符合校验规则才为True
+</code></pre></div>
+
+<ol>
+<li>如何查看不符合规则的字段及错误的理由</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>form_obj.errors`
+</code></pre></div>
+
+<ol>
+<li>如何查看符合校验规则的数据</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>form_obj.cleaned_data
+</code></pre></div>
+
+<ol>
+<li>forms组件中 定义的字段默认都是必须传值的 不能少传</li>
+<li>forms组件只会校验forms类中定义的字段 如果你多传了 不会有任何影响</li>
+</ol>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305120633.png" /></p>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305120700.png" /></p>
+<h2 id="forms_1">forms组件渲染标签<a class="headerlink" href="#forms_1" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 方式一<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>forms组件只会帮你渲染用户输入的标签，不会帮渲染提交按钮标签。</p>
+<p>views.py</p>
+<div class="codehilite"><pre><span></span><code>def index(request):
+    # 渲染标签，先生成一个空的form类的对象
+    form_obj = MyForm()
+
+    return render(request, &#39;index.html&#39;, locals())
+</code></pre></div>
+
+<p>前端页面：</p>
+<div class="codehilite"><pre><span></span><code>&lt;p&gt;forms组件渲染的方式1&lt;/p&gt;
+{{ form_obj.as_p }}
+&lt;br&gt;
+{{ form_obj.as_ul }}
+&lt;br&gt;
+{{ form_obj.as_table }}
+</code></pre></div>
+
+<p>效果：</p>
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305121844.png" /></p>
+<p>总结：这种渲染标签的方式封装程度态高 不推荐使用 但是可以用在本地测试</p>
+<h3 id="2">2. 方式二<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>不推荐使用，比较麻烦</p>
+<div class="codehilite"><pre><span></span><code>&lt;p&gt;forms组件渲染标签方式2：&lt;/p&gt;
+{{ form_obj.username.label }}{{ form_obj.username }}
+{{ form_obj.password.label }}{{ form_obj.password }}
+{{ form_obj.email.label }}{{ form_obj.email }}
+</code></pre></div>
+
+<h3 id="3">3.方式三<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>&lt;p&gt;forms组件渲染标签方式3：&lt;/p&gt;
+{% for form in form_obj %}
+    &lt;p&gt;{{ form.label }} {{ form }}&lt;/p&gt;
+{% endfor %}
+</code></pre></div>
+
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305121958.png" /></p>
+<p>若想要label标签显示中文，可以指定label标签：</p>
+<div class="codehilite"><pre><span></span><code>from django import forms
+
+class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;)
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;)
+    # email字段  必须是邮箱格式
+    email = forms.EmailField(label=&#39;邮箱&#39;)
+</code></pre></div>
+
+<h2 id="forms_2">forms组件展示信息<a class="headerlink" href="#forms_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+    {% for form in form_obj %}
+        &lt;p&gt;{{ form.label }} {{ form }}&lt;/p&gt;
+    {% endfor %}
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre></div>
+
+<p>views.py</p>
+<div class="codehilite"><pre><span></span><code>from django import forms
+
+class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;)
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;)
+    # email字段  必须是邮箱格式
+    email = forms.EmailField(label=&#39;邮箱&#39;)
+
+def index(request):
+    # 渲染标签，先生成一个空的forms类的对象
+    form_obj = MyForm()
+
+    if request.method == &#39;POST&#39;:
+        form_obj = MyForm(request.POST)
+        if form_obj.is_valid():
+            print(form_obj.cleaned_data)
+            return HttpResponse(&#39;数据正确&#39;)
+        else:
+            print(form_obj.errors)
+
+    return render(request, &#39;index.html&#39;, locals())
+</code></pre></div>
+
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305122112.png" /></p>
+<p>这玩意是前端做的校验</p>
+<p>注意：</p>
+<p><strong>数据的校验通常前后端都有，但是前端的校验不堪一击，可有可无；后端的校验必须要有而且必须非常全面</strong></p>
+<p>在前端form表单加上一个参数（<strong>novalidate</strong>），就可以不做校验：<code>&lt;form action="" method="post" novalidate&gt;</code></p>
+<p>前端错误信息展示写法：</p>
+<div class="codehilite"><pre><span></span><code>&lt;form action=&quot;&quot; method=&quot;post&quot; novalidate&gt;
+    {% for form in form_obj %}
+        &lt;p&gt;{{ form.label }} {{ form }}
+            &lt;span&gt;{{ form.errors.0 }}&lt;/span&gt;
+        &lt;/p&gt;
+
+    {% endfor %}
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre></div>
+
+<p><img alt="img" src="https://cdn.jsdelivr.net/gh/setcreed/pic_img/cdn_img/20200305122920.png" /></p>
+<p>也支持中文显示信息</p>
+<div class="codehilite"><pre><span></span><code>from django import forms
+
+class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, error_messages={
+        &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+        &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+        &#39;required&#39;: &#39;用户名不能为空&#39;,
+    })
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;密码最短三位&#39;,
+        &#39;required&#39;: &#39;密码不能为空&#39;,
+    })
+    # email字段  必须是邮箱格式
+    email = forms.EmailField(label=&#39;邮箱&#39;, error_messages={
+        &#39;required&#39;: &#39;邮箱不能为空&#39;,
+        &#39;invalid&#39;: &#39;邮箱格式不正确&#39;
+    })
+</code></pre></div>
+
+<h1 id="form">form组件自定义校验<a class="headerlink" href="#form" title="Permanent link">&para;</a></h1>
+<p>数据的校验前后端都必须有,其中前端只能做限制校验,无法匹配正则</p>
+<p>前端数据校验可有可无</p>
+<p>后端数据校验重拳出击</p>
+<p>在form表单中加一个novalidate参数即可屏蔽浏览器校验</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="n">novalidate</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h3 id="regexvalidator">RegexValidator验证器<a class="headerlink" href="#regexvalidator" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>from django import forms
+from django.core.validators import RegexValidator
+
+class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, error_messages={
+        &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+        &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+        &#39;required&#39;: &#39;用户名不能为空&#39;,
+    })
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;密码最短三位&#39;,
+        &#39;required&#39;: &#39;密码不能为空&#39;,
+    }, validators=[
+        RegexValidator(r&#39;^[0-9]+$&#39;, &#39;请输入数字&#39;),
+        RegexValidator(r&#39;^139[0-9]+$&#39;, &#39;数字必须要以139开头&#39;)   # 可以添加多个正则表达式，从上往下校验
+    ]
+    )
+</code></pre></div>
+
+<h3 id="_3">自定义校验器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#class类中自定义</span>
+<span class="kn">from</span> <span class="nn">django.forms</span> <span class="kn">import</span> <span class="n">widgets</span>
+<span class="k">class</span> <span class="nc">PublishForm</span><span class="p">(</span><span class="n">Form</span><span class="p">):</span>
+
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+                            <span class="n">min_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;用户名&#39;</span><span class="p">,</span>
+                            <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="s1">&#39;标题不能为空&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="s1">&#39;标题最少为5个字符&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="s1">&#39;标题最多为20个字符&#39;</span><span class="p">},</span>
+                            <span class="n">widget</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s2">&quot;form-control&quot;</span><span class="p">,</span>
+                                                          <span class="s1">&#39;placeholder&#39;</span><span class="p">:</span> <span class="s1">&#39;标题5-20个字符&#39;</span><span class="p">}))</span>
+
+
+    <span class="c1"># 使用自定义验证规则</span>
+    <span class="n">phone</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">mobile_validate</span><span class="p">,</span> <span class="p">],</span>
+                            <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="s1">&#39;手机不能为空&#39;</span><span class="p">},</span>
+                            <span class="n">widget</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s2">&quot;form-control&quot;</span><span class="p">,</span>
+                                                          <span class="s1">&#39;placeholder&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;手机号码&#39;</span><span class="p">}))</span>
+
+    <span class="n">email</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                            <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;邮箱不能为空&#39;</span><span class="p">,</span><span class="s1">&#39;invalid&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;邮箱格式错误&#39;</span><span class="p">},</span>
+                            <span class="n">widget</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s2">&quot;form-control&quot;</span><span class="p">,</span> <span class="s1">&#39;placeholder&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;邮箱&#39;</span><span class="p">}))</span>
+</code></pre></div>
+
+<h3 id="hook">钩子函数 (HOOK)<a class="headerlink" href="#hook" title="Permanent link">&para;</a></h3>
+<p>当你觉得上面的所有校验还是不能满足需求，可以考虑钩子函数</p>
+<h4 id="_4">全局钩子<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>我们在Fom类中定义 clean() 方法，就能够实现对字段进行全局校验。</p>
+<div class="codehilite"><pre><span></span><code>class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, error_messages={
+        &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+        &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+        &#39;required&#39;: &#39;用户名不能为空&#39;,
+    })
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;密码最短三位&#39;,
+        &#39;required&#39;: &#39;密码不能为空&#39;,
+    })
+
+    re_password = forms.CharField(max_length=8, min_length=3, label=&#39;确认密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;确认密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;确认密码最短三位&#39;,
+        &#39;required&#39;: &#39;确认密码不能为空&#39;,
+    })
+
+    # 校验密码 确认密码是否一致
+    def clean(self):
+        password = self.cleaned_data.get(&#39;password&#39;)
+        re_password = self.cleaned_data.get(&#39;password&#39;)
+        if not password == re_password:
+            self.add_error(&#39;re_password&#39;, &#39;两次，密码不一致&#39;)
+
+        return self.cleaned_data
+</code></pre></div>
+
+<p>勾走了啥,就返回啥,勾走了全局,返回全局</p>
+<h4 id="_5">局部钩子<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>我们在Fom类中定义 clean_字段名() 方法，就能够实现对特定字段进行校验。</p>
+<div class="codehilite"><pre><span></span><code>class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, error_messages={
+        &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+        &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+        &#39;required&#39;: &#39;用户名不能为空&#39;,
+    })
+    # password字段 最多八位， 最少三位
+    password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;密码最短三位&#39;,
+        &#39;required&#39;: &#39;密码不能为空&#39;,
+    })
+
+    re_password = forms.CharField(max_length=8, min_length=3, label=&#39;确认密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;确认密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;确认密码最短三位&#39;,
+        &#39;required&#39;: &#39;确认密码不能为空&#39;,
+    })
+
+    # 校验用户名中不能有666
+    def clean_username(self):
+        username = self.cleaned_data.get(&#39;username&#39;)
+        if &#39;666&#39; in username:
+            # 给username字段添加错误信息
+            self.add_error(&#39;username&#39;, &#39;666是不存在的&#39;)
+        # 将username返回出去
+        return username
+</code></pre></div>
+
+<p>局部钩子钩走了啥,就要返回啥</p>
+<p>相当于在clean_data中做二次校验</p>
+<h5 id="_6">注意<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p>is_valid方法返回值为True或False,如果设置了raise_exception=True,当返回值为False时,会主动抛出异常.</p>
+<h2 id="forms_3">forms组件补充知识点<a class="headerlink" href="#forms_3" title="Permanent link">&para;</a></h2>
+<h3 id="_7">其他字段参数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>label input对应的提示信息</p>
+<p>initial 默认值</p>
+<p>required 默认为True 控制字段是否必填</p>
+<div class="codehilite"><pre><span></span><code>class MyForm(forms.Form):
+    # username字段 最多八位， 最少三位
+    username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, initial=&#39;默认值&#39;, 
+        error_messages={
+        &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+        &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+        &#39;required&#39;: &#39;用户名不能为空&#39;,
+                        }, required=False)
+</code></pre></div>
+
+<p>widget 给input框设置样式及属性</p>
+<div class="codehilite"><pre><span></span><code>password = forms.CharField(max_length=8, min_length=3, label=&#39;密码&#39;, error_messages={
+        &#39;max_length&#39;: &#39;密码最长八位&#39;,
+        &#39;min_length&#39;: &#39;密码最短三位&#39;,
+        &#39;required&#39;: &#39;密码不能为空&#39;,
+    }, widget=forms.widgets.PasswordInput()  # 这个password字段是密文的
+username = forms.CharField(max_length=8, min_length=3, label=&#39;用户名&#39;, initial=&#39;默认值&#39;,
+                               error_messages={
+                                   &#39;max_length&#39;: &#39;用户名最长八位&#39;,
+                                   &#39;min_length&#39;: &#39;用户名最短三位&#39;,
+                                   &#39;required&#39;: &#39;用户名不能为空&#39;,
+                               }, required=False,
+                               widget=forms.widgets.TextInput({&#39;class&#39;: &#39;form-control c1 c2&#39;, &#39;username&#39;: &#39;cwz&#39;})
+                               )
+</code></pre></div>
+
+<h4 id="error_messages">error_messages<a class="headerlink" href="#error_messages" title="Permanent link">&para;</a></h4>
+<p>重写错误信息。</p>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    username = forms.CharField(
+        min_length=8,
+        label=&quot;用户名&quot;,
+        initial=&quot;张三&quot;,
+        error_messages={
+            &quot;required&quot;: &quot;不能为空&quot;,
+            &quot;invalid&quot;: &quot;格式错误&quot;,
+            &quot;min_length&quot;: &quot;用户名最短8位&quot;
+        }
+    )
+    pwd = forms.CharField(min_length=6, label=&quot;密码&quot;)
+</code></pre></div>
+
+<h4 id="password">password<a class="headerlink" href="#password" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    ...
+    pwd = forms.CharField(
+        min_length=6,
+        label=&quot;密码&quot;,
+        widget=forms.widgets.PasswordInput(attrs={&#39;class&#39;: &#39;c1&#39;}, render_value=True)
+    )
+</code></pre></div>
+
+<h4 id="radioselect">radioSelect<a class="headerlink" href="#radioselect" title="Permanent link">&para;</a></h4>
+<p>单radio值为字符串</p>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    username = forms.CharField(
+        min_length=8,
+        label=&quot;用户名&quot;,
+        initial=&quot;张三&quot;,
+        error_messages={
+            &quot;required&quot;: &quot;不能为空&quot;,
+            &quot;invalid&quot;: &quot;格式错误&quot;,
+            &quot;min_length&quot;: &quot;用户名最短8位&quot;
+        }
+    )
+    pwd = forms.CharField(min_length=6, label=&quot;密码&quot;)
+    gender = forms.fields.ChoiceField(
+        choices=((1, &quot;男&quot;), (2, &quot;女&quot;), (3, &quot;保密&quot;)),
+        label=&quot;性别&quot;,
+        initial=3,
+        widget=forms.widgets.RadioSelect()
+    )
+</code></pre></div>
+
+<h4 id="select">单选Select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    ...
+    hobby = forms.ChoiceField(
+        choices=((1, &quot;篮球&quot;), (2, &quot;足球&quot;), (3, &quot;双色球&quot;), ),
+        label=&quot;爱好&quot;,
+        initial=3,
+        widget=forms.widgets.Select()
+    )
+</code></pre></div>
+
+<h4 id="select_1">多选Select<a class="headerlink" href="#select_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    ...
+    hobby = forms.MultipleChoiceField(
+        choices=((1, &quot;篮球&quot;), (2, &quot;足球&quot;), (3, &quot;双色球&quot;), ),
+        label=&quot;爱好&quot;,
+        initial=[1, 3],
+        widget=forms.widgets.SelectMultiple()
+    )
+</code></pre></div>
+
+<h4 id="checkbox">单选checkbox<a class="headerlink" href="#checkbox" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    ...
+    keep = forms.ChoiceField(
+        label=&quot;是否记住密码&quot;,
+        initial=&quot;checked&quot;,
+        widget=forms.widgets.CheckboxInput()
+    )
+</code></pre></div>
+
+<h4 id="checkbox_1">多选checkbox<a class="headerlink" href="#checkbox_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>class LoginForm(forms.Form):
+    ...
+    hobby = forms.MultipleChoiceField(
+        choices=((1, &quot;篮球&quot;), (2, &quot;足球&quot;), (3, &quot;双色球&quot;),),
+        label=&quot;爱好&quot;,
+        initial=[1, 3],
+        widget=forms.widgets.CheckboxSelectMultiple()
+    )
+</code></pre></div>
+
+<h4 id="choice">choice字段注意事项<a class="headerlink" href="#choice" title="Permanent link">&para;</a></h4>
+<p>在使用选择标签时，需要注意choices的选项可以配置从数据库中获取，但是由于是静态字段 获取的值无法实时更新，需要重写构造方法从而实现choice实时更新</p>
+<p>方式一</p>
+<div class="codehilite"><pre><span></span><code>from django.forms import Form
+from django.forms import widgets
+from django.forms import fields
+
+
+class MyForm(Form):
+
+    user = fields.ChoiceField(
+        # choices=((1, &#39;上海&#39;), (2, &#39;北京&#39;),),
+        initial=2,
+        widget=widgets.Select
+    )
+
+    def __init__(self, *args, **kwargs):
+        super(MyForm,self).__init__(*args, **kwargs)
+        # self.fields[&#39;user&#39;].choices = ((1, &#39;上海&#39;), (2, &#39;北京&#39;),)
+        # 或
+        self.fields[&#39;user&#39;].choices = models.Classes.objects.all().values_list(&#39;id&#39;,&#39;caption&#39;)
+</code></pre></div>
+
+<p>方式二</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span> <span class="nn">django.forms</span> <span class="kn">import</span> <span class="n">fields</span>
+<span class="kn">from</span> <span class="nn">django.forms</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">form_model</span>
+
+
+<span class="k">class</span> <span class="nc">FInfo</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">authors</span> <span class="o">=</span> <span class="n">form_model</span><span class="o">.</span><span class="n">ModelMultipleChoiceField</span><span class="p">(</span><span class="n">queryset</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">NNewType</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>  <span class="c1"># 多选</span>
+    <span class="c1"># authors = form_model.ModelChoiceField(queryset=models.NNewType.objects.all()) #单选</span>
+</code></pre></div>
+
+<h3 id="_8">其他<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>密码改为密文</p>
+<div class="codehilite"><pre><span></span><code><span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;密码&#39;</span><span class="p">,</span>
+                           <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span>
+                               <span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="s1">&#39;密码最长八位&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="s1">&#39;密码最短三位&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="s1">&#39;密码不能为空&#39;</span>
+                           <span class="p">},</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">()</span>
+                          <span class="p">)</span>
+</code></pre></div>
+
+<p>widget可改变input形式</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                多对多三种创建方法
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                django之cookies和session组件
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
