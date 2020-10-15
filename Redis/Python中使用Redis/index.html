@@ -1455,29 +1455,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#djangoredis" class="md-nav__link">
-    django使用redis
+  <a href="#redis" class="md-nav__link">
+    redis的事务
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    安装
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    配置
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1749,6 +1729,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1791,29 +1819,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#djangoredis" class="md-nav__link">
-    django使用redis
+  <a href="#redis" class="md-nav__link">
+    redis的事务
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    安装
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    配置
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1834,7 +1842,23 @@
               
                 
                 
-                <h1 id="pythonredis">Python中使用redis<a class="headerlink" href="#pythonredis" title="Permanent link">&para;</a></h1>
+                <div class="toc">
+<ul>
+<li><a href="#pythonredis">Python中使用redis</a><ul>
+<li><a href="#_1">下载</a></li>
+<li><a href="#_2">直接使用</a></li>
+<li><a href="#_3">连接池的使用</a></li>
+<li><a href="#redis">redis的事务</a></li>
+</ul>
+</li>
+<li><a href="#djangoredis">django使用redis</a><ul>
+<li><a href="#_4">安装</a></li>
+<li><a href="#_5">配置</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="pythonredis">Python中使用redis<a class="headerlink" href="#pythonredis" title="Permanent link">&para;</a></h1>
 <h5 id="_1">下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code>pip install redis
 </code></pre></div>
@@ -1852,7 +1876,8 @@
 <span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">connection_pool</span><span class="o">=</span><span class="n">pool</span><span class="p">)</span>
 </code></pre></div>
 
-<h3 id="djangoredis">django使用redis<a class="headerlink" href="#djangoredis" title="Permanent link">&para;</a></h3>
+<h3 id="redis">redis的事务<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
+<h1 id="djangoredis">django使用redis<a class="headerlink" href="#djangoredis" title="Permanent link">&para;</a></h1>
 <h5 id="_4">安装<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code>pip install django-redis
 </code></pre></div>

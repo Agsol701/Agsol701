@@ -1668,6 +1668,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1712,6 +1760,11 @@
 <li><a href="#_6">总结</a></li>
 </ul>
 </li>
+<li><a href="#_7">读锁和写锁</a><ul>
+<li><a href="#_8">读锁</a></li>
+<li><a href="#_9">写锁</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <h1 id="_1">并发事务带来的问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
@@ -1747,7 +1800,7 @@
 <th>隔离级别</th>
 <th>脏读</th>
 <th>不可重复读</th>
-<th>幻影读</th>
+<th>幻读</th>
 </tr>
 </thead>
 <tbody>
@@ -1828,6 +1881,13 @@
 </tr>
 </tbody>
 </table>
+<h1 id="_7">读锁和写锁<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<h5 id="_8">读锁<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>共享锁(S锁)又称读锁，若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S 锁。</p>
+<p>这保证了其他事务可以读A，但在T释放A上的S锁之前不能对A做任何修改。</p>
+<h5 id="_9">写锁<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<p>排他锁(X锁)又称写锁。若事务T对数据对象A加上X锁，事务T可以读A也可以修改A，其他事务不能再对A加任何锁，直到T释放A上的锁。</p>
+<p>这保证了其他事务在T释放A上的锁之前不能再读取和修改A。</p>
                 
                   
                 

@@ -1,0 +1,79 @@
+# Strings
+
+### contains
+
+```go
+package strings
+func Contains(s string,substr string) bool
+//判断sbustr是否为s子串
+```
+
+example
+
+```go
+//code:
+fmt.Println(strings.Contains("seafood","foo"))
+fmt.Println(strings.Contains("seafood","bar"))
+fmt.Println(strings.Contains("seafood",""))
+fmt.Println(strings.Contains("",""))
+
+//OutPut:
+true
+false
+true
+true
+```
+
+
+
+### index
+
+```go
+package strings
+func Index(s string, substr string) int
+//返回父串中第一个子串的位置, 如果不存在子串, 返回-1
+```
+
+example
+
+```go
+//code
+fmt.Println(strings.Index("chicken","ken"))
+fmt.Println(strings.Index("chicken","dmr"))
+//OutPut
+4
+-1
+```
+
+
+
+### split
+
+```go
+   s := strings.Split("", "")
+    fmt.Println(s, len(s))
+    s = strings.Split("abc,abc", "")
+    fmt.Println(s, len(s))
+    s = strings.Split("", ",")
+    fmt.Println(s, len(s))
+    s = strings.Split("abc,abc", ",")
+    fmt.Println(s, len(s))
+    s = strings.Split("abc,abc", "|")
+    fmt.Println(s, len(s))
+    fmt.Println(len(""))
+    fmt.Println(len([]string{""}))
+    str := ""
+    fmt.Println(str[0])
+
+运行结果:
+
+[] 0    //返回空数组
+[a b c , a b c] 7  //返回7个数组元素
+[] 1  //返回一个包含空字符元素的数组, 数组长度是1
+[abc abc] 2
+[abc,abc] 1
+0
+1
+panic: runtime error: index out of range 
+```
+

@@ -1,0 +1,68 @@
+gin中间件必须是一个`gin.HandlerFunc`类型.
+
+包含一个`c *gin.Context`请求上下文为参数的函数,都可以称为`gin.Handlerfunc`类型 
+
+### 局部中间件的使用
+
+r.GET方法:GET(relativePath string, handlers ...HandlerFunc) IRoutes
+
+一个请求可以接收多个函数,按顺序执行,请求中间件,函数,依次写入就可以依次执行
+
+### 全局中间件的使用
+
+r.Use(m1)
+
+### c.Nest()
+
+调用后续处理函数
+
+### c.Abort()
+
+组织调用后续的处理函数
+
+### 路由组使用中间件
+
+##### 方法1
+
+在定义路由组时直接使用
+
+```go
+xxGroup := r.Group("/xx",authMiddleware(true)) 
+{
+    xxGroup.GET("/index",func(c *gin.Context) {
+        c.JSON(http.StausOK,gin.H{"msg":"ok})
+    })
+}
+```
+
+##### 方法2
+
+先定义路由组,然后使用路由组`.Use`方法 
+
+```go
+xx2Group := r.Group("/xx2")
+xx2Group.Use(authMiddleware(true))
+```
+
+### 跨中间件传参
+
+`c.SET`可以在c对象中放入值,
+
+`c.GET`可以在c对象中取值,与GET同级的还有`MUSTGET,GEETESTRING`等方法
+
+### 默认中间件
+
+创建route对象可以使用
+
+`r := gin.New()`可以创建一个无任何中间件的对象
+
+常用Default方法自带连个中间件
+
+`r := gin.Default()`时,默认使用了`Logger()`和`Recovery()`这两个中间件 
+
++ Logger中间件将日志写入`gin.DefaultWriter`中,即配置了`GIN_MODE= release`
++ Recovery中间件会recover任何panic.如果有panic,会写入500响应码.
+
+### 注意
+
+当在中间件在中开启goroutine时,需要不能直接传入c对象,需要传入`c.COPY()`,保证并发安全

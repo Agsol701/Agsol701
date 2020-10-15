@@ -1715,6 +1715,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1801,6 +1849,7 @@
 <li><a href="#_12">跨域问题</a><ul>
 <li><a href="#_13">**同源**的定义</a></li>
 <li><a href="#csrf">CSRF</a></li>
+<li><a href="#xss">xss</a></li>
 <li><a href="#cors">CORS</a><ul>
 <li><a href="#_14">简单请求</a></li>
 <li><a href="#_15">非简单请求</a></li>
@@ -1997,6 +2046,10 @@ Server:服务端</p>
 <p>如果两个 URL 的 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Protocol">protocol</a>、<a href="https://developer.mozilla.org/en-US/docs/Glossary/port">port</a> (如果有指定的话)和 <a href="https://developer.mozilla.org/en-US/docs/Glossary/host">host</a> 都相同的话，则这两个 URL 是*同源*。(协议,IP,端口)</p>
 <h3 id="csrf">CSRF<a class="headerlink" href="#csrf" title="Permanent link">&para;</a></h3>
 <p>没有同源策略会引发CSRF跨站请求伪造.</p>
+<p>CSRF，即 Cross Site Request Forgery，中译是跨站请求伪造，是一种劫持受信任用户向服务器发送非预期请求的攻击方式。</p>
+<p>通常情况下，CSRF 攻击是攻击者借助受害者的 Cookie 骗取服务器的信任，可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击服务器，从而在并未授权的情况下执行在权限保护之下的操作。</p>
+<h3 id="xss">xss<a class="headerlink" href="#xss" title="Permanent link">&para;</a></h3>
+<p>XSS 攻击是指攻击者在网站上注入恶意的客户端代码，通过恶意脚本对客户端网页进行篡改，从而在用户浏览网页时，对用户浏览器进行控制或者获取用户隐私数据的一种攻击方式。</p>
 <h3 id="cors">CORS<a class="headerlink" href="#cors" title="Permanent link">&para;</a></h3>
 <p>CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）</p>
 <p>CORS有两种请求，简单请求和非简单请求。</p>

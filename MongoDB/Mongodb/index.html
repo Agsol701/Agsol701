@@ -1,0 +1,3178 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="Agsol">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Mongodb - Agsol的技术栈</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#mongodb" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Agsol的技术栈" aria-label="Agsol的技术栈" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Agsol的技术栈
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Mongodb
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Agsol的技术栈" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Agsol的技术栈
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      组成原理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        组成原理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础" class="md-nav__link">
+      计算机基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="基本数据类型" class="md-nav__link">
+      基本数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" title="常量与变量" class="md-nav__link">
+      常量与变量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B/" title="数值类型" class="md-nav__link">
+      数值类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/" title="基本运算符" class="md-nav__link">
+      基本运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%88%97%E8%A1%A8/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E5%85%B8/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9B%86%E5%90%88/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/bytesbytearray/" title="bytesbytearray" class="md-nav__link">
+      bytesbytearray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/" title="内建函数" class="md-nav__link">
+      内建函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/" title="递归函数" class="md-nav__link">
+      递归函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="文件处理" class="md-nav__link">
+      文件处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" title="字符编码" class="md-nav__link">
+      字符编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%9B%9B%E5%BC%8F%E5%9B%9B%E5%99%A8/" title="四式四器" class="md-nav__link">
+      四式四器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%B1%BB/" title="类" class="md-nav__link">
+      类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象" class="md-nav__link">
+      面向对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E6%A8%A1%E5%9D%97/" title="模块" class="md-nav__link">
+      模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" title="进程和线程" class="md-nav__link">
+      进程和线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B/" title="Python中的进程" class="md-nav__link">
+      Python中的进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B/" title="Python中的线程" class="md-nav__link">
+      Python中的线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="线程同步" class="md-nav__link">
+      线程同步
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Golang
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Golang
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/golang%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/" title="golang简介及安装" class="md-nav__link">
+      golang简介及安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="代码结构和基础语法" class="md-nav__link">
+      代码结构和基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%9B%E5%88%B6%E5%8F%8A%E5%8E%9F%E7%A0%81/" title="进制及原码" class="md-nav__link">
+      进制及原码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F/" title="变量和常量" class="md-nav__link">
+      变量和常量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%A0%87%E8%AF%86%E7%AC%A6%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="标识符及数据类型" class="md-nav__link">
+      标识符及数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B/" title="数字类型" class="md-nav__link">
+      数字类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B/" title="布尔类型" class="md-nav__link">
+      布尔类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/" title="字符类型" class="md-nav__link">
+      字符类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符" class="md-nav__link">
+      运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8C%85/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5/" title="输入语句" class="md-nav__link">
+      输入语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%87%BD%E6%95%B0/" title="函数" class="md-nav__link">
+      函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%95%B0%E7%BB%84/" title="数组" class="md-nav__link">
+      数组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%88%87%E7%89%87/" title="切片" class="md-nav__link">
+      切片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8C%87%E9%92%88/" title="指针" class="md-nav__link">
+      指针
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/" title="结构体的方法" class="md-nav__link">
+      结构体的方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AD%97%E6%AE%B5/" title="结构体的匿名字段" class="md-nav__link">
+      结构体的匿名字段
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E6%8E%A5%E5%8F%A3/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/goroutine/" title="goroutine" class="md-nav__link">
+      goroutine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="并发编程" class="md-nav__link">
+      并发编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="md-nav__link">
+      异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8F%8D%E5%B0%84/" title="反射" class="md-nav__link">
+      反射
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Golang/json/" title="json" class="md-nav__link">
+      json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Django
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Django
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%89%8D%E8%A8%80/" title="django前言" class="md-nav__link">
+      django前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%9F%BA%E7%A1%80%E4%B8%89%E6%9D%BF%E6%96%A7/" title="django基础三板斧" class="md-nav__link">
+      django基础三板斧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" title="django静态文件" class="md-nav__link">
+      django静态文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E8%BF%9E%E6%8E%A5MySQL/" title="django连接MySQL" class="md-nav__link">
+      django连接MySQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/MTV%E4%B8%8EMVC%E6%A8%A1%E5%9E%8B/" title="MTV与MVC模型" class="md-nav__link">
+      MTV与MVC模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%B7%AF%E7%94%B1%E5%B1%82/" title="django之路由层" class="md-nav__link">
+      django之路由层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E8%A7%86%E5%9B%BE%E5%B1%82/" title="django之视图层" class="md-nav__link">
+      django之视图层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E6%A8%A1%E6%9D%BF%E5%B1%82/" title="django之模板层" class="md-nav__link">
+      django之模板层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM/" title="django之ORM" class="md-nav__link">
+      django之ORM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8B%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="django之分组查询" class="md-nav__link">
+      django之分组查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8BORM%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/" title="django之ORM优化查询" class="md-nav__link">
+      django之ORM优化查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%92%8Cajax/" title="django和ajax" class="md-nav__link">
+      django和ajax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E5%BA%8F%E5%88%97%E5%8C%96%E6%A8%A1%E5%9D%97/" title="django序列化模块" class="md-nav__link">
+      django序列化模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/%E5%A4%9A%E5%AF%B9%E5%A4%9A%E4%B8%89%E7%A7%8D%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/" title="多对多三种创建方法" class="md-nav__link">
+      多对多三种创建方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bforms%E7%BB%84%E4%BB%B6/" title="django之forms组件" class="md-nav__link">
+      django之forms组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B9%8Bcookies%E5%92%8Csession%E7%BB%84%E4%BB%B6/" title="django之cookies和session组件" class="md-nav__link">
+      django之cookies和session组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/django%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="django中间件" class="md-nav__link">
+      django中间件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      drf
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        drf
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drf/Restful%E8%A7%84%E8%8C%83/" title="Restful规范" class="md-nav__link">
+      Restful规范
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf中的APIView请求生命周期.md" title="drf中的APIView请求生命周期" class="md-nav__link">
+      drf中的APIView请求生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件.md" title="drf序列化组件" class="md-nav__link">
+      drf序列化组件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多表操作.md" title="多表操作" class="md-nav__link">
+      多表操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/drf序列化组件实现十大接口.md" title="drf序列化组件实现十大接口" class="md-nav__link">
+      drf序列化组件实现十大接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/视图家族.md" title="视图家族" class="md-nav__link">
+      视图家族
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/jwt认证.md" title="jwt认证" class="md-nav__link">
+      jwt认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大认证.md" title="三大认证" class="md-nav__link">
+      三大认证
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/多方式登录.md" title="多方式登录" class="md-nav__link">
+      多方式登录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/三大组件源码分析.md" title="三大组件源码分析" class="md-nav__link">
+      三大组件源码分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="网络编程" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" title="网络模型" class="md-nav__link">
+      网络模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/Dns%E8%AF%A6%E8%A7%A3/" title="Dns详解" class="md-nav__link">
+      Dns详解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/http%E5%8D%8F%E8%AE%AE/" title="http协议" class="md-nav__link">
+      http协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/CGI%2CwSGI%2CuWSGI%2Cuwsgi/" title="CGI,wSGI,uWSGI,uwsgi" class="md-nav__link">
+      CGI,wSGI,uWSGI,uwsgi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Redis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Redis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Redis/" title="Redis" class="md-nav__link">
+      Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Golang%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Golang中使用Redis" class="md-nav__link">
+      Golang中使用Redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Redis/Python%E4%B8%AD%E4%BD%BF%E7%94%A8Redis/" title="Python中使用Redis" class="md-nav__link">
+      Python中使用Redis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MySQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MySQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础" class="md-nav__link">
+      数据库基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/%E5%BA%93%E8%A1%A8%E5%80%BC%E7%9A%84%E6%93%8D%E4%BD%9C/" title="库表值的操作" class="md-nav__link">
+      库表值的操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/pymysql/" title="pymysql" class="md-nav__link">
+      pymysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MySQL/MySQL%E4%B8%BB%E4%BB%8E%E6%90%AD%E5%BB%BA/" title="MySQL主从搭建" class="md-nav__link">
+      MySQL主从搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      MongoDB
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        MongoDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MongoDB%E5%AE%89%E8%A3%85/" title="MongoDB安装" class="md-nav__link">
+      MongoDB安装
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%AE%89%E8%A3%85/" title="Docker简介与安装" class="md-nav__link">
+      Docker简介与安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E9%95%9C%E5%83%8F/" title="Docker镜像" class="md-nav__link">
+      Docker镜像
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%AE%B9%E5%99%A8/" title="Docker容器" class="md-nav__link">
+      Docker容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Docker%E5%85%B6%E4%BB%96/" title="Docker其他" class="md-nav__link">
+      Docker其他
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/" title="树" class="md-nav__link">
+      树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" title="稀疏数组" class="md-nav__link">
+      稀疏数组
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一 简介
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 易用性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 易扩展性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 丰富的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4、卓越的性能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb_1" class="md-nav__link">
+    二 MongoDB基础知识
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mongodbmsghellofoo3python" class="md-nav__link">
+    2.1 文档是MongoDB的核心概念。文档就是键值对的一个有序集{'msg':'hello','foo':3}。类似于python中的有序字典。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mongodb" class="md-nav__link">
+    2.2 集合就是一组文档。如果将MongoDB中的一个文档比喻为关系型数据的一行，那么一个集合就是相当于一张表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mongodb" class="md-nav__link">
+    2.3 数据库：在MongoDB中，多个文档组成集合，多个集合可以组成数据库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 强调：把数据库名添加到集合名前，得到集合的完全限定名，即命名空间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    三 安装&amp;配置
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 账号管理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    四 基本数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curd" class="md-nav__link">
+    五 CURD操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 数据库操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 集合操作（表）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 文档操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    5.3.1 新增文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532" class="md-nav__link">
+    5.3.2 查询文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533" class="md-nav__link">
+    5.3.3 修改文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534" class="md-nav__link">
+    5.3.4 删除文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535" class="md-nav__link">
+    5.3.5 聚合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pymongo" class="md-nav__link">
+    六 Pymongo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    七 练习题
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mongodb">Mongodb<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h1>
+<h2 id="_1">一 简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>MongoDB是一款强大、灵活、且易于扩展的通用型数据库</p>
+<h3 id="11">1.1 易用性<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>MongoDB是一个面向文档（document-oriented）的数据库，而不是关系型数据库。
+不采用关系型主要是为了获得更好得扩展性。当然还有一些其他好处，与关系数据库相比，面向文档的数据库不再有“行“（row）的概念取而代之的是更为灵活的“文档”（document）模型。
+通过在文档中嵌入文档和数组，面向文档的方法能够仅使用一条记录来表现复杂的层级关系，这与现代的面向对象语言的开发者对数据的看法一致。
+另外，不再有预定义模式（predefined schema）：文档的键（key）和值（value）不再是固定的类型和大小。由于没有固定的模式，根据需要添加或删除字段变得更容易了。通常由于开发者能够进行快速迭代，所以开发进程得以加快。而且，实验更容易进行。开发者能尝试大量的数据模型，从中选一个最好的。
+</code></pre></div>
+
+<h3 id="12">1.2 易扩展性<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>应用程序数据集的大小正在以不可思议的速度增长。随着可用带宽的增长和存储器价格的下降，即使是一个小规模的应用程序，需要存储的数据量也可能大的惊人，甚至超出
+了很多数据库的处理能力。过去非常罕见的T级数据，现在已经是司空见惯了。
+由于需要存储的数据量不断增长，开发者面临一个问题：应该如何扩展数据库，分为纵向扩展和横向扩展，纵向扩展是最省力的做法，但缺点是大型机一般都非常贵，而且
+当数据量达到机器的物理极限时，花再多的钱也买不到更强的机器了，此时选择横向扩展更为合适，但横向扩展带来的另外一个问题就是需要管理的机器太多。
+MongoDB的设计采用横向扩展。面向文档的数据模型使它能很容易地在多台服务器之间进行数据分割。MongoDB能够自动处理跨集群的数据和负载，自动重新分配文档，以及将
+用户的请求路由到正确的机器上。这样，开发者能够集中精力编写应用程序，而不需要考虑如何扩展的问题。如果一个集群需要更大的容量，只需要向集群添加新服务器，MongoDB就会自动将现有的数据向新服务器传送
+</code></pre></div>
+
+<h3 id="13">1.3 丰富的功能<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">MongoDB作为一款通用型数据库</span><span class="err">，除了能够创建、读取、更新和删除数据之外，还提供了一系列不断扩展的独特功能</span>
+<span class="c1">#1、索引</span>
+<span class="err">支持通用二级索引，允许多种快速查询，且提供唯一索引、复合索引、地理空间索引、全文索引</span>
+
+<span class="c1">#2、聚合</span>
+<span class="err">支持聚合管道，用户能通过简单的片段创建复杂的集合，并通过数据库自动优化</span>
+
+<span class="c1">#3、特殊的集合类型</span>
+<span class="err">支持存在时间有限的集合，适用于那些将在某个时刻过期的数据，如会话</span><span class="n">session</span><span class="err">。类似地，</span><span class="n">MongoDB也支持固定大小的集合</span><span class="err">，用于保存近期数据，如日志</span>
+
+<span class="c1">#4、文件存储</span>
+<span class="err">支持一种非常易用的协议，用于存储大文件和文件元数据。</span><span class="n">MongoDB并不具备一些在关系型数据库中很普遍的功能</span><span class="err">，如链接</span><span class="n">join和复杂的多行事务</span><span class="err">。省略</span>
+<span class="err">这些的功能是处于架构上的考虑，或者说为了得到更好的扩展性，因为在分布式系统中这两个功能难以高效地实现</span>
+</code></pre></div>
+
+<h3 id="14">1.4、卓越的性能<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>MongoDB的一个主要目标是提供卓越的性能，这很大程度上决定了MongoDB的设计。MongoDB把尽可能多的内存用作缓存cache，视图为每次查询自动选择正确的索引。
+总之各方面的设计都旨在保持它的高性能
+虽然MongoDB非常强大并试图保留关系型数据库的很多特性，但它并不追求具备关系型数据库的所有功能。只要有可能，数据库服务器就会将处理逻辑交给客户端。这种精简方式的设计是MongoDB能够实现如此高性能的原因之一
+</code></pre></div>
+
+<h2 id="mongodb_1">二 MongoDB基础知识<a class="headerlink" href="#mongodb_1" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20200401215128936" src="https://tva1.sinaimg.cn/large/00831rSTly1gdelvcm1snj311o0gsq6o.jpg" /></p>
+<h3 id="21-mongodbmsghellofoo3python">2.1 文档是MongoDB的核心概念。文档就是键值对的一个有序集{'msg':'hello','foo':3}。类似于python中的有序字典。<a class="headerlink" href="#21-mongodbmsghellofoo3python" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">需要注意的是：</span>
+<span class="c1">#1、文档中的键/值对是有序的。</span>
+<span class="c1">#2、文档中的值不仅可以是在双引号里面的字符串，还可以是其他几种数据类型（甚至可以是整个嵌入的文档)。</span>
+<span class="c1">#3、MongoDB区分类型和大小写。</span>
+<span class="c1">#4、MongoDB的文档不能有重复的键。</span>
+<span class="c1">#5、文档中的值可以是多种不同的数据类型，也可以是一个完整的内嵌文档。文档的键是字符串。除了少数例外情况，键可以使用任意UTF-8字符。</span>
+
+<span class="err">文档键命名规范：</span>
+<span class="c1">#1、键不能含有\0 (空字符)。这个字符用来表示键的结尾。</span>
+<span class="c1">#2、.和$有特别的意义，只有在特定环境下才能使用。</span>
+<span class="c1">#3、以下划线&quot;_&quot;开头的键是保留的(不是严格要求的)。</span>
+</code></pre></div>
+
+<h3 id="22-mongodb">2.2 集合就是一组文档。如果将MongoDB中的一个文档比喻为关系型数据的一行，那么一个集合就是相当于一张表<a class="headerlink" href="#22-mongodb" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、集合存在于数据库中，通常情况下为了方便管理，不同格式和类型的数据应该插入到不同的集合，但其实集合没有固定的结构，这意味着我们完全可以把不同格式和类型的数据统统插入一个集合中。</span>
+
+<span class="c1">#2、组织子集合的方式就是使用“.”，分隔不同命名空间的子集合。</span>
+<span class="err">比如一个具有博客功能的应用可能包含两个集合，分别是</span><span class="n">blog</span><span class="o">.</span><span class="n">posts和blog</span><span class="o">.</span><span class="n">authors</span><span class="err">，这是为了使组织结构更清晰，这里的</span><span class="n">blog集合</span><span class="err">（这个集合甚至不需要存在）跟它的两个子集合没有任何关系。</span>
+<span class="err">在</span><span class="n">MongoDB中</span><span class="err">，使用子集合来组织数据非常高效，值得推荐</span>
+
+<span class="c1">#3、当第一个文档插入时，集合就会被创建。合法的集合名：</span>
+<span class="err">集合名不能是空字符串</span><span class="s2">&quot;&quot;</span><span class="err">。</span>
+<span class="err">集合名不能含有</span>\<span class="mi">0</span><span class="err">字符（空字符</span><span class="p">)</span><span class="err">，这个字符表示集合名的结尾。</span>
+<span class="err">集合名不能以</span><span class="s2">&quot;system.&quot;</span><span class="err">开头，这是为系统集合保留的前缀。</span>
+<span class="err">用户创建的集合名字不能含有保留字符。有些驱动程序的确支持在集合名里面包含，这是因为某些系统生成的集合中包含该字符。除非你要访问这种系统创建的集合，否则千万不要在名字里出现$。</span>
+</code></pre></div>
+
+<h3 id="23-mongodb">2.3 数据库：在MongoDB中，多个文档组成集合，多个集合可以组成数据库<a class="headerlink" href="#23-mongodb" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">数据库也通过名字来标识。数据库名可以是满足以下条件的任意</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="err">字符串：</span>
+<span class="c1">#1、不能是空字符串（&quot;&quot;)。</span>
+<span class="c1">#2、不得含有&#39; &#39;（空格)、.、$、/、\和\0 (空字符)。</span>
+<span class="c1">#3、应全部小写。</span>
+<span class="c1">#4、最多64字节。</span>
+
+<span class="err">有一些数据库名是保留的，可以直接访问这些有特殊作用的数据库。</span>
+<span class="c1">#1、admin： 从身份认证的角度讲，这是“root”数据库，如果将一个用户添加到admin数据库，这个用户将自动获得所有数据库的权限。再者，一些特定的服务器端命令也只能从admin数据库运行，如列出所有数据库或关闭服务器</span>
+<span class="c1">#2、local: 这个数据库永远都不可以复制，且一台服务器上的所有本地集合都可以存储在这个数据库中</span>
+<span class="c1">#3、config: MongoDB用于分片设置时，分片信息会存储在config数据库中</span>
+</code></pre></div>
+
+<h3 id="24">2.4 强调：把数据库名添加到集合名前，得到集合的完全限定名，即命名空间<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">例如：</span>
+<span class="err">如果要使用</span><span class="n">cms数据库中的blog</span><span class="o">.</span><span class="n">posts集合</span><span class="err">，这个集合的命名空间就是</span>
+<span class="n">cmd</span><span class="o">.</span><span class="n">blog</span><span class="o">.</span><span class="n">posts</span><span class="err">。命名空间的长度不得超过</span><span class="mi">121</span><span class="err">个字节，且在实际使用中应该小于</span><span class="mi">100</span><span class="err">个字节</span>
+</code></pre></div>
+
+<p><img alt="image-20200401215347803" src="https://tva1.sinaimg.cn/large/00831rSTly1gdelxpstvnj311m0bqn2p.jpg" /></p>
+<h2 id="_2">三 安装&amp;配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 安装<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#0、下载地址 https://www.mongodb.com/download-center/community，选择平台下载</span>
+
+<span class="c1">#1、安装，一路下一步</span>
+<span class="c1">#2、会自动创建文件db和mongod.log文件,自动创建服务</span>
+<span class="c1">#3、注意bin路径下的配置文件mongod.cfg</span>
+<span class="n">storage</span><span class="p">:</span>
+  <span class="n">dbPath</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">MongoDB</span>\<span class="n">Server</span>\<span class="mf">4.2</span>\<span class="n">data</span>
+  <span class="n">journal</span><span class="p">:</span>
+    <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
+<span class="c1"># where to write logging data.</span>
+<span class="n">systemLog</span><span class="p">:</span>
+  <span class="n">destination</span><span class="p">:</span> <span class="nb">file</span>
+  <span class="n">logAppend</span><span class="p">:</span> <span class="n">true</span>
+  <span class="n">path</span><span class="p">:</span>  <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">MongoDB</span>\<span class="n">Server</span>\<span class="mf">4.2</span>\<span class="n">log</span>\<span class="n">mongod</span><span class="o">.</span><span class="n">log</span>
+<span class="c1"># network interfaces</span>
+<span class="n">net</span><span class="p">:</span>
+  <span class="n">port</span><span class="p">:</span> <span class="mi">27017</span>
+  <span class="n">bindIp</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+
+<span class="c1">#4、启动\关闭</span>
+<span class="n">net</span> <span class="n">start</span> <span class="n">MongoDB</span>
+<span class="n">net</span> <span class="n">stop</span> <span class="n">MongoDB</span>
+<span class="n">mongod</span> <span class="o">--</span><span class="n">config</span> <span class="s2">&quot;mongod.cfg&quot;</span>
+<span class="c1"># mongod --config &quot;mongod.cfg&quot; --auth 开启认证</span>
+
+<span class="c1">#6、登录</span>
+<span class="n">mongo</span>
+<span class="c1"># 远程连接：./mongo --host 10.0.0.5 --port 27017</span>
+<span class="c1">#7、安装robo3t（客户端，等同于Navicat）</span>
+<span class="err">一路下一步</span>
+</code></pre></div>
+
+<h3 id="32">3.2 账号管理<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#注意，要管理哪个库，就在哪个库下建账号,管理员账号要建在amdin库下</span>
+<span class="c1">#1、创建账号</span>
+<span class="n">use</span> <span class="n">admin</span>
+<span class="c1">#全局变量 db ，当前在什么库下，这个db就是谁</span>
+<span class="n">db</span><span class="o">.</span><span class="n">createUser</span><span class="p">(</span>
+  <span class="p">{</span>
+    <span class="n">user</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">pwd</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span> <span class="p">}</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="n">use</span> <span class="n">test</span> <span class="c1"># 空数据库不显示</span>
+<span class="n">db</span><span class="o">.</span><span class="n">createUser</span><span class="p">(</span>
+  <span class="p">{</span>
+    <span class="n">user</span><span class="p">:</span> <span class="s2">&quot;lqz&quot;</span><span class="p">,</span>
+    <span class="n">pwd</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="s2">&quot;readWrite&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span> <span class="p">},</span>
+             <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="s2">&quot;read&quot;</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="s2">&quot;db1&quot;</span> <span class="p">}</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#2、重启数据库</span>
+<span class="n">net</span> <span class="n">stop</span> <span class="n">MongoDB</span>
+<span class="n">net</span> <span class="n">start</span> <span class="n">MongoDB</span>
+<span class="c1">#需要以开启认证的方式启动mongodb服务</span>
+<span class="n">mongod</span> <span class="o">--</span><span class="n">config</span> <span class="s2">&quot;mongod.cfg&quot;</span> <span class="o">--</span><span class="n">auth</span>
+
+<span class="c1">#3、登录：注意使用双引号而非单引号</span>
+<span class="c1">#以管理员登陆</span>
+<span class="o">./</span><span class="n">mongo</span> <span class="o">--</span><span class="n">host</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.5</span> <span class="o">--</span><span class="n">port</span> <span class="mi">27017</span> <span class="o">-</span><span class="n">u</span> <span class="s2">&quot;root&quot;</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;123&quot;</span> <span class="o">--</span><span class="n">authenticationDatabase</span> <span class="s2">&quot;admin&quot;</span>
+<span class="c1"># 以用户lqz登陆(只对test库有权限)</span>
+<span class="o">./</span><span class="n">mongo</span> <span class="o">--</span><span class="n">host</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.5</span> <span class="o">--</span><span class="n">port</span> <span class="mi">27017</span> <span class="o">-</span><span class="n">u</span> <span class="s2">&quot;lqz&quot;</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;123&quot;</span> <span class="o">--</span><span class="n">authenticationDatabase</span> <span class="s2">&quot;test&quot;</span>
+<span class="n">mongo</span> <span class="o">--</span><span class="n">port</span> <span class="mi">27017</span> <span class="o">-</span><span class="n">u</span> <span class="s2">&quot;root&quot;</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;123&quot;</span> <span class="o">--</span><span class="n">authenticationDatabase</span> <span class="s2">&quot;admin&quot;</span>
+
+<span class="err">也可以在登录之后用</span><span class="n">db</span><span class="o">.</span><span class="n">auth</span><span class="p">(</span><span class="s2">&quot;账号&quot;</span><span class="p">,</span><span class="s2">&quot;密码&quot;</span><span class="p">)</span><span class="err">登录</span>
+<span class="n">mongo</span>
+<span class="n">show</span> <span class="n">dbs</span>
+<span class="n">use</span> <span class="n">admin</span>
+<span class="c1"># db是一个全局变量，代表当前所有库</span>
+<span class="n">db</span><span class="o">.</span><span class="n">auth</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">,</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="n">show</span> <span class="n">tables</span><span class="err">；</span>
+</code></pre></div>
+
+<h2 id="_3">四 基本数据类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>1、在概念上，MongoDB的文档与Javascript的对象相近，因而可以认为它类似于JSON。JSON（<a href="http://www.json.org">http://www.json.org</a>）是一种简单的数据表示方式：其规范仅用一段文字就能描述清楚（其官网证明了这点），且仅包含六种数据类型。</p>
+<p>2、这样有很多好处：易于理解、易于解析、易于记忆。然而从另一方面说，因为只有null、布尔、数字、字符串、数字和对象这几种数据类型，所以JSON的表达能力有一定的局限。</p>
+<p>3、虽然JSON具备的这些类型已经具有很强的表现力，但绝大数应用（尤其是在于数据库打交道时）都还需要其他一些重要的类型。例如，JSON没有日期类型，这使得原本容易日期处理变得烦人。另外，JSON只有一种数字类型，无法区分浮点数和整数，更别区分32位和64位了。再者JSON无法表示其他一些通用类型，如正则表达式或函数。</p>
+<p>4、MongoDB在保留了JSON基本键/值对特性的基础上，添加了其他一些数据类型。在不同的编程语言下，这些类型的确切表示有些许差异。下面说明了MongoDB支持的其他通用类型，以及如何正在文档中使用它们</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、null：用于表示空或不存在的字段</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">null</span><span class="p">}</span>
+<span class="c1">#2、布尔型：true和false</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">false</span><span class="p">}</span>
+<span class="c1">#3、数值</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mf">3.1415926</span><span class="p">}</span>
+<span class="c1">#4、字符串</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="s1">&#39;egon&#39;</span><span class="p">}</span>
+<span class="c1">#5、日期</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">new</span> <span class="n">Date</span><span class="p">()}</span>
+<span class="n">d</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">getHours</span><span class="p">()</span>
+<span class="c1">#6、正则表达式</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pattern&#39;</span><span class="p">:</span><span class="o">/^</span><span class="n">egon</span><span class="o">.*</span><span class="err">?</span><span class="n">nb</span><span class="err">$</span><span class="o">/</span><span class="n">i</span><span class="p">}</span>
+
+<span class="err">正则写在／／内，后面的</span><span class="n">i代表</span><span class="p">:</span>
+<span class="n">i</span> <span class="err">忽略大小写</span>
+<span class="n">m</span> <span class="err">多行匹配模式</span>
+<span class="n">x</span> <span class="err">忽略非转义的空白字符</span>
+<span class="n">s</span> <span class="err">单行匹配模式</span>
+
+<span class="c1">#7、数组</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">]}</span>
+
+<span class="c1">#8、内嵌文档</span>
+<span class="n">user</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;egon&#39;</span><span class="p">,</span><span class="s1">&#39;addr&#39;</span><span class="p">:{</span><span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span><span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;YT&#39;</span><span class="p">}}</span>
+<span class="n">user</span><span class="o">.</span><span class="n">addr</span><span class="o">.</span><span class="n">country</span>
+
+<span class="c1">#9、对象id:是一个12字节的ID,是文档的唯一标识，不可变</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">ObjectId</span><span class="p">()}</span>
+</code></pre></div>
+
+<p>_id和Objectid</p>
+<div class="codehilite"><pre><span></span><code><span class="n">MongoDB中存储的文档必须有一个</span><span class="s2">&quot;_id&quot;</span><span class="err">键。这个键的值可以是任意类型，默认是个</span><span class="n">ObjectId对象</span><span class="err">。</span>
+<span class="err">在一个集合里，每个文档都有唯一的“</span><span class="n">_id</span><span class="err">”</span><span class="p">,</span><span class="err">确保集合里每个文档都能被唯一标识。</span>
+<span class="err">不同集合</span><span class="s2">&quot;_id&quot;</span><span class="err">的值可以重复，但同一集合内</span><span class="s2">&quot;_id&quot;</span><span class="err">的值必须唯一</span>
+
+<span class="c1">#1、ObjectId</span>
+<span class="n">ObjectId是</span><span class="s2">&quot;_id&quot;</span><span class="err">的默认类型。因为设计</span><span class="n">MongoDb的初衷就是用作分布式数据库</span><span class="err">，所以能够在分片环境中生成</span>
+<span class="err">唯一的标识符非常重要，而常规的做法：在多个服务器上同步自动增加主键既费时又费力，这就是</span><span class="n">MongoDB采用</span>
+<span class="n">ObjectId的原因</span><span class="err">。</span>
+<span class="n">ObjectId采用12字节的存储空间</span><span class="err">，是一个由</span><span class="mi">24</span><span class="err">个十六进制数字组成的字符串</span>
+    <span class="mi">0</span><span class="o">|</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span>   <span class="mi">4</span><span class="o">|</span><span class="mi">5</span><span class="o">|</span><span class="mi">6</span><span class="o">|</span>     <span class="mi">7</span><span class="o">|</span><span class="mi">8</span>    <span class="mi">9</span><span class="o">|</span><span class="mi">10</span><span class="o">|</span><span class="mi">11</span>    
+    <span class="err">时间戳</span>      <span class="err">机器</span>      <span class="n">PID</span>    <span class="err">计数器</span>
+<span class="err">如果快速创建多个</span><span class="n">ObjectId</span><span class="err">，会发现每次只有最后几位有变化。另外，中间的几位数字也会变化（要是在创建过程中停顿几秒）。</span>
+<span class="err">这是</span><span class="n">ObjectId的创建方式导致的</span><span class="err">，如上图</span>
+
+<span class="err">时间戳单位为秒，与随后</span><span class="mi">5</span><span class="err">个字节组合起来，提供了秒级的唯一性。这个</span><span class="mi">4</span><span class="err">个字节隐藏了文档的创建时间，绝大多数驱动程序都会提供</span>
+<span class="err">一个方法，用于从</span><span class="n">ObjectId中获取这些信息</span><span class="err">。</span>
+
+<span class="err">因为使用的是当前时间，很多用户担心要对服务器进行时钟同步。其实没必要，因为时间戳的实际值并不重要，只要它总是不停增加就好。</span>
+<span class="err">接下来</span><span class="mi">3</span><span class="err">个字节是所在主机的唯一标识符。通常是机器主机名的散列值。这样就可以保证不同主机生成不同的</span><span class="n">ObjectId</span><span class="err">，不产生冲突</span>
+
+<span class="err">接下来连个字节确保了在同一台机器上并发的多个进程产生的</span><span class="n">ObjectId是唯一的</span>
+
+<span class="err">前</span><span class="mi">9</span><span class="err">个字节确保了同一秒钟不同机器不同进程产生的</span><span class="n">ObjectId是唯一的</span><span class="err">。最后</span><span class="mi">3</span><span class="err">个字节是一个自动增加的</span> <span class="err">计数器。确保相同进程的同一秒产生的</span>
+<span class="n">ObjectId也是不一样的</span><span class="err">。</span>
+
+<span class="c1">#2、自动生成_id</span>
+<span class="err">如果插入文档时没有</span><span class="s2">&quot;_id&quot;</span><span class="err">键，系统会自帮你创建</span> <span class="err">一个。可以由</span><span class="n">MongoDb服务器来做这件事</span><span class="err">。</span>
+<span class="err">但通常会在客户端由驱动程序完成。这一做法非常好地体现了</span><span class="n">MongoDb的哲学</span><span class="err">：能交给客户端驱动程序来做的事情就不要交给服务器来做。</span>
+<span class="err">这种理念背后的原因是：即便是像</span><span class="n">MongoDB这样扩展性非常好的数据库</span><span class="err">，扩展应用层也要比扩展数据库层容易的多。将工作交给客户端做就</span>
+<span class="err">减轻了数据库扩展的负担。</span>
+</code></pre></div>
+
+<h2 id="curd">五 CURD操作<a class="headerlink" href="#curd" title="Permanent link">&para;</a></h2>
+<h3 id="51">5.1 数据库操作<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、增</span>
+<span class="n">use</span> <span class="n">config</span> <span class="c1">#如果数据库不存在，则创建数据库，否则切换到指定数据库。</span>
+
+<span class="c1">#2、查</span>
+<span class="n">show</span> <span class="n">dbs</span> <span class="c1">#查看所有</span>
+<span class="err">可以看到，我们刚创建的数据库</span><span class="n">config并不在数据库的列表中</span><span class="err">，</span> <span class="err">要显示它，我们需要向</span><span class="n">config数据库插入一些数据</span><span class="err">。</span>
+<span class="n">db</span><span class="o">.</span><span class="n">table1</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+
+<span class="c1">#3、删</span>
+<span class="n">use</span> <span class="n">config</span> <span class="c1">#先切换到要删的库下</span>
+<span class="n">db</span><span class="o">.</span><span class="n">dropDatabase</span><span class="p">()</span> <span class="c1">#删除当前库</span>
+</code></pre></div>
+
+<h3 id="52">5.2 集合操作（表）<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、增</span>
+<span class="err">当第一个文档插入时，集合就会被创建</span>
+<span class="o">&gt;</span> <span class="n">use</span> <span class="n">database1</span>
+<span class="n">switched</span> <span class="n">to</span> <span class="n">db</span> <span class="n">database1</span>
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">table1</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="n">WriteResult</span><span class="p">({</span> <span class="s2">&quot;nInserted&quot;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">})</span>
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">table2</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span>
+<span class="n">WriteResult</span><span class="p">({</span> <span class="s2">&quot;nInserted&quot;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">})</span>
+<span class="c1">#注意 db.user和db.user.info是两个表</span>
+
+<span class="c1">#2、查</span>
+<span class="o">&gt;</span> <span class="n">show</span> <span class="n">collections</span>
+<span class="o">&gt;</span> <span class="n">show</span> <span class="n">tables</span>
+<span class="n">table1</span>
+<span class="n">table2</span>
+
+<span class="c1">#3、删</span>
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">table1</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
+<span class="n">true</span>
+<span class="o">&gt;</span> <span class="n">show</span> <span class="n">tables</span>
+<span class="n">table2</span>
+</code></pre></div>
+
+<h3 id="53">5.3 文档操作<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<h4 id="531">5.3.1 新增文档<a class="headerlink" href="#531" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">#单条插入与多条插入</span>
+
+<span class="c1">#1、没有指定_id则默认ObjectId,_id不能重复，且在插入后不可变</span>
+
+<span class="c1">#2、插入单条</span>
+<span class="n">user0</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;BJ&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">user0</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">find</span><span class="p">()</span>
+
+<span class="c1">#3、插入多条</span>
+<span class="n">user1</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;weifang&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">user2</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;run&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;hebei&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">user3</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;drink&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;heibei&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">user4</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">,</span><span class="s1">&#39;tea&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;BJ&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">user5</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;henan&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">insertMany</span><span class="p">([</span><span class="n">user1</span><span class="p">,</span><span class="n">user2</span><span class="p">,</span><span class="n">user3</span><span class="p">,</span><span class="n">user4</span><span class="p">,</span><span class="n">user5</span><span class="p">])</span>
+
+<span class="c1"># 有则覆盖，没则新增</span>
+<span class="n">db</span><span class="o">.</span><span class="n">t1</span><span class="o">.</span><span class="n">save</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">t1</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">})</span>
+</code></pre></div>
+
+<h4 id="532">5.3.2 查询文档<a class="headerlink" href="#532" title="Permanent link">&para;</a></h4>
+<p>比较运算</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 比较运算</span>
+<span class="c1"># SQL：=,!=,&gt;,&lt;,&gt;=,&lt;=</span>
+<span class="c1"># MongoDB：{key:value}代表什么等于什么,&quot;$ne&quot;,&quot;$gt&quot;,&quot;$lt&quot;,&quot;gte&quot;,&quot;lte&quot;,其中&quot;$ne&quot;能用于所有数据类型</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">pretty</span><span class="p">()</span>  <span class="c1"># 以json格式显示，了解</span>
+<span class="c1">#1、select * from db1.user where name = &quot;agsol1&quot;;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;agsol1&#39;</span><span class="p">})</span>
+
+<span class="c1">#2、select * from db1.user where name != &quot;agsol2&quot;;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:{</span><span class="s2">&quot;$ne&quot;</span><span class="p">:</span><span class="s1">&#39;agsol2&#39;</span><span class="p">}})</span>
+
+<span class="c1">#3、select * from db1.user where id &gt; 2;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s1">&#39;$gt&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}})</span>
+
+<span class="c1">#4、select * from db1.user where id &lt; 3;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s1">&#39;$lt&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}})</span>
+
+<span class="c1">#5、select * from db1.user where id &gt;= 2;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$gte&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,}})</span>
+
+<span class="c1">#6、select * from db1.user where id &lt;= 2;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$lte&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}})</span>
+</code></pre></div>
+
+<p>逻辑运算</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#逻辑运算</span>
+<span class="c1"># SQL：and，or，not ，mod（取余数）</span>
+<span class="c1"># MongoDB：字典中逗号分隔的多个条件是and关系，&quot;$or&quot;的条件放到[]内,&quot;$not&quot;</span>
+
+<span class="c1">#1、select * from db1.user where id &gt;= 2 and id &lt; 4;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$gte&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;$lt&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}})</span>
+
+<span class="c1">#2、select * from db1.user where id &gt;= 2 and age &lt; 40;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$gte&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span><span class="s2">&quot;age&quot;</span><span class="p">:{</span><span class="s2">&quot;$lt&quot;</span><span class="p">:</span><span class="mi">40</span><span class="p">}})</span>
+
+<span class="c1">#3、select * from db1.user where id &gt;= 5 or name = &quot;agsol&quot;;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span>
+    <span class="s2">&quot;$or&quot;</span><span class="p">:[</span>
+        <span class="p">{</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$gte&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">})</span>
+
+
+<span class="c1">#4、select * from db1.user where id % 2=1;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$mod&quot;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]}})</span>
+
+<span class="c1">#5、上题，取反</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$not&quot;</span><span class="p">:{</span><span class="s2">&quot;$mod&quot;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]}}})</span>
+</code></pre></div>
+
+<p>成员运算</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 成员运算</span>
+<span class="c1"># SQL：in，not in</span>
+<span class="c1"># MongoDB：&quot;$in&quot;,&quot;$nin&quot;</span>
+
+<span class="c1">#1、select * from db1.user where age in (20,30,31);</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;age&quot;</span><span class="p">:{</span><span class="s2">&quot;$in&quot;</span><span class="p">:[</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">]}})</span>
+
+<span class="c1">#2、select * from db1.user where name not in (&#39;agsol1&#39;,&#39;agsol2&#39;);</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:{</span><span class="s2">&quot;$nin&quot;</span><span class="p">:[</span><span class="s1">&#39;agsol1&#39;</span><span class="p">,</span><span class="s1">&#39;agsol2&#39;</span><span class="p">]}})</span>
+</code></pre></div>
+
+<p>正则匹配</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># SQL: regexp 正则</span>
+<span class="c1"># MongoDB: /正则表达/i</span>
+<span class="c1">#1、select * from db1.user where name regexp &#39;^l&#39;;</span>
+<span class="c1"># 查询名字以l开头的人</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="o">/.*</span><span class="err">?</span><span class="o">/</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="o">/^</span><span class="n">l</span><span class="o">/</span><span class="p">})</span>
+<span class="c1"># 查询名字以l开头，以1结尾的所有数据</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="o">/^</span><span class="n">l</span><span class="o">.*</span><span class="err">?</span><span class="mi">1</span><span class="err">$</span><span class="o">/</span><span class="p">})</span>
+</code></pre></div>
+
+<p>取指定字段</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、select name,age from db1.user where id=3;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+<span class="c1"># 0表示不显示，1表示显示</span>
+</code></pre></div>
+
+<p>查询数组</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、查看有dancing爱好的人</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;hobbies&#39;</span><span class="p">:</span><span class="s1">&#39;dancing&#39;</span><span class="p">})</span>
+
+<span class="c1">#2、查看既有dancing爱好又有tea爱好的人</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:{</span>
+        <span class="s2">&quot;$all&quot;</span><span class="p">:[</span><span class="s1">&#39;dancing&#39;</span><span class="p">,</span><span class="s1">&#39;tea&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#3、查看第4个爱好为tea的人</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;hobbies.3&quot;</span><span class="p">:</span><span class="s1">&#39;tea&#39;</span><span class="p">})</span>
+
+<span class="c1">#4、查看所有人最后两个爱好(注意没有hobbies字段的也会被查出)（本质用的是取指定字段，所以要放在后面的字典中）</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({},{</span><span class="s1">&#39;hobbies&#39;</span><span class="p">:{</span><span class="s2">&quot;$slice&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;addr&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+
+<span class="c1">#5、查看所有人的第2个到第3个爱好</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({},{</span><span class="s1">&#39;hobbies&#39;</span><span class="p">:{</span><span class="s2">&quot;$slice&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]},</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;addr&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">blog</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">pretty</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;alex意外死亡的真相&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comments&quot;</span> <span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;egon&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span> <span class="p">:</span> <span class="s2">&quot;alex是谁？？？&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;thumb&quot;</span> <span class="p">:</span> <span class="mi">200</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;wxx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span> <span class="p">:</span> <span class="s2">&quot;我去，真的假的&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;thumb&quot;</span> <span class="p">:</span> <span class="mi">300</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;yxx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span> <span class="p">:</span> <span class="s2">&quot;吃喝嫖赌抽，欠下两个亿&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;thumb&quot;</span> <span class="p">:</span> <span class="mi">40</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;egon&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span> <span class="p">:</span> <span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;thumb&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">blog</span><span class="o">.</span><span class="n">find</span><span class="p">({},{</span><span class="s1">&#39;comments&#39;</span><span class="p">:{</span><span class="s2">&quot;$slice&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">}})</span><span class="o">.</span><span class="n">pretty</span><span class="p">()</span> <span class="c1">#查询最后两个</span>
+<span class="n">db</span><span class="o">.</span><span class="n">blog</span><span class="o">.</span><span class="n">find</span><span class="p">({},{</span><span class="s1">&#39;comments&#39;</span><span class="p">:{</span><span class="s2">&quot;$slice&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}})</span><span class="o">.</span><span class="n">pretty</span><span class="p">()</span> <span class="c1">#查询1到2</span>
+</code></pre></div>
+
+<p>排序</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 排序:--1代表升序，-1代表降序</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">({</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+</code></pre></div>
+
+<p>分页</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 分页:--limit代表取多少个document，skip代表跳过前多少个document。 </span>
+<span class="c1"># limit中表示一页显示的条数，skip(页码数*一页显示的条数)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1"># 表关联</span>
+<span class="n">user</span> <span class="p">{</span><span class="n">_id</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="n">nane</span><span class="p">:</span><span class="n">agsol</span><span class="p">,</span><span class="n">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span>   <span class="err">一个人写多篇文章</span>
+<span class="n">article</span> <span class="o">----</span><span class="err">》子查询</span>
+    <span class="p">{</span><span class="s1">&#39;userid&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="n">article</span><span class="p">:</span><span class="err">红楼梦</span><span class="p">}</span>
+  <span class="p">{</span><span class="s1">&#39;userid&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="n">article</span><span class="p">:</span><span class="err">西游记</span><span class="p">}</span>
+</code></pre></div>
+
+<p>获取数量</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 获取数量</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">count</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">}})</span> 
+<span class="o">--</span><span class="err">或者</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">}})</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</code></pre></div>
+
+<p>其他</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、{&#39;key&#39;:null} 匹配key的值为null或者没有这个key</span>
+<span class="n">db</span><span class="o">.</span><span class="n">t2</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">111</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">t2</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">t2</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="n">null</span><span class="p">})</span>
+
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">t2</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">})</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5a5cc2a7c1b4645aad959e5a&quot;</span><span class="p">),</span> <span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="mi">20</span> <span class="p">}</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s2">&quot;5a5cc2a8c1b4645aad959e5b&quot;</span><span class="p">),</span> <span class="s2">&quot;b&quot;</span> <span class="p">:</span> <span class="n">null</span> <span class="p">}</span>
+
+<span class="c1">#2、查找所有</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span> <span class="c1">#等同于db.user.find({})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">pretty</span><span class="p">()</span>
+
+<span class="c1">#3、查找一个，与find用法一致，只是只取匹配成功的第一个</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">findOne</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}})</span>
+
+
+<span class="c1"># 分布式id的生成方案https://www.cnblogs.com/liuqingzheng/p/11074623.html</span>
+</code></pre></div>
+
+<h4 id="533">5.3.3 修改文档<a class="headerlink" href="#533" title="Permanent link">&para;</a></h4>
+<p>语法介绍</p>
+<div class="codehilite"><pre><span></span><code><span class="n">update</span><span class="p">()</span> <span class="err">方法用于更新已存在的文档。语法格式如下：</span>
+<span class="n">db</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+   <span class="o">&lt;</span><span class="n">query</span><span class="o">&gt;</span><span class="p">,</span>
+   <span class="o">&lt;</span><span class="n">update</span><span class="o">&gt;</span><span class="p">,</span>
+   <span class="p">{</span>
+     <span class="n">upsert</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="n">multi</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="n">writeConcern</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">document</span><span class="o">&gt;</span>
+   <span class="p">}</span>
+<span class="p">)</span>
+<span class="err">参数说明：对比</span><span class="n">update</span> <span class="n">db1</span><span class="o">.</span><span class="n">t1</span> <span class="nb">set</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;EGON&#39;</span><span class="p">,</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;Male&#39;</span> <span class="n">where</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;egon&#39;</span> <span class="ow">and</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">;</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+   <span class="p">{</span><span class="n">namne</span><span class="p">:{</span><span class="err">$</span><span class="n">ne</span><span class="p">:</span><span class="n">agsol</span><span class="p">}},</span>
+   <span class="p">{</span><span class="err">字典</span><span class="p">},</span>
+   <span class="p">{</span>
+     <span class="n">upsert</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="n">multi</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="n">writeConcern</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">document</span><span class="o">&gt;</span>
+   <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">query</span> <span class="p">:</span> <span class="err">相当于</span><span class="n">where条件</span><span class="err">。</span>
+<span class="n">update</span> <span class="p">:</span> <span class="n">update的对象和一些更新的操作符</span><span class="err">（如$</span><span class="p">,</span><span class="err">$</span><span class="n">inc</span><span class="o">...</span><span class="err">等，相当于</span><span class="n">set后面的</span>
+<span class="n">upsert</span> <span class="p">:</span> <span class="err">可选，默认为</span><span class="n">false</span><span class="err">，代表如果不存在</span><span class="n">update的记录不更新也不插入</span><span class="err">，设置为</span><span class="n">true代表插入</span><span class="err">。</span>
+<span class="n">multi</span> <span class="p">:</span> <span class="err">可选，默认为</span><span class="n">false</span><span class="err">，代表只更新找到的第一条记录，设为</span><span class="n">true</span><span class="p">,</span><span class="err">代表更新找到的全部记录。</span>
+<span class="n">writeConcern</span> <span class="p">:</span><span class="err">可选，抛出异常的级别。</span>
+
+<span class="err">更新操作是不可分割的：若两个更新同时发送，先到达服务器的先执行，然后执行另外一个，不会破坏文档。</span>
+</code></pre></div>
+
+<p>覆盖式</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#注意：除非是删除，否则_id是始终不会变的</span>
+<span class="c1">#1、覆盖式:</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">30</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol9&quot;</span><span class="p">,</span><span class="s2">&quot;hobbies_count&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+<span class="err">是用</span><span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol3&quot;</span><span class="p">,</span><span class="s2">&quot;hobbies_count&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span><span class="err">覆盖原来的记录</span>
+
+<span class="c1">#2、一种最简单的更新就是用一个新的文档完全替换匹配的文档。这适用于大规模式迁移的情况。例如</span>
+<span class="n">var</span> <span class="n">obj</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">findOne</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+
+<span class="n">obj</span><span class="o">.</span><span class="n">username</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;NB&#39;</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">hobbies_count</span><span class="o">++</span>
+<span class="n">delete</span> <span class="n">obj</span><span class="o">.</span><span class="n">age</span>
+<span class="n">delete</span> <span class="n">obj</span><span class="o">.</span><span class="n">_id</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span><span class="n">obj</span><span class="p">)</span>
+</code></pre></div>
+
+<p>设置$set</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#设置：$set</span>
+
+<span class="err">通常文档只会有一部分需要更新。可以使用原子性的更新修改器，指定对文档中的某些字段进行更新。</span>
+<span class="err">更新修改器是种特殊的键，用来指定复杂的更新操作，比如修改、增加后者删除</span>
+
+<span class="c1">#1、update db1.user set  name=&quot;WXX&quot; where id = 2</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;张三&quot;</span><span class="p">,}})</span>
+
+<span class="c1">#2、没有匹配成功则新增一条{&quot;upsert&quot;:true}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;李飞刀&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">}},{</span><span class="s2">&quot;upsert&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">})</span>
+
+<span class="c1">#3、默认只改匹配成功的第一条,{&quot;multi&quot;:改多条}</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">28</span><span class="p">}})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">38</span><span class="p">}},{</span><span class="s2">&quot;multi&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">})</span>
+
+<span class="c1">#4、修改内嵌文档，把名字为agsol4的人所在的地址国家改成Japan</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s2">&quot;agsol4&quot;</span><span class="p">},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;addr.country&quot;</span><span class="p">:</span><span class="s2">&quot;Japan&quot;</span><span class="p">}})</span>
+
+<span class="c1">#5、把名字为agsol4的人的地2个爱好改成sleep</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s2">&quot;agsol4&quot;</span><span class="p">},{</span><span class="s2">&quot;$set&quot;</span><span class="p">:{</span><span class="s2">&quot;hobbies.1&quot;</span><span class="p">:</span><span class="s2">&quot;sleep&quot;</span><span class="p">}})</span>
+
+<span class="c1">#6、删除agsol4的爱好,$unset</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s2">&quot;agsol4&quot;</span><span class="p">},{</span><span class="s2">&quot;$unset&quot;</span><span class="p">:{</span><span class="s2">&quot;hobbies&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}})</span>
+</code></pre></div>
+
+<p>增加和减少</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#增加和减少：$inc</span>
+
+<span class="c1">#1、所有人年龄增加一岁</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;$inc&quot;</span><span class="p">:{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;multi&quot;</span><span class="p">:</span><span class="n">true</span>
+    <span class="p">}</span>
+    <span class="p">)</span>
+<span class="c1">#2、所有人年龄减少5岁</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;$inc&quot;</span><span class="p">:{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;multi&quot;</span><span class="p">:</span><span class="n">true</span>
+    <span class="p">}</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+<p>添加删除组内元素 $push $pop $pull</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#添加删除数组内元素</span>
+
+<span class="err">往数组内添加元素</span><span class="p">:</span><span class="err">$</span><span class="n">push</span>
+<span class="c1">#1、为名字为agsol的人添加一个爱好read</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">},{</span><span class="s2">&quot;$push&quot;</span><span class="p">:{</span><span class="s2">&quot;hobbies&quot;</span><span class="p">:</span><span class="s2">&quot;read&quot;</span><span class="p">}})</span>
+
+<span class="c1">#2、为名字为agsol的人一次添加多个爱好tea，dancing</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">},{</span><span class="s2">&quot;$push&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;hobbies&quot;</span><span class="p">:{</span><span class="s2">&quot;$each&quot;</span><span class="p">:[</span><span class="s2">&quot;tea&quot;</span><span class="p">,</span><span class="s2">&quot;dancing&quot;</span><span class="p">]}</span>
+<span class="p">}})</span>
+
+<span class="err">按照位置且只能从开头或结尾删除元素：$</span><span class="n">pop</span>
+<span class="c1">#3、{&quot;$pop&quot;:{&quot;key&quot;:1}} 从数组末尾删除一个元素</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">},{</span><span class="s2">&quot;$pop&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;hobbies&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#4、{&quot;$pop&quot;:{&quot;key&quot;:-1}} 从头部删除</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;agsol&quot;</span><span class="p">},{</span><span class="s2">&quot;$pop&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;hobbies&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#5、按照条件删除元素,：&quot;$pull&quot; 把符合条件的统统删掉，而$pop只能从两端删</span>
+<span class="c1"># 删除所有国家为chine的人的read爱好</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;addr.country&#39;</span><span class="p">:</span><span class="s2">&quot;China&quot;</span><span class="p">},{</span><span class="s2">&quot;$pull&quot;</span><span class="p">:{</span>
+    <span class="s2">&quot;hobbies&quot;</span><span class="p">:</span><span class="s2">&quot;read&quot;</span><span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;multi&quot;</span><span class="p">:</span><span class="n">true</span>
+<span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>避免重复 "$addToSet"</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#避免添加重复：&quot;$addToSet&quot;</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;urls&quot;</span><span class="p">:[]})</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">&quot;$addToSet&quot;</span><span class="p">:{</span><span class="s2">&quot;urls&quot;</span><span class="p">:</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">}})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">&quot;$addToSet&quot;</span><span class="p">:{</span><span class="s2">&quot;urls&quot;</span><span class="p">:</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">}})</span>
+<span class="n">db</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">&quot;$addToSet&quot;</span><span class="p">:{</span><span class="s2">&quot;urls&quot;</span><span class="p">:</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">}})</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span>
+    <span class="s2">&quot;$addToSet&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;urls&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;$each&quot;</span><span class="p">:[</span>
+            <span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;http://www.xxxx.com&#39;</span>
+            <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>其他</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、了解：限制大小&quot;$slice&quot;，只留最后n个</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">},{</span>
+    <span class="s2">&quot;$push&quot;</span><span class="p">:{</span><span class="s2">&quot;hobbies&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;$each&quot;</span><span class="p">:[</span><span class="s2">&quot;read&quot;</span><span class="p">,</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+        <span class="s2">&quot;$slice&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#2、了解：排序The $sort element value must be either 1 or -1&quot;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">},{</span>
+    <span class="s2">&quot;$push&quot;</span><span class="p">:{</span><span class="s2">&quot;hobbies&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;$each&quot;</span><span class="p">:[</span><span class="s2">&quot;read&quot;</span><span class="p">,</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+        <span class="s2">&quot;$slice&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;$sort&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#注意：不能只将&quot;$slice&quot;或者&quot;$sort&quot;与&quot;$push&quot;配合使用，且必须使用&quot;$eah&quot;</span>
+</code></pre></div>
+
+<h4 id="534">5.3.4 删除文档<a class="headerlink" href="#534" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">#1、删除多个中的第一个</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">deleteOne</span><span class="p">({</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">8</span> <span class="p">})</span>
+
+<span class="c1">#2、删除国家为China的全部</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">deleteMany</span><span class="p">(</span> <span class="p">{</span><span class="s1">&#39;addr.country&#39;</span><span class="p">:</span> <span class="s1">&#39;China&#39;</span><span class="p">}</span> <span class="p">)</span> 
+
+<span class="c1">#3、删除全部</span>
+<span class="n">db</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">deleteMany</span><span class="p">({})</span> 
+</code></pre></div>
+
+<h4 id="535">5.3.5 聚合<a class="headerlink" href="#535" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="err">如果你有数据存储在</span><span class="n">MongoDB中</span><span class="err">，你想做的可能就不仅仅是将数据提取出来那么简单了；你可能希望对数据进行分析并加以利用。</span><span class="n">MongoDB提供了以下聚合工具</span><span class="err">：</span>
+<span class="c1">#1、聚合框架</span>
+<span class="c1">#2、MapReduce(详见MongoDB权威指南)</span>
+<span class="c1">#3、几个简单聚合命令：count、distinct和group。(详见MongoDB权威指南)</span>
+
+<span class="c1">#聚合框架：</span>
+<span class="err">可以使用多个构件创建一个管道，上一个构件的结果传给下一个构件。</span>
+<span class="err">这些构件包括（括号内为构件对应的操作符）：筛选</span><span class="p">(</span><span class="err">$</span><span class="n">match</span><span class="p">)</span><span class="err">、投射</span><span class="p">(</span><span class="err">$</span><span class="n">project</span><span class="p">)</span><span class="err">、分组</span><span class="p">(</span><span class="err">$</span><span class="n">group</span><span class="p">)</span><span class="err">、排序</span><span class="p">(</span><span class="err">$</span><span class="n">sort</span><span class="p">)</span><span class="err">、限制</span><span class="p">(</span><span class="err">$</span><span class="n">limit</span><span class="p">)</span><span class="err">、跳过</span><span class="p">(</span><span class="err">$</span><span class="n">skip</span><span class="p">)</span>
+<span class="err">不同的管道操作符可以任意组合，重复使用</span>
+</code></pre></div>
+
+<p>准备数据</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">client</span><span class="o">=</span><span class="n">MongoClient</span><span class="p">(</span><span class="s1">&#39;mongodb://root:123@localhost:27017&#39;</span><span class="p">)</span>
+<span class="n">table</span><span class="o">=</span><span class="n">client</span><span class="p">[</span><span class="s1">&#39;db1&#39;</span><span class="p">][</span><span class="s1">&#39;emp&#39;</span><span class="p">]</span>
+<span class="c1"># table.drop()</span>
+
+<span class="n">l</span><span class="o">=</span><span class="p">[</span>
+<span class="p">(</span><span class="s1">&#39;egon&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20170301&#39;</span><span class="p">,</span><span class="s1">&#39;老男孩驻沙河办事处外交大使&#39;</span><span class="p">,</span><span class="mf">7300.33</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="c1">#以下是教学部</span>
+<span class="p">(</span><span class="s1">&#39;alex&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="s1">&#39;20150302&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mf">1000000.31</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;wupeiqi&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span><span class="s1">&#39;20130305&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">8300</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;yuanhao&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="s1">&#39;20140701&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">3500</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;liwenzhou&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="s1">&#39;20121101&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;jingliyang&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20110211&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">9000</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;jinxin&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;19000301&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">30000</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;成龙&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="s1">&#39;20101111&#39;</span><span class="p">,</span><span class="s1">&#39;teacher&#39;</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;歪歪&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="s1">&#39;20150311&#39;</span><span class="p">,</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span><span class="mf">3000.13</span><span class="p">,</span><span class="mi">402</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="c1">#以下是销售部门</span>
+<span class="p">(</span><span class="s1">&#39;丫丫&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="s1">&#39;20101101&#39;</span><span class="p">,</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span><span class="mf">2000.35</span><span class="p">,</span><span class="mi">402</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;丁丁&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20110312&#39;</span><span class="p">,</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span><span class="mf">1000.37</span><span class="p">,</span><span class="mi">402</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;星星&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20160513&#39;</span><span class="p">,</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span><span class="mf">3000.29</span><span class="p">,</span><span class="mi">402</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;格格&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="s1">&#39;20170127&#39;</span><span class="p">,</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span><span class="mf">4000.33</span><span class="p">,</span><span class="mi">402</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;张野&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="s1">&#39;20160311&#39;</span><span class="p">,</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="mf">10000.13</span><span class="p">,</span><span class="mi">403</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="c1">#以下是运营部门</span>
+<span class="p">(</span><span class="s1">&#39;程咬金&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;19970312&#39;</span><span class="p">,</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="mi">20000</span><span class="p">,</span><span class="mi">403</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;程咬银&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20130311&#39;</span><span class="p">,</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="mi">19000</span><span class="p">,</span><span class="mi">403</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;程咬铜&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20150411&#39;</span><span class="p">,</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="mi">18000</span><span class="p">,</span><span class="mi">403</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;程咬铁&#39;</span><span class="p">,</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="s1">&#39;20140512&#39;</span><span class="p">,</span><span class="s1">&#39;operation&#39;</span><span class="p">,</span><span class="mi">17000</span><span class="p">,</span><span class="mi">403</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">d</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="n">n</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s1">&#39;sex&#39;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+        <span class="s1">&#39;hire_date&#39;</span><span class="p">:</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;post&#39;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+        <span class="s1">&#39;salary&#39;</span><span class="p">:</span><span class="n">item</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="p">}</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<p>筛选 "$match"</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;字段&quot;</span><span class="p">:</span><span class="s2">&quot;条件&quot;</span><span class="p">}},</span><span class="err">可以使用任何常用查询操作符$</span><span class="n">gt</span><span class="p">,</span><span class="err">$</span><span class="n">lt</span><span class="p">,</span><span class="err">$</span><span class="n">in等</span>
+
+<span class="c1">#例1、select * from db1.emp where post=&#39;teacher&#39;;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;post&quot;</span><span class="p">:</span><span class="s2">&quot;teacher&quot;</span><span class="p">}})</span> <span class="c1"># shell版本不匹配，会出错</span>
+
+<span class="c1">#例2、select * from db1.emp where id &gt; 3 group by post;  </span>
+<span class="c1"># 计算每个部门的平均工资</span>
+<span class="n">select</span> <span class="n">post</span> <span class="k">as</span> <span class="n">_id</span><span class="p">,</span><span class="n">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">avg_salary</span> <span class="kn">from</span> <span class="nn">db1.emp</span> <span class="nn">where</span> <span class="nn">id</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="n">group</span> <span class="n">by</span> <span class="n">post</span><span class="p">;</span>  
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}}},</span>
+    <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s1">&#39;avg_salary&#39;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}}</span>
+<span class="p">)</span>
+
+<span class="c1">#例3、select post as _id,avg(salary) as avg_salary from db1.emp where id &gt; 3 group by post having avg(avg_salary) &gt; 10000; </span>
+<span class="c1"># 查询平均工资大于10000的部门</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}}},</span>
+    <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s1">&#39;avg_salary&#39;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}},</span>
+    <span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">}}}</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>投射 $project</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;要保留的字段名&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;要去掉的字段名&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;新增的字段名&quot;</span><span class="p">:</span><span class="s2">&quot;表达式&quot;</span><span class="p">}}</span>
+
+<span class="c1">#1、select name,post,(age+1) as new_age from db1.emp;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;post&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;new_age&quot;</span><span class="p">:{</span><span class="s2">&quot;$add&quot;</span><span class="p">:[</span><span class="s2">&quot;$age&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">]}</span>
+        <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">#2、表达式之数学表达式</span>
+<span class="p">{</span><span class="s2">&quot;$add&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">exprN</span><span class="p">]}</span> <span class="c1">#相加</span>
+<span class="p">{</span><span class="s2">&quot;$subtract&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">]}</span> <span class="c1">#第一个减第二个</span>
+<span class="p">{</span><span class="s2">&quot;$multiply&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">exprN</span><span class="p">]}</span> <span class="c1">#相乘</span>
+<span class="p">{</span><span class="s2">&quot;$divide&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">]}</span> <span class="c1">#第一个表达式除以第二个表达式的商作为结果</span>
+<span class="p">{</span><span class="s2">&quot;$mod&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">]}</span> <span class="c1">#第一个表达式除以第二个表达式得到的余数作为结果</span>
+
+<span class="c1">#3、表达式之日期表达式:$year,$month,$week,$dayOfMonth,$dayOfWeek,$dayOfYear,$hour,$minute,$second</span>
+<span class="c1">#例如：select name,date_format(&quot;%Y&quot;) as hire_year from db1.emp</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;hire_year&quot;</span><span class="p">:{</span><span class="s2">&quot;$year&quot;</span><span class="p">:</span><span class="s2">&quot;$hire_date&quot;</span><span class="p">}}}</span>
+<span class="p">)</span>
+
+<span class="c1">#例如查看每个员工的工作多长时间</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;hire_period&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;$subtract&quot;</span><span class="p">:[</span>
+            <span class="p">{</span><span class="s2">&quot;$year&quot;</span><span class="p">:</span><span class="n">new</span> <span class="n">Date</span><span class="p">()},</span>
+            <span class="p">{</span><span class="s2">&quot;$year&quot;</span><span class="p">:</span><span class="s2">&quot;$hire_date&quot;</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}}}</span>
+<span class="p">)</span>
+
+
+<span class="c1">#4、字符串表达式</span>
+<span class="p">{</span><span class="s2">&quot;$substr&quot;</span><span class="p">:[</span><span class="err">字符串</span><span class="o">/</span><span class="err">$值为字符串的字段名</span><span class="p">,</span><span class="err">起始位置</span><span class="p">,</span><span class="err">截取几个字节</span><span class="p">]}</span>
+<span class="p">{</span><span class="s2">&quot;$concat&quot;</span><span class="p">:[</span><span class="n">expr1</span><span class="p">,</span><span class="n">expr2</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">exprN</span><span class="p">]}</span> <span class="c1">#指定的表达式或字符串连接在一起返回,只支持字符串拼接</span>
+<span class="p">{</span><span class="s2">&quot;$toLower&quot;</span><span class="p">:</span><span class="n">expr</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">&quot;$toUpper&quot;</span><span class="p">:</span><span class="n">expr</span><span class="p">}</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span> <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;NAME&quot;</span><span class="p">:{</span><span class="s2">&quot;$toUpper&quot;</span><span class="p">:</span><span class="s2">&quot;$name&quot;</span><span class="p">}}})</span>
+
+<span class="c1"># 除egon外，所有人名字加SB</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:{</span><span class="s2">&quot;$ne&quot;</span><span class="p">:</span><span class="s2">&quot;egon&quot;</span><span class="p">}}},</span>
+    <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:</span>
+        <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;new_name&quot;</span><span class="p">:</span>
+            <span class="p">{</span><span class="s2">&quot;$concat&quot;</span><span class="p">:</span>
+                <span class="p">[</span><span class="s2">&quot;$name&quot;</span><span class="p">,</span><span class="s2">&quot;SB&quot;</span><span class="p">]</span>
+                <span class="p">}</span>  
+            <span class="p">}}</span>            
+<span class="p">)</span>
+<span class="c1"># 取除egon外， 所有人名字3个字节（utf8编码，3个字节一个汉字）</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:{</span><span class="s2">&quot;$ne&quot;</span><span class="p">:</span><span class="s2">&quot;egon&quot;</span><span class="p">}}},</span>
+    <span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:</span>
+        <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;new_name&quot;</span><span class="p">:</span>
+            <span class="p">{</span><span class="s2">&quot;$substr&quot;</span><span class="p">:</span>
+                <span class="p">[</span><span class="s2">&quot;$name&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">}</span>  
+            <span class="p">}}</span>            
+<span class="p">)</span>
+</code></pre></div>
+
+<p>分组 $group</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="err">分组字段</span><span class="p">,</span><span class="s2">&quot;新的字段名&quot;</span><span class="p">:</span><span class="err">聚合操作符</span><span class="p">}}</span>
+
+<span class="c1">#1、将分组字段传给$group函数的_id字段即可</span>
+<span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$sex&quot;</span><span class="p">}}</span> <span class="c1">#按照性别分组</span>
+<span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">}}</span> <span class="c1">#按照职位分组</span>
+<span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:{</span><span class="s2">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;$state&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;$city&quot;</span><span class="p">}}}</span> <span class="c1">#按照多个字段分组，比如按照州市分组</span>
+
+<span class="c1">#2、分组后聚合得结果,类似于sql中聚合函数的聚合操作符：$sum、$avg、$max、$min、$first、$last</span>
+<span class="c1">#例1：select post,max(salary) as max_salary from db1.emp group by post; </span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;max_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$max&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}})</span>
+
+<span class="c1">#例2：去每个部门最大薪资与最低薪资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;max_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$max&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">},</span><span class="s2">&quot;min_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$min&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}})</span>
+
+<span class="c1">#例3：如果字段是排序后的，那么$first,$last会很有用,比用$max和$min效率高</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;first_id&quot;</span><span class="p">:{</span><span class="s2">&quot;$first&quot;</span><span class="p">:</span><span class="s2">&quot;$_id&quot;</span><span class="p">}}})</span>
+
+<span class="c1">#例4：求每个部门的总工资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}})</span>
+
+<span class="c1">#例5：求每个部门的人数</span>
+<span class="n">seledt</span> <span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">count</span> <span class="kn">from</span> <span class="nn">emp</span><span class="p">;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}})</span>
+
+<span class="c1">#3、数组操作符</span>
+<span class="p">{</span><span class="s2">&quot;$addToSet&quot;</span><span class="p">:</span><span class="n">expr</span><span class="p">}</span><span class="err">：不重复</span>
+<span class="p">{</span><span class="s2">&quot;$push&quot;</span><span class="p">:</span><span class="n">expr</span><span class="p">}</span><span class="err">：重复</span>
+
+<span class="c1">#例：查询岗位名以及各岗位内的员工姓名:select post,group_concat(name) from db1.emp group by post;</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;names&quot;</span><span class="p">:{</span><span class="s2">&quot;$push&quot;</span><span class="p">:</span><span class="s2">&quot;$name&quot;</span><span class="p">}}})</span>
+<span class="c1"># 跟上面一样</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;names&quot;</span><span class="p">:{</span><span class="s2">&quot;$addToSet&quot;</span><span class="p">:</span><span class="s2">&quot;$name&quot;</span><span class="p">}}})</span>
+</code></pre></div>
+
+<p>排序$sort  限制 $limit 跳过 $skip</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;字段名&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;字段名&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}}</span> <span class="c1">#1升序，-1降序</span>
+<span class="p">{</span><span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="n">n</span><span class="p">}</span> 
+<span class="p">{</span><span class="s2">&quot;$skip&quot;</span><span class="p">:</span><span class="n">n</span><span class="p">}</span> <span class="c1">#跳过多少个文档</span>
+
+<span class="c1">#例1、取平均工资最高的前两个部门</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">2</span>
+<span class="p">}</span>
+<span class="p">)</span>
+<span class="c1">#例2、</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">3</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$skip&quot;</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;$skip&quot;</span><span class="p">:</span><span class="mi">2</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">2</span>
+<span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>随机选取 $sample</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#集合users包含的文档如下</span>
+<span class="n">db</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">insertMany</span><span class="p">([</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;dave123&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">true</span> <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;dave2&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">false</span>  <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;ahn&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">true</span>  <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">false</span>  <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;annT&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">true</span>  <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;li&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">true</span>  <span class="p">},</span>
+<span class="p">{</span> <span class="s2">&quot;_id&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;ty&quot;</span><span class="p">,</span> <span class="s2">&quot;q1&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="s2">&quot;q2&quot;</span> <span class="p">:</span> <span class="n">true</span>  <span class="p">}</span>
+
+<span class="p">])</span>
+
+<span class="c1">#下述操作时从users集合中随机选取3个文档</span>
+<span class="c1"># 抽奖</span>
+<span class="n">db</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+   <span class="p">[</span> <span class="p">{</span> <span class="err">$</span><span class="n">sample</span><span class="p">:</span> <span class="p">{</span> <span class="n">size</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># 路飞项目搞活动，送优惠券---》3天后开奖---》100---》抽奖成功</span>
+</code></pre></div>
+
+<h2 id="pymongo">六 Pymongo<a class="headerlink" href="#pymongo" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="c1">#https://api.mongodb.com/python/current/tutorial.html</span>
+
+<span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+
+<span class="c1">#1、链接</span>
+<span class="n">client</span><span class="o">=</span><span class="n">MongoClient</span><span class="p">(</span><span class="s1">&#39;mongodb://root:123@localhost:27017/&#39;</span><span class="p">)</span>
+<span class="c1"># client = MongoClient(&#39;localhost&#39;, 27017)</span>
+
+<span class="c1">#2、use 数据库</span>
+<span class="n">db</span><span class="o">=</span><span class="n">client</span><span class="p">[</span><span class="s1">&#39;db2&#39;</span><span class="p">]</span> <span class="c1">#等同于：client.db1</span>
+
+<span class="c1">#3、查看库下所有的集合</span>
+<span class="k">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">collection_names</span><span class="p">(</span><span class="n">include_system_collections</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+
+<span class="c1">#4、创建集合</span>
+<span class="n">table_user</span><span class="o">=</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;userinfo&#39;</span><span class="p">]</span> <span class="c1">#等同于：db.user</span>
+
+<span class="c1">#5、插入文档</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">user0</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;egon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;birth&quot;</span><span class="p">:</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;BJ&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">user1</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;alex&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;birth&quot;</span><span class="p">:</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:[</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="s1">&#39;read&#39;</span><span class="p">,</span><span class="s1">&#39;dancing&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;addr&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;China&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;city&#39;</span><span class="p">:</span><span class="s1">&#39;weifang&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1"># res=table_user.insert_many([user0,user1]).inserted_ids</span>
+<span class="c1"># print(res)</span>
+<span class="c1"># print(table_user.count())</span>
+
+<span class="c1">#6、查找</span>
+
+<span class="c1"># from pprint import pprint#格式化细</span>
+<span class="c1"># pprint(table_user.find_one())</span>
+<span class="c1"># for item in table_user.find():</span>
+<span class="c1">#     pprint(item)</span>
+
+<span class="c1"># print(table_user.find_one({&quot;_id&quot;:{&quot;$gte&quot;:1},&quot;name&quot;:&#39;egon&#39;}))</span>
+
+<span class="c1">#7、更新</span>
+<span class="n">table_user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;_id&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;EGON&#39;</span><span class="p">})</span>
+
+<span class="c1">#8、传入新的文档替换旧的文档</span>
+<span class="n">table_user</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s1">&#39;egon_xxx&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+
+
+
+
+<span class="c1"># pip3 install pymong</span>
+<span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">from</span> <span class="nn">pymongo.collection</span> <span class="kn">import</span> <span class="n">Collection</span>
+<span class="c1">#MongoClient(&#39;mongodb://root:123@localhost:27017/&#39;)</span>
+<span class="n">conn</span><span class="o">=</span><span class="n">MongoClient</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;10.0.0.5&quot;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">27017</span><span class="p">)</span>
+
+<span class="c1"># use agsol</span>
+<span class="c1"># 你用过python中的魔法方法(init,new,str) __add__</span>
+<span class="c1"># with  __enter__  __exit__</span>
+
+<span class="n">agsol</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">agsol</span>  <span class="c1"># 重写了__getattr__</span>
+<span class="c1"># agsol=conn[&quot;agsol&quot;] # 重写了__get_item__</span>
+<span class="c1">#agsol.users 获取表</span>
+<span class="n">users</span><span class="o">=</span><span class="n">agsol</span><span class="o">.</span><span class="n">users</span> <span class="c1"># type:Collection</span>
+<span class="c1"># users.find({&#39;name&#39;:&quot;li&quot;})</span>
+
+<span class="c1"># users.insert_many()</span>
+<span class="c1"># users.insert_one()</span>
+<span class="c1"># update被弃用了</span>
+
+<span class="c1"># users.update()</span>
+<span class="c1">#</span>
+<span class="c1"># users.aggregate({},{},{})</span>
+<span class="c1"># users.delete_many()</span>
+<span class="c1"># users.delete_one()</span>
+<span class="c1"># print(users.find())</span>
+<span class="c1"># for i in users.find({&#39;name&#39;:&quot;li&quot;}):</span>
+<span class="c1">#     print(type(i))</span>
+
+
+
+<span class="c1">#集成到django框架和flask框架</span>
+</code></pre></div>
+
+<h2 id="_4">七 练习题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span> <span class="err">查询岗位名以及各岗位内的员工姓名</span>
+<span class="mf">2.</span> <span class="err">查询岗位名以及各岗位内包含的员工个数</span>
+<span class="mf">3.</span> <span class="err">查询公司内男员工和女员工的个数</span>
+<span class="mf">4.</span> <span class="err">查询岗位名以及各岗位的平均薪资、最高薪资、最低薪资</span>
+<span class="mf">5.</span> <span class="err">查询男员工与男员工的平均薪资，女员工与女员工的平均薪资</span>
+<span class="mf">6.</span> <span class="err">查询各岗位内包含的员工个数小于</span><span class="mi">2</span><span class="err">的岗位名、岗位内包含员工名字、个数</span>
+<span class="mf">7.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span>
+<span class="mf">8.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">且小于</span><span class="mi">20000</span><span class="err">的岗位名、平均工资</span>
+<span class="mf">9.</span> <span class="err">查询所有员工信息，先按照</span><span class="n">age升序排序</span><span class="err">，如果</span><span class="n">age相同则按照hire_date降序排序</span>
+<span class="mf">10.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span><span class="p">,</span><span class="err">结果按平均薪资升序排列</span>
+<span class="mf">11.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span><span class="p">,</span><span class="err">结果按平均薪资降序排列</span><span class="p">,</span><span class="err">取前</span><span class="mi">1</span><span class="err">个</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span> <span class="err">查询岗位名以及各岗位内的员工姓名</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;names&quot;</span><span class="p">:{</span><span class="s2">&quot;$push&quot;</span><span class="p">:</span><span class="s2">&quot;$name&quot;</span><span class="p">}}})</span>
+
+<span class="mf">2.</span> <span class="err">查询岗位名以及各岗位内包含的员工个数</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}})</span>
+
+<span class="mf">3.</span> <span class="err">查询公司内男员工和女员工的个数</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$sex&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}})</span>
+
+<span class="mf">4.</span> <span class="err">查询岗位名以及各岗位的平均薪资、最高薪资、最低薪资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">},</span><span class="s2">&quot;max_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$max&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">},</span><span class="s2">&quot;min_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$min&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}})</span>
+
+<span class="mf">5.</span> <span class="err">查询男员工与男员工的平均薪资，女员工与女员工的平均薪资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$sex&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}})</span>
+
+<span class="mf">6.</span> <span class="err">查询各岗位内包含的员工个数小于</span><span class="mi">2</span><span class="err">的岗位名、岗位内包含员工名字、个数</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span><span class="s2">&quot;names&quot;</span><span class="p">:{</span><span class="s2">&quot;$push&quot;</span><span class="p">:</span><span class="s2">&quot;$name&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$lt&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}}},</span>
+<span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;names&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">)</span>
+
+<span class="mf">7.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">}}},</span>
+<span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">)</span>
+
+<span class="mf">8.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">且小于</span><span class="mi">20000</span><span class="err">的岗位名、平均工资</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span><span class="s2">&quot;$lt&quot;</span><span class="p">:</span><span class="mi">20000</span><span class="p">}}},</span>
+<span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">)</span>
+
+<span class="mf">9.</span> <span class="err">查询所有员工信息，先按照</span><span class="n">age升序排序</span><span class="err">，如果</span><span class="n">age相同则按照hire_date降序排序</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;hire_date&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">)</span>
+
+<span class="mf">10.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span><span class="p">,</span><span class="err">结果按平均薪资升序排列</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">}}},</span>
+<span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">)</span>
+
+<span class="mf">11.</span> <span class="err">查询各岗位平均薪资大于</span><span class="mi">10000</span><span class="err">的岗位名、平均工资</span><span class="p">,</span><span class="err">结果按平均薪资降序排列</span><span class="p">,</span><span class="err">取前</span><span class="mi">1</span><span class="err">个</span>
+<span class="n">db</span><span class="o">.</span><span class="n">emp</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$post&quot;</span><span class="p">,</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span><span class="s2">&quot;$salary&quot;</span><span class="p">}}</span>
+<span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:{</span><span class="s2">&quot;$gt&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">}}},</span>
+<span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}},</span>
+<span class="p">{</span><span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+<span class="p">{</span><span class="s2">&quot;$project&quot;</span><span class="p">:{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span><span class="n">new</span> <span class="n">Date</span><span class="p">,</span><span class="s2">&quot;平均工资&quot;</span><span class="p">:</span><span class="s2">&quot;$avg_salary&quot;</span><span class="p">,</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
+<span class="p">)</span>
+</code></pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 Agsol
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

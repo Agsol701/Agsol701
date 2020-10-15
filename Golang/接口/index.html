@@ -1715,6 +1715,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -2043,7 +2091,9 @@
 <p>一个接口由两部分组成,动态类型用来存储数据的数据类型,动态值用来存储数据的值.</p>
 <h1 id="_16">类型断言<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h1>
 <p>可用于强制类型转换</p>
-<p>语法格式:`x.(T)</p>
+<p>语法格式:<code>v,ok:=x.(T)</code></p>
+<p>当x与T类型一致时,v为数据,ok为true</p>
+<p>当x与T类型不一致时,v为T类型对应的空值,ok为false </p>
 <h5 id="_17">接口值<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
 <p>一个接口的值(简称接口值)是由<code>一个具体类型</code>和<code>具体类型的值</code>两部分组成的.这两部分分别称为接口的<code>动态类型</code>和<code>动态值</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">w</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span>

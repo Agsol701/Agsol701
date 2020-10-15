@@ -1914,6 +1914,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -2164,7 +2212,92 @@
               
                 
                 
-                <h1 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                <div class="toc">
+<ul>
+<li><a href="#_1">树</a><ul>
+<li><a href="#_2">定义</a><ul>
+<li><a href="#_3">普通定义</a></li>
+<li><a href="#_4">递归定义</a></li>
+</ul>
+</li>
+<li><a href="#_5">概念</a><ul>
+<li><a href="#_6">结点</a></li>
+<li><a href="#degree">结点的度degree</a></li>
+<li><a href="#_7">叶子结点</a></li>
+<li><a href="#branch-node">分支结点(branch node)</a></li>
+<li><a href="#_8">分支</a></li>
+<li><a href="#_9">内部结点</a></li>
+<li><a href="#_10">树的度</a></li>
+<li><a href="#level">树的层level</a></li>
+<li><a href="#depth">树的深度depth</a></li>
+<li><a href="#_11">路径</a></li>
+<li><a href="#_12">路径长度</a></li>
+<li><a href="#_13">森林</a></li>
+</ul>
+</li>
+<li><a href="#_14">结点间的关系</a><ul>
+<li><a href="#_15">孩子结点</a></li>
+<li><a href="#_16">双亲结点</a></li>
+<li><a href="#_17">兄弟结点</a></li>
+<li><a href="#_18">祖先结点</a></li>
+<li><a href="#_19">子孙结点</a></li>
+</ul>
+</li>
+<li><a href="#_20">树的分类</a><ul>
+<li><a href="#_21">有序树</a></li>
+<li><a href="#_22">无序树</a></li>
+</ul>
+</li>
+<li><a href="#_23">树的特点</a></li>
+<li><a href="#_24">树的存储</a></li>
+</ul>
+</li>
+<li><a href="#_25">二叉树</a><ul>
+<li><a href="#_26">定义</a></li>
+<li><a href="#_27">特性</a></li>
+<li><a href="#_28">性质</a></li>
+<li><a href="#_29">五种基本形态</a></li>
+<li><a href="#_30">斜树</a><ul>
+<li><a href="#_31">左斜树</a></li>
+<li><a href="#_32">右斜树</a></li>
+</ul>
+</li>
+<li><a href="#_33">二叉树的遍历</a><ul>
+<li><a href="#_34">遍历</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_35">树的遍历</a><ul>
+<li><a href="#_36">广度优先遍历</a><ul>
+<li><a href="#_37">层序遍历</a></li>
+</ul>
+</li>
+<li><a href="#_38">深度优先遍历</a><ul>
+<li><a href="#dlr">前序遍历DLR</a></li>
+<li><a href="#ldr">中序遍历LDR</a></li>
+<li><a href="#lrd">后序遍历LRD</a></li>
+</ul>
+</li>
+<li><a href="#_39">遍历序列</a></li>
+</ul>
+</li>
+<li><a href="#_40">满二叉树</a><ul>
+<li><a href="#_41">定义</a></li>
+<li><a href="#_42">特性</a></li>
+</ul>
+</li>
+<li><a href="#_43">完全二叉树</a><ul>
+<li><a href="#_44">定义</a></li>
+<li><a href="#_45">与满二叉树的关系</a></li>
+<li><a href="#_46">按层序编号</a></li>
+<li><a href="#_47">性质</a></li>
+</ul>
+</li>
+<li><a href="#_48">平衡树</a></li>
+</ul>
+</div>
+<h1 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h3 id="_2">定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h5 id="_3">普通定义<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
 <ul>
@@ -2292,7 +2425,7 @@
 <h4 id="_34">遍历<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p>迭代所有元素一遍</p>
 <p>二叉树的遍历要求,左子树要在右子树的前面</p>
-<h4 id="_35">树的遍历<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<h1 id="_35">树的遍历<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h1>
 <p>对树中所有元素不重复的访问一遍,</p>
 <h4 id="_36">广度优先遍历<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
 <h5 id="_37">层序遍历<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h5>
@@ -2306,10 +2439,20 @@
 <p>每个子树内部依然是先根结点，再左子树后右子树。递归遍历</p>
 <p><img alt="二叉树的先序遍历" src="/img/数据结构/二叉树的先序遍历.png" /></p>
 <p><img alt="二叉树的先序遍历" src="D:\mkdocs\mysite\docs\img\数据结构\二叉树的先序遍历.png" /></p>
+<p>p A BDGH CEIF</p>
 <h5 id="ldr">中序遍历LDR<a class="headerlink" href="#ldr" title="Permanent link">&para;</a></h5>
 <p>中序/根遍历,也叫中根遍历，LDR</p>
+<p>每个子树内部，也是先左子树，后根结点，再右子树。递归遍历</p>
+<p><img alt="中序遍历" src="/img/数据结构/中序遍历.png" /></p>
+<p><img alt="中序遍历" src="D:\mkdocs\mysite\docs\img\数据结构\中序遍历.png" /></p>
+<p>左图 GDHB A IECF</p>
+<p>右图 GDHB A EICF</p>
 <h5 id="lrd">后序遍历LRD<a class="headerlink" href="#lrd" title="Permanent link">&para;</a></h5>
 <p>后序/根遍历,也叫后根遍历，LRD</p>
+<p>每个子树内部依然是先左子树，后右子树，再根结点。递归遍历</p>
+<p><img alt="后续遍历" src="/img/数据结构/后续遍历.png" /></p>
+<p><img alt="后续遍历" src="D:\mkdocs\mysite\docs\img\数据结构\后续遍历.png" /></p>
+<p>GHDB IEFC A</p>
 <h4 id="_39">遍历序列<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
 <p>将树种所有元素遍历一遍后,得到的元素的序列.将层次结构转换成了线性结构.</p>
 <h1 id="_40">满二叉树<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h1>

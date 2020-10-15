@@ -1742,6 +1742,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1833,7 +1881,7 @@
 </ul>
 </li>
 <li><a href="#goroutine_1">goroutine调度模型</a><ul>
-<li><a href="#mpg">MPG模式</a></li>
+<li><a href="#gpm">GPM模型</a></li>
 </ul>
 </li>
 <li><a href="#golangcpu">设置golang运行的cpu数</a></li>
@@ -1903,10 +1951,12 @@
 <li>Golang的协程机制是是go的特点,可以轻松开启上万协程.其他语言的并发一般是多线程,相对占用资源多,资源耗费大.</li>
 </ol>
 <h1 id="goroutine_1">goroutine调度模型<a class="headerlink" href="#goroutine_1" title="Permanent link">&para;</a></h1>
-<h3 id="mpg">MPG模式<a class="headerlink" href="#mpg" title="Permanent link">&para;</a></h3>
+<h3 id="gpm">GPM模型<a class="headerlink" href="#gpm" title="Permanent link">&para;</a></h3>
 <p>M:操作系统的主线程(是物理线程)</p>
 <p>P:协程执行需要的上下文</p>
 <p>G:协程</p>
+<p><img alt="MPG1" src="D:\mkdocs\mysite\docs\img\Go\MPG1.jpg" /></p>
+<p><img alt="MPG2" src="D:\mkdocs\mysite\docs\img\Go\MPG2.jpg" /></p>
 <p><img alt="mpg1" src="/img/Go/MPG1.jpg" /></p>
 <p><img alt="mpg2" src="/img/Go/MPG2.jpg" /></p>
 <h1 id="golangcpu">设置golang运行的cpu数<a class="headerlink" href="#golangcpu" title="Permanent link">&para;</a></h1>

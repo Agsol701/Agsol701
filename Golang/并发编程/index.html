@@ -1715,6 +1715,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -2072,6 +2120,7 @@
 </code></pre></div>
 
 <p>channel的缓冲大小可以选择写或不写.</p>
+<p>缓冲区不写时,cap大小为0,默认无缓冲区的通道.</p>
 <h3 id="_7">操作<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>通道有发送（send）、接收(receive）和关闭（close）三种操作。</p>
 <p>发送和接收都使用<code>&lt;-</code>符号。</p>
@@ -2148,7 +2197,7 @@ main.main<span class="o">()</span>
 <p>无缓冲通道上的发送操作会阻塞，直到另一个<code>goroutine</code>在该通道上执行接收操作，这时值才能发送成功，两个<code>goroutine</code>将继续执行。相反，如果接收操作先执行，接收方的goroutine将阻塞，直到另一个<code>goroutine</code>在该通道上发送一个值。</p>
 <p>使用无缓冲通道进行通信将导致发送和接收的<code>goroutine</code>同步化。因此，无缓冲通道也被称为<code>同步通道</code>。</p>
 <h5 id="_13">注意<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
-<p>无缓冲的管道默认len和cap都是0</p>
+<p><mark>无缓冲的管道默认len和cap都是0</mark></p>
 <div class="codehilite"><pre><span></span><code><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span>  <span class="p">{</span>
     <span class="nx">ch</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">ch</span><span class="p">))</span>
@@ -2269,6 +2318,7 @@ main.main<span class="o">()</span>
 <p>满了或者没了就会阻塞.</p>
 <h3 id="_16">通道异常总结<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>关闭已经关闭的channel会引发panic</p>
+<p><img alt="channel异常总结" src="D:\mkdocs\mysite\docs\img\Go\channel异常总结.png" /></p>
 <p><img alt="" src="/img/Go/channel异常总结.png" /></p>
 <h3 id="_17">异常捕获<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>当开启多个协程时,不希望某一个协程出现问题导致整体代码的panic.</p>

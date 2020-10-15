@@ -1668,6 +1668,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1729,6 +1777,22 @@
 <h5 id="_2">小顶堆<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
 <p>每个非叶子结点都要小于或者等于其左右子节点的值称为大顶堆</p>
 <p>根节点是大顶堆中的最小值</p>
+<h1 id="_3">堆排序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h3 id="_4">构建大顶堆算法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>度数为2的结点A,如果它的左右孩子结点的最大值比它大,将这个对打值与该结点交换.</li>
+<li>度数为1的结点A,如果它的左孩子的值大于它,交换</li>
+<li>如果结点A,被交换到新的位置,还需要和其他孩子结点重复上面的过程.</li>
+</ol>
+<h3 id="_5">结点的选择<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h5 id="_6">起点<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p>从完全二叉树的最后一个结点的父结点开始,即最后一层的最右边叶子结点的父结点开始.</p>
+<p>结点数为n,则起始结点的编号为n//2</p>
+<h5 id="_7">下一个结点<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>从起始结点开始向左找其同层结点,到头后再从上一层的最右边结点开始继续想左逐个查找,直至根节点.</p>
+<h5 id="_8">排序<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>将大顶堆根节点这个最大值与最后一个叶子结点交换,那么最后一个叶子节点就是最大值,将这个叶子结点排除在待排序结点之外.</p>
+<p>从新的根结点开始,重新调整为大顶堆后,重复上一步,.</p>
                 
                   
                 

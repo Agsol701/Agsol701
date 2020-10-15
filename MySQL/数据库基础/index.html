@@ -1776,6 +1776,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1906,7 +1954,7 @@
 </li>
 </ul>
 </li>
-<li><a href="#sql">SQL</a><ul>
+<li><a href="#sql">SQL</a></li>
 <li><a href="#dcl">DCL</a><ul>
 <li><a href="#grantrevoke">GRANT授权,REVOKE撤销</a></li>
 </ul>
@@ -1922,8 +1970,6 @@
 <li><a href="#constrain">约束constrain</a></li>
 <li><a href="#_12">补充:</a></li>
 <li><a href="#view">视图view</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a href="#_13">数据类型</a><ul>
@@ -1979,6 +2025,15 @@
 </ul>
 </li>
 <li><a href="#_35">数据库三大范式</a></li>
+<li><a href="#_36">默认引擎</a><ul>
+<li><a href="#innodb">InnoDB索引</a><ul>
+<li><a href="#_37">聚集索引</a></li>
+<li><a href="#_38">普通索引</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_39">预处理</a></li>
 </ul>
 </div>
 <h1 id="_1">数据库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
@@ -2024,11 +2079,11 @@
 <p>TCL事务控制语言,负责处理==ACID==事务,支持commit,rollback指令</p>
 <p>SQL语句大小写不敏感  规范,要么全小写,要么关键字全大写</p>
 <p>SQL语句末尾应该使用分号结束.</p>
-<h3 id="dcl">DCL<a class="headerlink" href="#dcl" title="Permanent link">&para;</a></h3>
+<h1 id="dcl">DCL<a class="headerlink" href="#dcl" title="Permanent link">&para;</a></h1>
 <h5 id="grantrevoke">GRANT授权,REVOKE撤销<a class="headerlink" href="#grantrevoke" title="Permanent link">&para;</a></h5>
 <p>*为通配符,指代任意库或者任意表.<code>*.*</code>表示所有库的所有表;<code>employees.*</code>表示employees库下所有表</p>
 <p>%为通配符,他是SQL语句的通配符,匹配任意长度字符串.</p>
-<h3 id="ddl">DDL<a class="headerlink" href="#ddl" title="Permanent link">&para;</a></h3>
+<h1 id="ddl">DDL<a class="headerlink" href="#ddl" title="Permanent link">&para;</a></h1>
 <h5 id="_8">删除用户(慎用)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
 <p>DROP USER agsol;</p>
 <h5 id="_9">创建数据库<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
@@ -2448,6 +2503,10 @@
 <td align="center">SUM([DISTINCT]expr)</td>
 <td align="center">求和,[返回不重复值的和]</td>
 </tr>
+<tr>
+<td align="center">group_concat()</td>
+<td align="center">将多个字段在同一行显示,多于group by连用</td>
+</tr>
 </tbody>
 </table>
 <div class="codehilite"><pre><span></span><code><span class="o">--</span><span class="n">f1相当于创建了别名</span>
@@ -2721,6 +2780,20 @@
 <p><img alt="" src="/img/Python/三大范式.jpg" /></p>
 <p><img alt="" src="D:\learning\笔记\图片\Python\三大范式.jpg" /></p>
 <p>目前关系数据库有六种范式：第一范式（1NF）、第二范式（2NF）、第三范式（3NF）、巴斯-科德范式（BCNF）、第四范式(4NF）和第五范式（5NF，又称完美范式）。</p>
+<h1 id="_36">默认引擎<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h1>
+<p>mysql5.5之后默认InnodB,支持事务</p>
+<p>5.5之前默认MyISM,效率高,不支持事务</p>
+<h3 id="innodb">InnoDB索引<a class="headerlink" href="#innodb" title="Permanent link">&para;</a></h3>
+<h5 id="_37">聚集索引<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h5>
+<p>叶子节点存储行记录,索引InnoDB有且只有一个聚集索引</p>
+<p>如果有pk,pk是聚集索引,无pk,第一列not null unique列是聚集索引</p>
+<p>查询速度非常快,直接定位行记录.</p>
+<h5 id="_38">普通索引<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h5>
+<p>叶子节点存储主键值.</p>
+<h1 id="_39">预处理<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h1>
+<p>绝大多数情况下，某需求某一条 SQL 语句可能会被反复调用执行，或者每次执行的时候只有个别的值不同（比如 select 的 where 子句值不同，update 的 set 子句值不同，insert 的 values 值不同）。如果每次都需要经过上面的词法语义解析、语句优化、制定执行计划等，则效率就明显不行了。
+　　所谓预编译语句就是将此类 SQL 语句中的值用占位符替代，可以视为将 SQL 语句模板化或者说参数化，一般称这类语句叫Prepared Statements。
+　　预编译语句的优势在于归纳为：一次编译、多次运行，省去了解析优化等过程；此外预编译语句能防止 SQL 注入。</p>
                 
                   
                 

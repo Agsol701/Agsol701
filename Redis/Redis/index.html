@@ -1748,6 +1748,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../算法概述.md" title="算法概述" class="md-nav__link">
+      算法概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../最长不重复子串.md" title="最长不重复子串" class="md-nav__link">
+      最长不重复子串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1855,14 +1903,17 @@
 <li><a href="#_6">切换数据库</a></li>
 <li><a href="#_7">数据持久化</a></li>
 <li><a href="#rdb">方式一:RDB</a><ul>
-<li><a href="#_8">优点:</a></li>
-<li><a href="#_9">劣势:</a></li>
+<li><a href="#_8">触发</a></li>
+<li><a href="#_9">优点:</a></li>
+<li><a href="#_10">劣势:</a></li>
+<li><a href="#_11">配置</a></li>
 </ul>
 </li>
 <li><a href="#aof">方式二:AOF</a><ul>
-<li><a href="#_10">优势:</a></li>
-<li><a href="#_11">劣势:</a></li>
-<li><a href="#_12">总结</a></li>
+<li><a href="#_12">优势:</a></li>
+<li><a href="#_13">劣势:</a></li>
+<li><a href="#_14">总结</a></li>
+<li><a href="#_15">配置</a></li>
 </ul>
 </li>
 </ul>
@@ -1876,6 +1927,10 @@
 <li><a href="#key">对于key的操作</a></li>
 </ul>
 </li>
+<li><a href="#redis_5">Redis热点数据问题</a></li>
+<li><a href="#redis_6">redis为什么这么快</a></li>
+<li><a href="#redis_7">redis使用的内存超过设置的最大内存</a></li>
+<li><a href="#lru">LRU队列</a></li>
 </ul>
 </div>
 <h1 id="redis">Redis简介<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h1>
@@ -1979,27 +2034,35 @@ save 60 10000  #after 60 sec if at least 10000 keys changed
 <h3 id="rdb">方式一:RDB<a class="headerlink" href="#rdb" title="Permanent link">&para;</a></h3>
 <p>将redis在内存中的数据库记录定时dump到磁盘上的RDB持久化,也可支持手动写入.</p>
 <p>RDB持久化是指在指定的时间间隔内将内存中的数据集快照写入磁盘，实际操作过程是fork一个子进程，先将数据集写入临时文件，写入成功后，再替换之前的文件，用二进制压缩存储。</p>
-<h5 id="_8">优点:<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<h5 id="_8">触发<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<ol>
+<li>redis客户端中执行<code>save</code>,返回ok,将rdb文件同步到硬盘中,由于是同步更新,所以当rdb数据过大,会卡.</li>
+<li>redis客户端中执行<code>bgsave</code>,返回ok,相对于save,bgsave是异步操作.</li>
+<li>通过配置按时间自动持久化.用的最多.</li>
+</ol>
+<h5 id="_9">优点:<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
 <p>1). 一旦采用该方式，那么你的整个Redis数据库将只包含一个文件，这对于文件备份而言是非常完美的。比如，你可能打算每个小时归档一次最近24小时的数据，同时还要每天归档一次最近30天的数据。通过这样的备份策略，一旦系统出现灾难性故障，我们可以非常容易的进行恢复。</p>
 <p>2). 对于灾难恢复而言，RDB是非常不错的选择。因为我们可以非常轻松的将一个单独的文件压缩后再转移到其它存储介质上。</p>
 <p>3). 性能最大化。对于Redis的服务进程而言，在开始持久化时，它唯一需要做的只是fork出子进程，之后再由子进程完成这些持久化的工作，这样就可以极大的避免服务进程执行IO操作了。</p>
 <p>4). 相比于AOF机制，如果数据集很大，RDB的启动效率会更高。</p>
-<h5 id="_9">劣势:<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<h5 id="_10">劣势:<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
 <p>1). 如果你想保证数据的高可用性，即最大限度的避免数据丢失，那么RDB将不是一个很好的选择。因为系统一旦在定时持久化之前出现宕机现象，此前没有来得及写入磁盘的数据都将丢失。</p>
 <p>2). 由于RDB是通过fork子进程来协助完成数据持久化工作的，因此，如果当数据集较大时，可能会导致整个服务器停止服务几百毫秒，甚至是1秒钟。</p>
+<h5 id="_11">配置<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
 <h3 id="aof">方式二:AOF<a class="headerlink" href="#aof" title="Permanent link">&para;</a></h3>
 <p>原理是将redis的操作日志以追加的方式写入文件.</p>
 <p>AOF持久化以日志的形式记录服务器所处理的每一个写、删除操作，查询操作不会记录，以文本的方式记录，可以打开文件看到详细的操作记录。</p>
-<h5 id="_10">优势:<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<h5 id="_12">优势:<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
 <p>1). 该机制可以带来更高的数据安全性，即数据持久性。Redis中提供了3中同步策略，即每秒同步、每修改同步和不同步。事实上，每秒同步也是异步完成的，其效率也是非常高的，所差的是一旦系统出现宕机现象，那么这一秒钟之内修改的数据将会丢失。而每修改同步，我们可以将其视为同步持久化，即每次发生的数据变化都会被立即记录到磁盘中。可以预见，这种方式在效率上是最低的。至于无同步，无需多言，我想大家都能正确的理解它。</p>
 <p>2). 由于该机制对日志文件的写入操作采用的是append模式，因此在写入过程中即使出现宕机现象，也不会破坏日志文件中已经存在的内容。然而如果我们本次操作只是写入了一半数据就出现了系统崩溃问题，不用担心，在Redis下一次启动之前，我们可以通过redis-check-aof工具来帮助我们解决数据一致性的问题。</p>
 <p>3). 如果日志过大，Redis可以自动启用rewrite机制。即Redis以append模式不断的将修改数据写入到老的磁盘文件中，同时Redis还会创建一个新的文件用于记录此期间有哪些修改命令被执行。因此在进行rewrite切换时可以更好的保证数据安全性。</p>
 <p>4). AOF包含一个格式清晰、易于理解的日志文件用于记录所有的修改操作。事实上，我们也可以通过该文件完成数据的重建。</p>
-<h5 id="_11">劣势:<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<h5 id="_13">劣势:<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
 <p>1). 对于相同数量的数据集而言，AOF文件通常要大于RDB文件。RDB 在恢复大数据集时的速度比 AOF 的恢复速度要快。</p>
 <p>2). 根据同步策略的不同，AOF在运行效率上往往会慢于RDB。总之，每秒同步策略的效率是比较高的，同步禁用策略的效率和RDB一样高效。</p>
-<h5 id="_12">总结<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
+<h5 id="_14">总结<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
 <p>二者选择的标准，就是看系统是愿意牺牲一些性能，换取更高的缓存一致性（aof），还是愿意写操作频繁的时候，不启用备份来换取更高的性能，待手动运行save的时候，再做备份（rdb）。rdb这个就更有些 eventually consistent的意思了。</p>
+<h5 id="_15">配置<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
 <h1 id="redis_4">Redis数据类型<a class="headerlink" href="#redis_4" title="Permanent link">&para;</a></h1>
 <h3 id="strings">字符串strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>1.set key value 设置指定key的value
@@ -2178,6 +2241,62 @@ redis 127.0.0.1:6379&gt; keys on[eaw]
 </ul>
 <p><em>注:对于不存在的key或已过期的key/不过期的key,都返回-1</em>
 <em>Redis2.8中,对于不存在的key,返回-2</em></p>
+<h1 id="redis_5">Redis热点数据问题<a class="headerlink" href="#redis_5" title="Permanent link">&para;</a></h1>
+<p>问题：由于内存限制，导致了Redis中只能存储最多1W条的数据信息，如何确保这1w条数据是最热门的数据？</p>
+<p>解决方案
+热点数据排序（点击次数）
+既然热门数据，那么就需要有排序，使用redis中的zset数据类型是很自然的想法。数据中的某个唯一字段作为zset中的value，而点击次数作为score，记为click_zset。这样就可选出最热门的数据。而数据，则直接用HashMap存储。
+热点数据时间（近期访问）
+既然只能存1w条数据且需要是热门数据，那么，点击次数是一方面，时效性也是一方面，如何保证？可以另起一个zset，数据的字段为value，而每次点击时更新当前时间戳为其score，记为time_zset这样，就可以记录时间。在后台跑一个任务，间隔一定时间段删除两个zset中长时间没有发生点击事件的键，并删除hash数据，为产生的新数据腾出数据空间。
+处理新热点数据
+如果有空间，则保存到自己的hashmap，并将key存到两个zset中。
+而没有空间时，就应该在click_zset中取出点击次数排在最前第1w位后面的键，删除对应的hash数据。然后看这1w个score的值，然后把key放入两个zset中即可。</p>
+<h1 id="redis_6">redis为什么这么快<a class="headerlink" href="#redis_6" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>完全基于内存,绝大部分请求是纯内存操作,非常快速.</p>
+</li>
+<li>
+<p>数据结构简单,对数据操作也简单.</p>
+</li>
+<li>
+<p>采用单线程,避免了不必要的上下文切换,不用考虑各种锁的问题.</p>
+</li>
+<li>
+<p>使用I/O多路复用,非阻塞IO</p>
+</li>
+</ol>
+<p>I/O多路复用,多路指的是多个网络连接,复用指的是复用同一个线程.</p>
+<h1 id="redis_7">redis使用的内存超过设置的最大内存<a class="headerlink" href="#redis_7" title="Permanent link">&para;</a></h1>
+<p>当redis使用的内存超过设置的最大内存时，会触发redis的key淘汰机制，在redis3.0中的6中淘汰策略如下：</p>
+<p>（1）noeviction :不删除策略。当达到最大内存限制时，如果需要使用更多内存，则直接返回错误信息（redis默认淘汰策略）</p>
+<p>(2）allkeys-lru:在所有key中优先删除最近最少使用（less recently used，LRU）的key。</p>
+<p>(3）allkeys-random:在所有key中随机删除一部分key</p>
+<p>（4）volatile-lru: 在设置了超时时间（expire）的key中优先删除最近最少使用的key</p>
+<p>（5）volatile-random：在设置了超时时间的key中随机删除一部分key</p>
+<p>（6）volatile-ttl: 在设置了超时时间的key中优先删除剩余时间（time to live,TTL）的key</p>
+<p>数据库中有2000w数据，而redis中只有100w数据，如何保证redis中存放的都是热点数据？</p>
+<p>方案：</p>
+<p>限定redis占用的内存，redis会根据自身数据淘汰策略，留下热数据到内存。所以可以计算100w数据大约占用的内存，</p>
+<p>然后设置一下redis内存限制即可，并将淘汰策略设置为allkeys-lru或者volatile-lru.</p>
+<p>设置redis最大占用内存：</p>
+<p>打开redis配置文件，设置maxmemory参数，maxmemory是bytes字节类型哦！</p>
+<p>maxmemory 268435456</p>
+<p>设置过期策略：</p>
+<p>maxmemory-policy volatile-lru</p>
+<h1 id="lru">LRU队列<a class="headerlink" href="#lru" title="Permanent link">&para;</a></h1>
+<p>最常见的实现是使用一个链表保存缓存数据，详细算法实现如下：</p>
+<ol>
+<li>
+<p>新数据插入到链表头部；</p>
+</li>
+<li>
+<p>每当缓存命中（即缓存数据被访问），则将数据移到链表头部；</p>
+</li>
+<li>
+<p>当链表满的时候，将链表尾部的数据丢弃。</p>
+</li>
+</ol>
                 
                   
                 
